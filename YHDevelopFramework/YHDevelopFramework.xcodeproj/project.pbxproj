@@ -13,6 +13,10 @@
 		DBA450B91D2CE5E8001ADEDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA450B71D2CE5E8001ADEDC /* Main.storyboard */; };
 		DBA450BB1D2CE5E8001ADEDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA450BA1D2CE5E8001ADEDC /* Assets.xcassets */; };
 		DBA450BE1D2CE5E8001ADEDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA450BC1D2CE5E8001ADEDC /* LaunchScreen.storyboard */; };
+		DBA450CE1D2CEA91001ADEDC /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA450CD1D2CEA91001ADEDC /* BaseViewController.m */; };
+		DBA450D11D2CEAAE001ADEDC /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA450D01D2CEAAE001ADEDC /* BaseView.m */; };
+		DBA450D41D2CEADD001ADEDC /* BaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA450D31D2CEADD001ADEDC /* BaseService.m */; };
+		DBA450E61D2CEE2E001ADEDC /* readMe.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBA450E51D2CEE2E001ADEDC /* readMe.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,9 +27,16 @@
 		DBA450B41D2CE5E8001ADEDC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DBA450B51D2CE5E8001ADEDC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DBA450B81D2CE5E8001ADEDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DBA450BA1D2CE5E8001ADEDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DBA450BA1D2CE5E8001ADEDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Assets.xcassets; sourceTree = "<group>"; };
 		DBA450BD1D2CE5E8001ADEDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DBA450BF1D2CE5E8001ADEDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBA450BF1D2CE5E8001ADEDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../Info.plist; sourceTree = "<group>"; };
+		DBA450CC1D2CEA91001ADEDC /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		DBA450CD1D2CEA91001ADEDC /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		DBA450CF1D2CEAAE001ADEDC /* BaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseView.h; sourceTree = "<group>"; };
+		DBA450D01D2CEAAE001ADEDC /* BaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseView.m; sourceTree = "<group>"; };
+		DBA450D21D2CEADD001ADEDC /* BaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseService.h; sourceTree = "<group>"; };
+		DBA450D31D2CEADD001ADEDC /* BaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseService.m; sourceTree = "<group>"; };
+		DBA450E51D2CEE2E001ADEDC /* readMe.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = readMe.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +69,10 @@
 		DBA450AD1D2CE5E8001ADEDC /* YHDevelopFramework */ = {
 			isa = PBXGroup;
 			children = (
+				DBA450DB1D2CECBD001ADEDC /* Classes */,
+				DBA450C51D2CE874001ADEDC /* framework */,
 				DBA450B11D2CE5E8001ADEDC /* AppDelegate.h */,
 				DBA450B21D2CE5E8001ADEDC /* AppDelegate.m */,
-				DBA450B41D2CE5E8001ADEDC /* ViewController.h */,
-				DBA450B51D2CE5E8001ADEDC /* ViewController.m */,
-				DBA450B71D2CE5E8001ADEDC /* Main.storyboard */,
-				DBA450BA1D2CE5E8001ADEDC /* Assets.xcassets */,
-				DBA450BC1D2CE5E8001ADEDC /* LaunchScreen.storyboard */,
-				DBA450BF1D2CE5E8001ADEDC /* Info.plist */,
 				DBA450AE1D2CE5E8001ADEDC /* Supporting Files */,
 			);
 			path = YHDevelopFramework;
@@ -74,9 +81,156 @@
 		DBA450AE1D2CE5E8001ADEDC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DBA450B41D2CE5E8001ADEDC /* ViewController.h */,
+				DBA450B51D2CE5E8001ADEDC /* ViewController.m */,
+				DBA450B71D2CE5E8001ADEDC /* Main.storyboard */,
+				DBA450BC1D2CE5E8001ADEDC /* LaunchScreen.storyboard */,
 				DBA450AF1D2CE5E8001ADEDC /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DBA450C51D2CE874001ADEDC /* framework */ = {
+			isa = PBXGroup;
+			children = (
+				DBA450C81D2CE9B6001ADEDC /* Category */,
+				DBA450C71D2CE975001ADEDC /* Component */,
+				DBA450C61D2CE95A001ADEDC /* BaseObject */,
+			);
+			path = framework;
+			sourceTree = "<group>";
+		};
+		DBA450C61D2CE95A001ADEDC /* BaseObject */ = {
+			isa = PBXGroup;
+			children = (
+				DBA450CB1D2CEA6B001ADEDC /* service */,
+				DBA450CA1D2CEA5B001ADEDC /* view */,
+				DBA450C91D2CEA49001ADEDC /* controller */,
+			);
+			path = BaseObject;
+			sourceTree = "<group>";
+		};
+		DBA450C71D2CE975001ADEDC /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				DBA450D81D2CEC1B001ADEDC /* DBComponent */,
+				DBA450D71D2CEB5F001ADEDC /* logComponent */,
+				DBA450D61D2CEB3B001ADEDC /* languageComponent */,
+				DBA450D51D2CEB13001ADEDC /* httpComponent */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		DBA450C81D2CE9B6001ADEDC /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				DBA450DA1D2CEC6B001ADEDC /* foundationCategory */,
+				DBA450D91D2CEC4E001ADEDC /* kitCategory */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		DBA450C91D2CEA49001ADEDC /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				DBA450CC1D2CEA91001ADEDC /* BaseViewController.h */,
+				DBA450CD1D2CEA91001ADEDC /* BaseViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		DBA450CA1D2CEA5B001ADEDC /* view */ = {
+			isa = PBXGroup;
+			children = (
+				DBA450CF1D2CEAAE001ADEDC /* BaseView.h */,
+				DBA450D01D2CEAAE001ADEDC /* BaseView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		DBA450CB1D2CEA6B001ADEDC /* service */ = {
+			isa = PBXGroup;
+			children = (
+				DBA450D21D2CEADD001ADEDC /* BaseService.h */,
+				DBA450D31D2CEADD001ADEDC /* BaseService.m */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		DBA450D51D2CEB13001ADEDC /* httpComponent */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = httpComponent;
+			sourceTree = "<group>";
+		};
+		DBA450D61D2CEB3B001ADEDC /* languageComponent */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = languageComponent;
+			sourceTree = "<group>";
+		};
+		DBA450D71D2CEB5F001ADEDC /* logComponent */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = logComponent;
+			sourceTree = "<group>";
+		};
+		DBA450D81D2CEC1B001ADEDC /* DBComponent */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DBComponent;
+			sourceTree = "<group>";
+		};
+		DBA450D91D2CEC4E001ADEDC /* kitCategory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = kitCategory;
+			sourceTree = "<group>";
+		};
+		DBA450DA1D2CEC6B001ADEDC /* foundationCategory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = foundationCategory;
+			sourceTree = "<group>";
+		};
+		DBA450DB1D2CECBD001ADEDC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DBA450DE1D2CED1D001ADEDC /* deploy */,
+				DBA450DD1D2CECF5001ADEDC /* Sources */,
+				DBA450DC1D2CECD3001ADEDC /* Modules */,
+				DBA450E51D2CEE2E001ADEDC /* readMe.strings */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		DBA450DC1D2CECD3001ADEDC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DBA450DD1D2CECF5001ADEDC /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DBA450BA1D2CE5E8001ADEDC /* Assets.xcassets */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		DBA450DE1D2CED1D001ADEDC /* deploy */ = {
+			isa = PBXGroup;
+			children = (
+				DBA450BF1D2CE5E8001ADEDC /* Info.plist */,
+			);
+			path = deploy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBA450E61D2CEE2E001ADEDC /* readMe.strings in Resources */,
 				DBA450BE1D2CE5E8001ADEDC /* LaunchScreen.storyboard in Resources */,
 				DBA450BB1D2CE5E8001ADEDC /* Assets.xcassets in Resources */,
 				DBA450B91D2CE5E8001ADEDC /* Main.storyboard in Resources */,
@@ -150,6 +305,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBA450B61D2CE5E8001ADEDC /* ViewController.m in Sources */,
+				DBA450CE1D2CEA91001ADEDC /* BaseViewController.m in Sources */,
+				DBA450D41D2CEADD001ADEDC /* BaseService.m in Sources */,
+				DBA450D11D2CEAAE001ADEDC /* BaseView.m in Sources */,
 				DBA450B31D2CE5E8001ADEDC /* AppDelegate.m in Sources */,
 				DBA450B01D2CE5E8001ADEDC /* main.m in Sources */,
 			);
@@ -302,6 +460,7 @@
 				DBA450C41D2CE5E8001ADEDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
