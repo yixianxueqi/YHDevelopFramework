@@ -32,7 +32,7 @@
  */
 + (void)setLogFormat:(id<DDLogFormatter>)format;
 /**
- *  设置写入文件的日志等级
+ *  设置写入文件的日志等级,同时将符合等级的日志写入文件内
  *
  *  @param level DDLogLevel
  */

@@ -36,8 +36,14 @@
      DDLogError(@"Error");
     
     DDLogError(@"************");
+    [YHLogger setFileLogLevel:DDLogLevelVerbose];
     
-     
+    DDLogVerbose(@"Verbose");
+    DDLogDebug(@"Debug");
+    DDLogInfo(@"Info");
+    DDLogWarn(@"Warn");
+    DDLogError(@"Error");
+    
 //    NSArray *list = @[@"1",@"2",@"3",@"4"];
 //    for (int i = 0; i < 5; i++) {
 //        DDLogError(@"%@",list[i]);
