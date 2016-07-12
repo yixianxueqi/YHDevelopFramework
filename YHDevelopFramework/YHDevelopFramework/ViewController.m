@@ -22,7 +22,7 @@
     NSLog(@"%s",__func__);
     
 //    [self testDate];
-    [self testDevice];
+//    [self testDevice];
     
 }
 

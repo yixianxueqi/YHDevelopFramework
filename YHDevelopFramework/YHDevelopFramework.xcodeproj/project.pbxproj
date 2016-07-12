@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6BA7A0B108064810A864A538 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9628ACA354870A8FADE8F0D1 /* libPods.a */; };
 		DB3DA0BC1D34BC360016D137 /* YHDeviceTools.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3DA0BB1D34BC360016D137 /* YHDeviceTools.m */; };
+		DB3DA0BF1D34D2500016D137 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3DA0BE1D34D2500016D137 /* UIView+Frame.m */; };
 		DBA450B01D2CE5E8001ADEDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA450AF1D2CE5E8001ADEDC /* main.m */; };
 		DBA450B31D2CE5E8001ADEDC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA450B21D2CE5E8001ADEDC /* AppDelegate.m */; };
 		DBA450B61D2CE5E8001ADEDC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA450B51D2CE5E8001ADEDC /* ViewController.m */; };
@@ -27,6 +28,8 @@
 		9628ACA354870A8FADE8F0D1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3DA0BA1D34BC360016D137 /* YHDeviceTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHDeviceTools.h; sourceTree = "<group>"; };
 		DB3DA0BB1D34BC360016D137 /* YHDeviceTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHDeviceTools.m; sourceTree = "<group>"; };
+		DB3DA0BD1D34D2500016D137 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		DB3DA0BE1D34D2500016D137 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		DBA450AB1D2CE5E8001ADEDC /* YHDevelopFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YHDevelopFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA450AF1D2CE5E8001ADEDC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DBA450B11D2CE5E8001ADEDC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -228,6 +231,8 @@
 		DBA450D91D2CEC4E001ADEDC /* kitCategory */ = {
 			isa = PBXGroup;
 			children = (
+				DB3DA0BD1D34D2500016D137 /* UIView+Frame.h */,
+				DB3DA0BE1D34D2500016D137 /* UIView+Frame.m */,
 			);
 			path = kitCategory;
 			sourceTree = "<group>";
@@ -400,6 +405,7 @@
 				DBA450B61D2CE5E8001ADEDC /* ViewController.m in Sources */,
 				DBA450E91D2D0771001ADEDC /* NSDate+YHDateFormat.m in Sources */,
 				DBA450CE1D2CEA91001ADEDC /* BaseViewController.m in Sources */,
+				DB3DA0BF1D34D2500016D137 /* UIView+Frame.m in Sources */,
 				DBA450D41D2CEADD001ADEDC /* BaseService.m in Sources */,
 				DB3DA0BC1D34BC360016D137 /* YHDeviceTools.m in Sources */,
 				DBA450D11D2CEAAE001ADEDC /* BaseView.m in Sources */,
