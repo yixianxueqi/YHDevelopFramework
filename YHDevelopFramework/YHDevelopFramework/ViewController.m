@@ -20,10 +20,29 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     NSLog(@"%s",__func__);
-    
+    NSLog(@"%@",NSHomeDirectory());
 //    [self testDate];
 //    [self testDevice];
+    [self testLogger];
+}
+
+- (void)testLogger {
+
     
+     DDLogVerbose(@"Verbose");
+     DDLogDebug(@"Debug");
+     DDLogInfo(@"Info");
+     DDLogWarn(@"Warn");
+     DDLogError(@"Error");
+    
+    DDLogError(@"************");
+    
+     
+//    NSArray *list = @[@"1",@"2",@"3",@"4"];
+//    for (int i = 0; i < 5; i++) {
+//        DDLogError(@"%@",list[i]);
+//        
+//    }
 }
 
 - (void)testDevice {

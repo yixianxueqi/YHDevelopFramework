@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "YHLogger.h"
 /**
  * @class  BaseService
  *
@@ -15,5 +15,6 @@
  *
  */
 @interface BaseService : NSObject
+
 
 @end
