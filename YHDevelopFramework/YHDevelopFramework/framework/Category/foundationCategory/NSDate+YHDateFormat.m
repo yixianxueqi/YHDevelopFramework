@@ -65,7 +65,7 @@
 //获取指定时间的时间戳
 + (NSString *)getDateStamp:(NSDate *)date {
     
-   return [NSString stringWithFormat:@"%ld",(long)[date timeIntervalSince1970]];
+   return [NSString stringWithFormat:@"%f",[date timeIntervalSince1970]];
 }
 //根据日期和格式返回时间
 + (NSString *)getDateTimeWithDate:(NSDate *)date format:(NSString *)formatStr {

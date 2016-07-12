@@ -107,7 +107,7 @@
  */
 + (NSString *)getCurrentTimeByFormat:(NSString *)formatStr;
 /**
- *  根据日期和格式的起始时间与结束时间戳
+ *  根据日期和格式获取起始时间与结束时间
  *
  *  @param date 指定日期
  *  @param type 指定格式

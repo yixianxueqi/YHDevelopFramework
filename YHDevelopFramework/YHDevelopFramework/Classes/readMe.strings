@@ -47,7 +47,7 @@
 #           view/       :视图基类
 #           |
 #           controller/   :控制器基类
-#
+#       tools/      :工具类
 #
 #
 #
