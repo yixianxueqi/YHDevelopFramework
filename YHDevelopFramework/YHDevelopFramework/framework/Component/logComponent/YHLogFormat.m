@@ -50,7 +50,7 @@
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss:SSS"];
         
-        NSString *formatStr = [NSString stringWithFormat:@"%@, %@, %@: %@, (%ld): %@",[formatter stringFromDate:logMessage->_timestamp], loglevel, logMessage->_fileName, logMessage->_function,logMessage->_line, logMessage->_message];
+        NSString *formatStr = [NSString stringWithFormat:@"%@ %@: %@ %@ (%ld): %@",[formatter stringFromDate:logMessage->_timestamp], loglevel, logMessage->_fileName, logMessage->_function,logMessage->_line, logMessage->_message];
         return formatStr;
     }
 }
