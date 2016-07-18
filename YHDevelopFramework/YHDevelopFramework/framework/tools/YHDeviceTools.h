@@ -23,6 +23,12 @@
  */
 + (NSString *)appName;
 /**
+ *  获取Bundle Identifier
+ *
+ *  @return NSString
+ */
++ (NSString *)bundleIdentifier;
+/**
  *  获取app版本
  *
  *  @return NSString

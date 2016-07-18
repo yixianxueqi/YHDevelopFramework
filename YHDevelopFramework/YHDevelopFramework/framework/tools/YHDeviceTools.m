@@ -17,6 +17,11 @@
 
     return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
 }
+//  获取Bundle Identifier
++ (NSString *)bundleIdentifier {
+
+    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleIdentifier"];
+}
 //获取app版本
 + (NSString *)appVersion {
 

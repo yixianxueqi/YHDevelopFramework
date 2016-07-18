@@ -11,7 +11,8 @@
 #import "YHDeviceTools.h"
 #import "YHLogger.h"
 
-@interface ViewController ()<YHCrashHandle>
+
+@interface ViewController ()<YHCrashHandle,YHLoggerHandle>
 
 @end
 
@@ -25,6 +26,7 @@
 //    [self testDate];
 //    [self testDevice];
     [self testLogger];
+
 }
 
 - (void)testLogger {
@@ -33,24 +35,25 @@
     [YHLogger setLogFormat:[[YHLogFormat alloc] init]];
     [YHLogger setFileLogLevel:DDLogLevelInfo];
     [YHLogger startCatchCrashInfo];
-//     DDLogVerbose(@"Verbose");
-//     DDLogDebug(@"Debug");
+    [YHLogger getLogger].delegate = self;
+     DDLogVerbose(@"Verbose");
+     DDLogDebug(@"Debug");
      DDLogInfo(@"Info");
-//     DDLogWarn(@"Warn");
-//     DDLogError(@"Error");
+     DDLogWarn(@"Warn");
+     DDLogError(@"Error");
 //
     DDLogError(@"************");
     
-//    DDLogVerbose(@"Verbose");
-//    DDLogDebug(@"Debug");
+    DDLogVerbose(@"Verbose");
+    DDLogDebug(@"Debug");
     DDLogInfo(@"Info");
-//    DDLogWarn(@"Warn");
-//    DDLogError(@"Error");
+    DDLogWarn(@"Warn");
+    DDLogError(@"Error");
     
-    NSArray *list = @[@"1",@"2",@"3",@"4"];
-    for (int i = 0; i < 5; i++) {
-        DDLogVerbose(@"%@",list[i]);
-    }
+//    NSArray *list = @[@"1",@"2",@"3",@"4"];
+//    for (int i = 0; i < 5; i++) {
+//        DDLogVerbose(@"%@",list[i]);
+//    }
 }
 
 #pragma mark - YHCrashHandle
@@ -86,5 +89,23 @@
     NSLog(@"%@",[NSDate getDateTimeOfDateStamp:date.startDate format:@"yyyy-MM-dd HH:mm:ss:SSS"]);
     NSLog(@"%@",[NSDate getDateTimeOfDateStamp:date.endDate format:@"yyyy-MM-dd HH:mm:ss:SSS"]);
 }
+
+#pragma mark - YHLoggerHandle
+
+- (void)showAllNormalLogFilePath:(NSArray *)filePathList {
+
+    DDLogVerbose(@"%@",filePathList);
+}
+
+- (void)showALLCrashLogFilePath:(NSArray *)filePathList {
+
+    DDLogVerbose(@"%@",filePathList);
+}
+
+- (void)oneNewCrashLogFileAvaliable:(NSString *)filePath {
+
+    DDLogVerbose(@"%@",filePath);
+}
+
 
 @end

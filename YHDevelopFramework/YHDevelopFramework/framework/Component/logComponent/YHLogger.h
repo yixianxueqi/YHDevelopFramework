@@ -63,6 +63,10 @@
  */
 + (void)defaultLog;
 /**
+ *  获取logger对象，用来设置delegate
+ */
++ (instancetype)getLogger;
+/**
  *  设置日志格式
  */
 + (void)setLogFormat:(id<DDLogFormatter>)format;
