@@ -24,6 +24,8 @@
 		DBA450D41D2CEADD001ADEDC /* BaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA450D31D2CEADD001ADEDC /* BaseService.m */; };
 		DBA450E61D2CEE2E001ADEDC /* readMe.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBA450E51D2CEE2E001ADEDC /* readMe.strings */; };
 		DBA450E91D2D0771001ADEDC /* NSDate+YHDateFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA450E81D2D0771001ADEDC /* NSDate+YHDateFormat.m */; };
+		DBB862991D3CBF2000A5951F /* UIImageView+BorderChange.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB862981D3CBF2000A5951F /* UIImageView+BorderChange.m */; };
+		DBB8629D1D3CD60500A5951F /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB8629C1D3CD60500A5951F /* Entity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,10 @@
 		DBA450E51D2CEE2E001ADEDC /* readMe.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = readMe.strings; sourceTree = "<group>"; };
 		DBA450E71D2D0771001ADEDC /* NSDate+YHDateFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+YHDateFormat.h"; sourceTree = "<group>"; };
 		DBA450E81D2D0771001ADEDC /* NSDate+YHDateFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+YHDateFormat.m"; sourceTree = "<group>"; };
+		DBB862971D3CBF2000A5951F /* UIImageView+BorderChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+BorderChange.h"; sourceTree = "<group>"; };
+		DBB862981D3CBF2000A5951F /* UIImageView+BorderChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+BorderChange.m"; sourceTree = "<group>"; };
+		DBB8629B1D3CD60500A5951F /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
+		DBB8629C1D3CD60500A5951F /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entity.m; sourceTree = "<group>"; };
 		DD0E1219D0BEF083B310C3CF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +161,7 @@
 		DBA450C61D2CE95A001ADEDC /* BaseObject */ = {
 			isa = PBXGroup;
 			children = (
+				DBB8629A1D3CD5EE00A5951F /* model */,
 				DBA450CB1D2CEA6B001ADEDC /* service */,
 				DBA450CA1D2CEA5B001ADEDC /* view */,
 				DBA450C91D2CEA49001ADEDC /* controller */,
@@ -248,6 +255,8 @@
 			children = (
 				DB3DA0BD1D34D2500016D137 /* UIView+Frame.h */,
 				DB3DA0BE1D34D2500016D137 /* UIView+Frame.m */,
+				DBB862971D3CBF2000A5951F /* UIImageView+BorderChange.h */,
+				DBB862981D3CBF2000A5951F /* UIImageView+BorderChange.m */,
 			);
 			path = kitCategory;
 			sourceTree = "<group>";
@@ -293,6 +302,15 @@
 				DBA450BF1D2CE5E8001ADEDC /* Info.plist */,
 			);
 			path = deploy;
+			sourceTree = "<group>";
+		};
+		DBB8629A1D3CD5EE00A5951F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				DBB8629B1D3CD60500A5951F /* Entity.h */,
+				DBB8629C1D3CD60500A5951F /* Entity.m */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,7 +435,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBB8629D1D3CD60500A5951F /* Entity.m in Sources */,
 				DBA450B61D2CE5E8001ADEDC /* ViewController.m in Sources */,
+				DBB862991D3CBF2000A5951F /* UIImageView+BorderChange.m in Sources */,
 				DB3DA0C51D34ECF30016D137 /* YHLogFormat.m in Sources */,
 				DBA450E91D2D0771001ADEDC /* NSDate+YHDateFormat.m in Sources */,
 				DB3DA0C21D34E0190016D137 /* YHLogger.m in Sources */,

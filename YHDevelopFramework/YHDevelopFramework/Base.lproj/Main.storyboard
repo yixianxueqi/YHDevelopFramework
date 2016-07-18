@@ -24,14 +24,38 @@
                                     <segue destination="AZl-m1-hp3" kind="push" id="4nB-Nt-6dA"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tct-qf-s79">
+                                <rect key="frame" x="350" y="442" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1XN-3z-TOT">
+                                <rect key="frame" x="225" y="442" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.98137626259999999" green="0.16977544280000001" blue="0.078084771189999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="413-Rx-0oC"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="Cb3-0j-StL"/>
+                                    <constraint firstAttribute="width" constant="50" id="dEs-nl-j2Z"/>
+                                    <constraint firstAttribute="height" constant="50" id="eLO-4V-wFT"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="1XN-3z-TOT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-50" id="3uo-mU-X5P"/>
+                            <constraint firstItem="Tct-qf-s79" firstAttribute="width" secondItem="1XN-3z-TOT" secondAttribute="width" id="HV3-3C-gFo"/>
+                            <constraint firstItem="Tct-qf-s79" firstAttribute="leading" secondItem="1XN-3z-TOT" secondAttribute="trailing" constant="75" id="QMa-ig-ot4"/>
+                            <constraint firstItem="Tct-qf-s79" firstAttribute="centerY" secondItem="1XN-3z-TOT" secondAttribute="centerY" id="QPu-Eo-3ub"/>
                             <constraint firstItem="pgb-XW-fig" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RHV-Yf-pr0"/>
+                            <constraint firstItem="Tct-qf-s79" firstAttribute="height" secondItem="1XN-3z-TOT" secondAttribute="height" id="X6D-n0-fWS"/>
                             <constraint firstItem="pgb-XW-fig" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m3b-Km-o1W"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1XN-3z-TOT" secondAttribute="bottom" constant="44" id="oWC-Fd-H2d"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dIX-6e-cnB"/>
+                    <connections>
+                        <outlet property="igv1" destination="1XN-3z-TOT" id="fjz-xm-uak"/>
+                        <outlet property="igv2" destination="Tct-qf-s79" id="Gw2-pP-Tht"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
