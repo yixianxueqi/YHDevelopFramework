@@ -42,11 +42,14 @@
 #       |
 #       BaseObject/    :基类
 #           |
+#           model/      :模型类
+#           |
 #           service/    :业务基类
 #           |
 #           view/       :视图基类
 #           |
 #           controller/   :控制器基类
+#       |
 #       tools/      :工具类
 #
 #

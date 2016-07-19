@@ -61,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="1561" y="305"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller2-->
         <scene sceneID="dxC-wE-keO">
             <objects>
-                <viewController id="AZl-m1-hp3" sceneMemberID="viewController">
+                <viewController id="AZl-m1-hp3" customClass="ViewController2" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ecq-x6-VWR"/>
                         <viewControllerLayoutGuide type="bottom" id="yc6-Xl-M6C"/>

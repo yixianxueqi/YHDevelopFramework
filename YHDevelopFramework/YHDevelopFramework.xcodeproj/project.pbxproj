@@ -26,6 +26,7 @@
 		DBA450E91D2D0771001ADEDC /* NSDate+YHDateFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA450E81D2D0771001ADEDC /* NSDate+YHDateFormat.m */; };
 		DBB862991D3CBF2000A5951F /* UIImageView+BorderChange.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB862981D3CBF2000A5951F /* UIImageView+BorderChange.m */; };
 		DBB8629D1D3CD60500A5951F /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB8629C1D3CD60500A5951F /* Entity.m */; };
+		DBBCA3D71D3DD4F800ED7014 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBCA3D61D3DD4F800ED7014 /* ViewController2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,8 @@
 		DBB862981D3CBF2000A5951F /* UIImageView+BorderChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+BorderChange.m"; sourceTree = "<group>"; };
 		DBB8629B1D3CD60500A5951F /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
 		DBB8629C1D3CD60500A5951F /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entity.m; sourceTree = "<group>"; };
+		DBBCA3D51D3DD4F800ED7014 /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
+		DBBCA3D61D3DD4F800ED7014 /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
 		DD0E1219D0BEF083B310C3CF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +146,8 @@
 				DBA450B71D2CE5E8001ADEDC /* Main.storyboard */,
 				DBA450BC1D2CE5E8001ADEDC /* LaunchScreen.storyboard */,
 				DBA450AF1D2CE5E8001ADEDC /* main.m */,
+				DBBCA3D51D3DD4F800ED7014 /* ViewController2.h */,
+				DBBCA3D61D3DD4F800ED7014 /* ViewController2.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -437,6 +442,7 @@
 			files = (
 				DBB8629D1D3CD60500A5951F /* Entity.m in Sources */,
 				DBA450B61D2CE5E8001ADEDC /* ViewController.m in Sources */,
+				DBBCA3D71D3DD4F800ED7014 /* ViewController2.m in Sources */,
 				DBB862991D3CBF2000A5951F /* UIImageView+BorderChange.m in Sources */,
 				DB3DA0C51D34ECF30016D137 /* YHLogFormat.m in Sources */,
 				DBA450E91D2D0771001ADEDC /* NSDate+YHDateFormat.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Masonry.h>
 #import "YHLogger.h"
 #import "UIView+Frame.h"
 #import "NSDate+YHDateFormat.h"
@@ -17,5 +18,10 @@
  *
  */
 @interface BaseView : UIView
+
+//获取无数据图
+- (UIView *)getNoDataViewFrame:(CGRect)frame;
+//获取无网络链接图
+- (UIView *)getNoNetViewFrame:(CGRect)frame;
 
 @end

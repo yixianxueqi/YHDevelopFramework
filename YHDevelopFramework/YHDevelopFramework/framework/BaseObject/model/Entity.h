@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <YYKit/NSObject+YYModel.h>
+#import "YHLogger.h"
 /**
  * @class  Entity
  *

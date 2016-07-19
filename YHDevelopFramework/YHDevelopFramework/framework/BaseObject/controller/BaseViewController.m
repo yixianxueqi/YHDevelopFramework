@@ -8,6 +8,59 @@
 
 #import "BaseViewController.h"
 
+@interface BaseViewController ()
+
+@end
+
 @implementation BaseViewController
+
+#pragma mark - life cycle
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+}
+
+#pragma mark - define
+//展示等待菊花
+- (void)showLoading {
+    
+    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.animationType = MBProgressHUDAnimationFade;
+    [hud removeFromSuperViewOnHide];
+    [hud show:YES];
+}
+//隐藏等待菊花
+- (void)hideLoading {
+    
+    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+}
+//显示文字提示，默认2s
+- (void)showMBProgressHUDWithText:(NSString *)text {
+
+    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeText;
+    hud.animationType = MBProgressHUDAnimationFade;
+    hud.detailsLabelText = text;
+    hud.margin = 10.f;
+    hud.yOffset = 100.f;
+    [hud removeFromSuperViewOnHide];
+    [hud hide:YES afterDelay:2.f];
+}
+//显示文字提示并达到指定时间
+- (void)showMBProgressHUDWithText:(NSString *)text duration:(CGFloat)duration {
+
+    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeText;
+    hud.animationType = MBProgressHUDAnimationFade;
+    hud.detailsLabelText = text;
+    hud.margin = 10.f;
+    hud.yOffset = 100.f;
+    [hud removeFromSuperViewOnHide];
+    [hud hide:YES afterDelay:duration];
+}
 
 @end
