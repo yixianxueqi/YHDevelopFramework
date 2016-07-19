@@ -12,6 +12,7 @@
 #import "YHLogger.h"
 #import "UIImageView+BorderChange.h"
 #import "Entity.h"
+#import "BaseView.h"
 
 @interface ViewController ()<YHCrashHandle,YHLoggerHandle>
 
@@ -35,6 +36,7 @@
 //        
 //        [self testHUD];
 //    });
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -42,8 +44,15 @@
     
     [self.igv1 circleBorder];
     [self.igv2 cornerBorder:5];
+//    [self testBGView];
 }
 #pragma mark - Test
+
+- (void)testBGView {
+
+    UIView *view = [[[BaseView alloc] init] getNoDataViewFrame:self.view.bounds];
+    [self.view addSubview:view];
+}
 
 - (void)testHUD {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
