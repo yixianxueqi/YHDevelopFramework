@@ -36,6 +36,7 @@
 //        
 //        [self testHUD];
 //    });
+    [self testTools];
     
 }
 
@@ -47,6 +48,17 @@
 //    [self testBGView];
 }
 #pragma mark - Test
+
+- (void)testTools {
+
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"YHLis" ofType:@"plist"];
+    NSDictionary *dic = dicFromePlist(@"Info");//[[NSDictionary alloc] initWithContentsOfFile:path];
+    NSLog(@"%@",dic);
+    NSArray *list = listFromPlist(@"YHList");//[[NSArray alloc] initWithContentsOfFile:path];
+    NSLog(@"%@",list);
+//    UITableView *tabView = [[UITableView alloc] init];
+//    [tabView registerClass:[UITableViewCell class] forCellReuseIdentifier:@""];
+}
 
 - (void)testBGView {
 

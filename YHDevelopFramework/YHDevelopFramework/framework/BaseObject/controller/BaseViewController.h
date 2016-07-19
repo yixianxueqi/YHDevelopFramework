@@ -12,6 +12,7 @@
 #import "YHLogger.h"
 #import "UIView+Frame.h"
 #import "NSDate+YHDateFormat.h"
+#import "YHTools.h"
 /**
  * @class  BaseViewController
  *

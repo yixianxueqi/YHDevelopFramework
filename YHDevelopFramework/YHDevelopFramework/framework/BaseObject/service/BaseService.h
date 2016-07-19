@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "YHLogger.h"
+#import "YHTools.h"
+//成功回调
+typedef void(^successBlock)(id resp);
+//失败回调
+typedef void(^failureBlock)(NSInteger errCode, NSString *errMsg);
 /**
  * @class  BaseService
  *

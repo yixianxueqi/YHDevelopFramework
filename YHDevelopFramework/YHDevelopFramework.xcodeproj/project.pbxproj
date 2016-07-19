@@ -27,6 +27,8 @@
 		DBB862991D3CBF2000A5951F /* UIImageView+BorderChange.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB862981D3CBF2000A5951F /* UIImageView+BorderChange.m */; };
 		DBB8629D1D3CD60500A5951F /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB8629C1D3CD60500A5951F /* Entity.m */; };
 		DBBCA3D71D3DD4F800ED7014 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBCA3D61D3DD4F800ED7014 /* ViewController2.m */; };
+		DBBCA3DE1D3DFC1300ED7014 /* YHList.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBBCA3DD1D3DFC1300ED7014 /* YHList.plist */; };
+		DBBCA3E11D3E074B00ED7014 /* UIImage+ChangeSize.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBCA3E01D3E074B00ED7014 /* UIImage+ChangeSize.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,10 @@
 		DBB8629C1D3CD60500A5951F /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entity.m; sourceTree = "<group>"; };
 		DBBCA3D51D3DD4F800ED7014 /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
 		DBBCA3D61D3DD4F800ED7014 /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
+		DBBCA3DA1D3DF9D400ED7014 /* YHTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHTools.h; sourceTree = "<group>"; };
+		DBBCA3DD1D3DFC1300ED7014 /* YHList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = YHList.plist; sourceTree = "<group>"; };
+		DBBCA3DF1D3E074B00ED7014 /* UIImage+ChangeSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ChangeSize.h"; sourceTree = "<group>"; };
+		DBBCA3E01D3E074B00ED7014 /* UIImage+ChangeSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ChangeSize.m"; sourceTree = "<group>"; };
 		DD0E1219D0BEF083B310C3CF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +110,7 @@
 			children = (
 				DB3DA0BA1D34BC360016D137 /* YHDeviceTools.h */,
 				DB3DA0BB1D34BC360016D137 /* YHDeviceTools.m */,
+				DBBCA3DA1D3DF9D400ED7014 /* YHTools.h */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -262,6 +269,8 @@
 				DB3DA0BE1D34D2500016D137 /* UIView+Frame.m */,
 				DBB862971D3CBF2000A5951F /* UIImageView+BorderChange.h */,
 				DBB862981D3CBF2000A5951F /* UIImageView+BorderChange.m */,
+				DBBCA3DF1D3E074B00ED7014 /* UIImage+ChangeSize.h */,
+				DBBCA3E01D3E074B00ED7014 /* UIImage+ChangeSize.m */,
 			);
 			path = kitCategory;
 			sourceTree = "<group>";
@@ -305,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				DBA450BF1D2CE5E8001ADEDC /* Info.plist */,
+				DBBCA3DD1D3DFC1300ED7014 /* YHList.plist */,
 			);
 			path = deploy;
 			sourceTree = "<group>";
@@ -379,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBA450E61D2CEE2E001ADEDC /* readMe.strings in Resources */,
+				DBBCA3DE1D3DFC1300ED7014 /* YHList.plist in Resources */,
 				DBA450BE1D2CE5E8001ADEDC /* LaunchScreen.storyboard in Resources */,
 				DBA450BB1D2CE5E8001ADEDC /* Assets.xcassets in Resources */,
 				DBA450B91D2CE5E8001ADEDC /* Main.storyboard in Resources */,
@@ -452,6 +463,7 @@
 				DBA450D41D2CEADD001ADEDC /* BaseService.m in Sources */,
 				DB3DA0BC1D34BC360016D137 /* YHDeviceTools.m in Sources */,
 				DBA450D11D2CEAAE001ADEDC /* BaseView.m in Sources */,
+				DBBCA3E11D3E074B00ED7014 /* UIImage+ChangeSize.m in Sources */,
 				DBA450B31D2CE5E8001ADEDC /* AppDelegate.m in Sources */,
 				DB63FAC11D37811B000C06F5 /* YHCrashCatch.m in Sources */,
 				DBA450B01D2CE5E8001ADEDC /* main.m in Sources */,
