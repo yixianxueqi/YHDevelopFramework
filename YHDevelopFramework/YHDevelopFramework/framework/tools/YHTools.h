@@ -19,6 +19,8 @@
 #define dicFromePlist(name) [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:(name) ofType:@"plist"]]
 //从plist获取数组
 #define listFromPlist(name) [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:(name) ofType:@"plist"]]
+//从json文件获取字典
+#define dicFromJSON(name) [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:(name) ofType:@"json"]] options:NSJSONReadingAllowFragments error:nil]
 //读取xib
 #define nibView(viewClass) [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([viewClass class]) owner:self options:nil].lastObject
 //注册tableViewCell/collectionViewCell,class

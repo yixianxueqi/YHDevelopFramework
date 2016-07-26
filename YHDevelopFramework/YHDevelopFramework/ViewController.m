@@ -13,6 +13,10 @@
 #import "UIImageView+BorderChange.h"
 #import "Entity.h"
 #import "BaseView.h"
+#import "YHDBSQLite.h"
+#import "Person.h"
+#import <objc/runtime.h>
+#import <YTKKeyValueStore.h>
 
 @interface ViewController ()<YHCrashHandle,YHLoggerHandle>
 
@@ -27,17 +31,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     NSLog(@"%s",__func__);
-
+    DDLogVerbose(@"%@",NSHomeDirectory());
 //    [self testDate];
 //    [self testDevice];
-//    [self testLogger];
+    [self testLogger];
 //    [self testYYModel];
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        
 //        [self testHUD];
 //    });
-    [self testTools];
-    
+//    [self testTools];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -46,8 +50,56 @@
     [self.igv1 circleBorder];
     [self.igv2 cornerBorder:5];
 //    [self testBGView];
+//    [self testChildThreadCrash];
+//    [self testDB];
+    [self testRuntime];
+    
 }
 #pragma mark - Test
+
+- (void)testRuntime {
+
+    NSArray *list = [self propertyByClassName:[Person class]];
+    DDLogVerbose(@"%@",list);
+}
+
+- (void)testDB {
+
+//    YHDBSQLite *manager = [YHDBSQLite sharedDBManager];
+//    [manager doInTransaction:^(FMDatabase *db, BOOL *rollback) {
+//        NSString *sql = @"create table bulktest1 (id integer primary key autoincrement, x text);"
+//                        "insert into bulktest1 (x) values ('XXX');";
+//        BOOL flag = [db executeStatements:sql];
+//        DDLogVerbose(@"%d",flag);
+//        sql = @"select * from bulktest1;";
+//        FMResultSet *s = [db executeQuery:sql];
+//        while ([s next]) {
+//            NSString *text = [s stringForColumn:@"x"];
+//            DDLogVerbose(@"%@",text);
+//        }
+//    }];
+    
+}
+
+- (void)testChildThreadCrash {
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+            @try {
+                NSArray *list = @[@"1",@"2",@"3"];
+                for (int i = 0; i < 4; i++) {
+                    NSLog(@"%@",list[i]);
+                }
+            } @catch (NSException *exception) {
+                DDLogVerbose(@"%@",exception);
+            } @finally {
+                DDLogVerbose(@"end");
+            }
+           
+        });
+    });
+}
 
 - (void)testTools {
 
@@ -96,24 +148,24 @@
     [YHLogger setFileLogLevel:DDLogLevelInfo];
     [YHLogger startCatchCrashInfo];
     [YHLogger getLogger].delegate = self;
-     DDLogVerbose(@"Verbose");
-     DDLogDebug(@"Debug");
-     DDLogInfo(@"Info");
-     DDLogWarn(@"Warn");
-     DDLogError(@"Error");
-
-    DDLogError(@"************");
-    
-    DDLogVerbose(@"Verbose");
-    DDLogDebug(@"Debug");
-    DDLogInfo(@"Info");
-    DDLogWarn(@"Warn");
-    DDLogError(@"Error");
-    
-    NSArray *list = @[@"1",@"2",@"3",@"4"];
-    for (int i = 0; i < 5; i++) {
-        DDLogVerbose(@"%@",list[i]);
-    }
+//     DDLogVerbose(@"Verbose");
+//     DDLogDebug(@"Debug");
+//     DDLogInfo(@"Info");
+//     DDLogWarn(@"Warn");
+//     DDLogError(@"Error");
+//
+//    DDLogError(@"************");
+//    
+//    DDLogVerbose(@"Verbose");
+//    DDLogDebug(@"Debug");
+//    DDLogInfo(@"Info");
+//    DDLogWarn(@"Warn");
+//    DDLogError(@"Error");
+//    
+//    NSArray *list = @[@"1",@"2",@"3",@"4"];
+//    for (int i = 0; i < 5; i++) {
+//        DDLogVerbose(@"%@",list[i]);
+//    }
 }
 
 #pragma mark - YHCrashHandle
@@ -148,6 +200,30 @@
     NSLog(@"%@,%@",date.startDate,date.endDate);
     NSLog(@"%@",[NSDate getDateTimeOfDateStamp:date.startDate format:@"yyyy-MM-dd HH:mm:ss:SSS"]);
     NSLog(@"%@",[NSDate getDateTimeOfDateStamp:date.endDate format:@"yyyy-MM-dd HH:mm:ss:SSS"]);
+}
+//获取对象的属性名称
+- (NSArray *)propertyByClassName:(Class)cls {
+    
+    NSMutableArray *list = [NSMutableArray array];
+    NSMutableArray *nameList = [NSMutableArray array];
+    NSMutableArray *typeList = [NSMutableArray array];
+    [list addObject:nameList];
+    [list addObject:typeList];
+    unsigned int count = 0;
+    objc_property_t *properties = class_copyPropertyList(cls, &count);
+    for (unsigned int i = 0; i < count; i++) {
+        objc_property_t property = properties[i];
+        //名称
+        const char *propertyName = property_getName(property);
+        //类型
+        const char *propertyAttribute = property_getAttributes(property);
+        
+        [nameList addObject:[NSString stringWithUTF8String:propertyName]];
+        [typeList addObject:[NSString stringWithUTF8String:propertyAttribute]];
+        
+    }
+    free(properties);
+    return list;
 }
 
 #pragma mark - YHLoggerHandle
