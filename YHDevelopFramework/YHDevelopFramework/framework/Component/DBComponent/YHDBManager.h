@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "YHDBSQLite.h"
+#import "YHDBYTKValueStore.h"
 /**
  * @class YHDBManager
  *
@@ -19,6 +20,21 @@
 #pragma mark - fmdb
 
 #pragma mark - YTKKeyValueStore
-
+//创建表
+- (void)createTableWithName:(NSString *)tableName;
+//清理表内所有数据
+- (void)clearTable:(NSString *)tableName;
+//关闭数据库
+- (void)close;
+//存入对象
+- (YTKKeyValueItem *)putObject:(id)object intoTable:(NSString *)tableName;
+//取出对象
+- (YTKKeyValueItem *)getYTKKeyValueItemById:(NSString *)objectId fromTable:(NSString *)tableName;
+//获取表内所有对象
+- (NSArray *)getAllItemsFromTable:(NSString *)tableName;
+//删除对象
+- (void)deleteObjectById:(NSString *)objectId fromTable:(NSString *)tableName;
+//删除数组内指定对象
+- (void)deleteObjectsByIdArray:(NSArray *)objectIdArray fromTable:(NSString *)tableName;
 
 @end

@@ -33,6 +33,7 @@
 		DBBCA3D71D3DD4F800ED7014 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBCA3D61D3DD4F800ED7014 /* ViewController2.m */; };
 		DBBCA3DE1D3DFC1300ED7014 /* YHList.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBBCA3DD1D3DFC1300ED7014 /* YHList.plist */; };
 		DBBCA3E11D3E074B00ED7014 /* UIImage+ChangeSize.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBCA3E01D3E074B00ED7014 /* UIImage+ChangeSize.m */; };
+		DBC0F73A1D4749A6007C7E5B /* YTKKeyValueStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC0F7391D4749A6007C7E5B /* YTKKeyValueStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,8 @@
 		DBBCA3DD1D3DFC1300ED7014 /* YHList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = YHList.plist; sourceTree = "<group>"; };
 		DBBCA3DF1D3E074B00ED7014 /* UIImage+ChangeSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ChangeSize.h"; sourceTree = "<group>"; };
 		DBBCA3E01D3E074B00ED7014 /* UIImage+ChangeSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ChangeSize.m"; sourceTree = "<group>"; };
+		DBC0F7381D4749A6007C7E5B /* YTKKeyValueStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKKeyValueStore.h; sourceTree = "<group>"; };
+		DBC0F7391D4749A6007C7E5B /* YTKKeyValueStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKKeyValueStore.m; sourceTree = "<group>"; };
 		DD0E1219D0BEF083B310C3CF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -272,6 +275,7 @@
 		DBA450D81D2CEC1B001ADEDC /* DBComponent */ = {
 			isa = PBXGroup;
 			children = (
+				DBC0F7371D47498B007C7E5B /* thirdPart */,
 				DB44B5481D3F5CE0000D98C5 /* YHDBSQLite.h */,
 				DB44B5491D3F5CE0000D98C5 /* YHDBSQLite.m */,
 				DB44B54B1D3F8371000D98C5 /* YHDBManager.h */,
@@ -346,6 +350,15 @@
 				DBB8629C1D3CD60500A5951F /* Entity.m */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		DBC0F7371D47498B007C7E5B /* thirdPart */ = {
+			isa = PBXGroup;
+			children = (
+				DBC0F7381D4749A6007C7E5B /* YTKKeyValueStore.h */,
+				DBC0F7391D4749A6007C7E5B /* YTKKeyValueStore.m */,
+			);
+			path = thirdPart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -484,6 +497,7 @@
 				DB3DA0BF1D34D2500016D137 /* UIView+Frame.m in Sources */,
 				DB44B54D1D3F8371000D98C5 /* YHDBManager.m in Sources */,
 				DBA450D41D2CEADD001ADEDC /* BaseService.m in Sources */,
+				DBC0F73A1D4749A6007C7E5B /* YTKKeyValueStore.m in Sources */,
 				DB3DA0BC1D34BC360016D137 /* YHDeviceTools.m in Sources */,
 				DBA450D11D2CEAAE001ADEDC /* BaseView.m in Sources */,
 				DBBCA3E11D3E074B00ED7014 /* UIImage+ChangeSize.m in Sources */,

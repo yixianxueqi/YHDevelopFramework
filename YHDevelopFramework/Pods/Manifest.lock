@@ -33,8 +33,6 @@ PODS:
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
   - SDWebImage/Core (3.8.1)
-  - YTKKeyValueStore (0.1.2):
-    - FMDB (~> 2.0)
   - YYKit (1.0.7):
     - YYKit/no-arc (= 1.0.7)
   - YYKit/no-arc (1.0.7)
@@ -49,7 +47,6 @@ DEPENDENCIES:
   - MJRefresh (~> 3.1.9)
   - NullSafe (~> 1.2.2)
   - SDWebImage (~> 3.8.1)
-  - YTKKeyValueStore (~> 0.1.2)
   - YYKit (~> 1.0.7)
 
 SPEC CHECKSUMS:
@@ -62,7 +59,6 @@ SPEC CHECKSUMS:
   MJRefresh: bb72948c985914b0b5cecac573a2c69a8915fb02
   NullSafe: cbf1f77a24558e49bc76e2673f31250d3087c792
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
-  YTKKeyValueStore: 4d002941540dd5108fa23009b71e0f2f937f7a0f
   YYKit: 843d1b26e20b82c695790c9a89907eaa1e99907f
 
 COCOAPODS: 0.39.0
