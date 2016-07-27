@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Entity.h"
 
-@interface Person : NSObject
+@interface Person : Entity
 
 @property (nonatomic,copy) NSString *name;
 @property (nonatomic,assign) BOOL sex;

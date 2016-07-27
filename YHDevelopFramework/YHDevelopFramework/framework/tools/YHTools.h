@@ -9,6 +9,12 @@
 #ifndef YHTools_h
 #define YHTools_h
 
+#ifndef __OPTIMIZE__
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...) {}
+#endif
+
 //设置颜色
 #define RGBAColor(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
 //设置16进制颜色s

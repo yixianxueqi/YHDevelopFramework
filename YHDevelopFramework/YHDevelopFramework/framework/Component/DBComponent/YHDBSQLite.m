@@ -18,7 +18,7 @@
 
 static YHDBSQLite *dbManager;
 
-+ (instancetype)sharedDBManagerwWithFile:(NSString *)path {
++ (instancetype)sharedDBManagerWithFile:(NSString *)path {
 
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -28,20 +28,9 @@ static YHDBSQLite *dbManager;
     return dbManager;
 }
 #pragma mark - define
-//在数据库中操作
-- (void)doInDataBase:(void (^)(FMDatabase *db))block {
 
-    [dbManager.dbQueue inDatabase:block];
-}
-//在事务中操作
-- (void)doInTransaction:(void (^)(FMDatabase *db, BOOL *rollback))block {
 
-    [dbManager.dbQueue inTransaction:block];
-}
-//关闭
-- (void)close {
-    [dbManager.dbQueue close];
-}
+
 #pragma mark - private
 
 

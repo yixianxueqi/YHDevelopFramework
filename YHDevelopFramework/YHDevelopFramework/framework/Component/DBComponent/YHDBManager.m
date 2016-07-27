@@ -9,12 +9,10 @@
 #import "YHDBManager.h"
 #import <objc/runtime.h>
 
-//开启一个异步子线程
-#define AThread(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), (block));
 //数据库路径
-#define dbPath [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]stringByAppendingPathComponent:@"db"]
+#define dbFilePath [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]stringByAppendingPathComponent:@"db"]
 //valueStore数据库名字
-#define dbName [NSString stringWithFormat:@"%@_kv.db",[[NSBundle mainBundle] bundleIdentifier]]
+#define dbKVName [NSString stringWithFormat:@"%@_kv.db",[[NSBundle mainBundle] bundleIdentifier]]
 //fmdb数据库名字
 #define dbSQLName [NSString stringWithFormat:@"%@_sql.db",[[NSBundle mainBundle] bundleIdentifier]]
 
@@ -40,11 +38,17 @@
 
 #pragma mark - fmdb
 
+- (YHDBSQLite *)getdbSqlite {
 
+    return self.dbSQLite;
+}
 
 #pragma mark - YTKKeyValueStore
 
+- (YHDBYTKValueStore *)getKeyValueStore {
 
+    return self.dbValueStore;
+}
 
 #pragma mark - private
 - (BOOL)creatFilePath {
@@ -52,10 +56,10 @@
     //创建数据库所在的文件夹
     BOOL isDir = false;
     BOOL isSuc = NO;
-    BOOL isDirExist = [[NSFileManager defaultManager] fileExistsAtPath:dbPath isDirectory:&isDir];
+    BOOL isDirExist = [[NSFileManager defaultManager] fileExistsAtPath:dbFilePath isDirectory:&isDir];
     if (!(isDir && !isDirExist)) {
         //目录不存在，则创建目录
-        isSuc = [[NSFileManager defaultManager] createDirectoryAtPath:dbPath withIntermediateDirectories:YES attributes:nil error:nil];
+        isSuc = [[NSFileManager defaultManager] createDirectoryAtPath:dbFilePath withIntermediateDirectories:YES attributes:nil error:nil];
     }
     return isSuc;
 }
@@ -64,7 +68,8 @@
 - (YHDBSQLite *)dbSQLite {
 
     if (!_dbSQLite) {
-        _dbSQLite = [YHDBSQLite sharedDBManagerWithFile:[dbPath stringByAppendingPathComponent:dbSQLName]];
+        NSString *filePath = [dbFilePath stringByAppendingPathComponent:dbSQLName];
+        _dbSQLite = [YHDBSQLite sharedDBManagerWithFile:filePath];
     }
     return _dbSQLite;
 }
@@ -72,7 +77,8 @@
 - (YHDBYTKValueStore *)dbValueStore {
 
     if (!_dbValueStore) {
-        _dbValueStore = [YHDBYTKValueStore sharedDBManagerWithFile:[dbPath stringByAppendingPathComponent:dbName]];
+        NSString *filePath = [dbFilePath stringByAppendingPathComponent:dbKVName];
+        _dbValueStore = [YHDBYTKValueStore sharedDBManagerWithFile:filePath];
     }
     return _dbValueStore;
 }

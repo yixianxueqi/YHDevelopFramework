@@ -13,9 +13,10 @@
 #import "UIImageView+BorderChange.h"
 #import "Entity.h"
 #import "BaseView.h"
-#import "YHDBSQLite.h"
+#import "YHDBManager.h"
 #import "Person.h"
 #import <objc/runtime.h>
+#import "NSObject+JsonAndDic.h"
 
 @interface ViewController ()<YHCrashHandle,YHLoggerHandle>
 
@@ -40,7 +41,7 @@
 //        [self testHUD];
 //    });
 //    [self testTools];
-
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -50,8 +51,8 @@
     [self.igv2 cornerBorder:5];
 //    [self testBGView];
 //    [self testChildThreadCrash];
-//    [self testDB];
-    [self testRuntime];
+    [self testDB];
+//    [self testRuntime];
     
 }
 #pragma mark - Test
@@ -64,20 +65,32 @@
 
 - (void)testDB {
 
-//    YHDBSQLite *manager = [YHDBSQLite sharedDBManager];
-//    [manager doInTransaction:^(FMDatabase *db, BOOL *rollback) {
-//        NSString *sql = @"create table bulktest1 (id integer primary key autoincrement, x text);"
-//                        "insert into bulktest1 (x) values ('XXX');";
-//        BOOL flag = [db executeStatements:sql];
-//        DDLogVerbose(@"%d",flag);
-//        sql = @"select * from bulktest1;";
-//        FMResultSet *s = [db executeQuery:sql];
-//        while ([s next]) {
-//            NSString *text = [s stringForColumn:@"x"];
-//            DDLogVerbose(@"%@",text);
-//        }
-//    }];
-    
+//    YHDBYTKValueStore *stroe = [[[YHDBManager alloc] init] getKeyValueStore];
+//    NSString *tableName = @"YTKVS";
+//    [stroe createTableWithName:tableName];
+//    NSString *keyid = [stroe putObject:[[self per] modelToJSONObject] intoTable:tableName];
+//    id pers = [stroe getYTKKeyValueItemById:keyid fromTable:tableName].itemObject;
+//    DDLogVerbose(@"%@",pers);
+//    NSString *keyID = [stroe putNumber:@2 intoTable:tableName];
+//    DDLogVerbose(@"%@",[stroe getNumberById:keyID fromTable:tableName]);
+//    [stroe clearTable:tableName];
+//    NSArray *list = [stroe getAllItemsFromTable:tableName];
+//    for (YTKKeyValueItem *item in list) {
+//        
+//        DDLogVerbose(@"%@",item.itemObject);
+//    }
+    NSLog(@"%@",[[[self per] toDic] toJsonString]);
+}
+
+- (Person *)per {
+
+    Person *pers = [[Person alloc] init];
+    pers.name = @"123";
+    pers.age = 21;
+    pers.sex = YES;
+    pers.dic = @{@"1":@"0"};
+    pers.list = @[@"1",@"2",@"3",@"4"];
+    return pers;
 }
 
 - (void)testChildThreadCrash {
