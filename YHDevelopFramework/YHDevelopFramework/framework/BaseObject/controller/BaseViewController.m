@@ -15,9 +15,21 @@
 @implementation BaseViewController
 
 #pragma mark - life cycle
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    //注册语言变换通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(languageChanged) name:LanguageChangeNotifiacation object:nil];
+}
+
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+}
+
+- (void)dealloc {
+    //移除语言通知的监听
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:LanguageChangeNotifiacation object:nil];
 }
 
 #pragma mark - define
@@ -61,6 +73,11 @@
     hud.yOffset = 100.f;
     [hud removeFromSuperViewOnHide];
     [hud hide:YES afterDelay:duration];
+}
+
+#pragma mark - 应用内语言国际化
+- (void)languageChanged {
+    //子类通过重写此方法，来实现语言转变
 }
 
 @end

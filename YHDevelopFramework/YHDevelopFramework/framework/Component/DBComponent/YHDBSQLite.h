@@ -24,4 +24,12 @@
  */
 + (instancetype)sharedDBManagerWithFile:(NSString *)path;
 
+/*
+ *  有待补充完善
+ */
+//事务中操作
+- (void)inTransaction:(void (^)(FMDatabase *db, BOOL *rollback))block;
+//操作数据库
+- (void)inDatabase:(void (^)(FMDatabase *db))block;
+
 @end

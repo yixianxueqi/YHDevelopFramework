@@ -29,7 +29,14 @@ static YHDBSQLite *dbManager;
 }
 #pragma mark - define
 
+- (void)inTransaction:(void (^)(FMDatabase *, BOOL *))block {
 
+    [self.dbQueue inTransaction:block];
+}
+//操作数据库
+- (void)inDatabase:(void (^)(FMDatabase *db))block {
+    [self.dbQueue inDatabase:block];
+}
 
 #pragma mark - private
 

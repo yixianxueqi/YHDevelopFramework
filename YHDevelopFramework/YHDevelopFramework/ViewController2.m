@@ -8,15 +8,43 @@
 
 #import "ViewController2.h"
 
+@interface ViewController2 ()
+
+@property (weak, nonatomic) IBOutlet UIButton *btn2;
+
+@end
+
 @implementation ViewController2
 
 #pragma mark - life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        [self testHUD];
-    });
+
+}
+
+- (void)testNoti:(id)obj {
+
+    NSLog(@"aaa");
+}
+
+- (void)dealloc {
+
+    
+}
+
+- (IBAction)btnClick:(UIButton *)sender {
+    
+    if ([[InternationalControl shareLanguageControl] getLanguage] == 1) {
+        [[InternationalControl shareLanguageControl] setLanguage:LanguageEnum_EN];
+    } else {
+        [[InternationalControl shareLanguageControl] setLanguage:LanguageEnum_ZHCN];
+    }
+}
+
+- (void)languageChanged {
+
+    NSLog(@"viewcontroller 2");
+    [self.btn2 setTitle:LocalLanguage(@"gg", nil) forState:UIControlStateNormal];
 }
 
 #pragma mark - define

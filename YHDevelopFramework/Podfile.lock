@@ -30,6 +30,7 @@ PODS:
   - MBProgressHUD (0.9.2)
   - MJRefresh (3.1.10)
   - NullSafe (1.2.2)
+  - RegexKitLite (4.0)
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
   - SDWebImage/Core (3.8.1)
@@ -48,8 +49,9 @@ DEPENDENCIES:
   - MBProgressHUD (~> 0.9.2)
   - MJRefresh (~> 3.1.9)
   - NullSafe (~> 1.2.2)
+  - RegexKitLite (~> 4.0)
   - SDWebImage (~> 3.8.1)
-  - YTKKeyValueStore
+  - YTKKeyValueStore (~> 0.1.2)
   - YYKit (~> 1.0.7)
 
 SPEC CHECKSUMS:
@@ -61,6 +63,7 @@ SPEC CHECKSUMS:
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJRefresh: bb72948c985914b0b5cecac573a2c69a8915fb02
   NullSafe: cbf1f77a24558e49bc76e2673f31250d3087c792
+  RegexKitLite: c0e4c12e6e7de0769f3a3ed679f0f61604170661
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   YTKKeyValueStore: 4d002941540dd5108fa23009b71e0f2f937f7a0f
   YYKit: 843d1b26e20b82c695790c9a89907eaa1e99907f

@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ * @class  NSObject (JsonAndDic)
+ *
+ * @abstract 将对象转化为字典或json字符串
+ *
+ */
 @interface NSObject (JsonAndDic)
 
 //将对象转化为json

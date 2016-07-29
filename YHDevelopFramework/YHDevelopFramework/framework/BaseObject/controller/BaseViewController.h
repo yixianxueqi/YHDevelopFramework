@@ -13,6 +13,7 @@
 #import "UIView+Frame.h"
 #import "NSDate+YHDateFormat.h"
 #import "YHTools.h"
+#import "InternationalControl.h"
 /**
  * @class  BaseViewController
  *
@@ -29,5 +30,6 @@
 - (void)showMBProgressHUDWithText:(NSString *)text;
 //显示文字提示并达到指定时间
 - (void)showMBProgressHUDWithText:(NSString *)text duration:(CGFloat)duration;
-
+//语言环境改变调用的方法
+- (void)languageChanged;
 @end

@@ -17,11 +17,16 @@
 #import "Person.h"
 #import <objc/runtime.h>
 #import "NSObject+JsonAndDic.h"
+#import "NSNumber+Formatter.h"
+#import "NSString+Secret.h"
+#import "RegularCheck.h"
+#import "InternationalControl.h"
 
 @interface ViewController ()<YHCrashHandle,YHLoggerHandle>
 
 @property (weak, nonatomic) IBOutlet UIImageView *igv1;
 @property (weak, nonatomic) IBOutlet UIImageView *igv2;
+@property (weak, nonatomic) IBOutlet UIButton *btn;
 
 @end
 
@@ -41,7 +46,7 @@
 //        [self testHUD];
 //    });
 //    [self testTools];
-    
+    [self testLanguage];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -51,11 +56,32 @@
     [self.igv2 cornerBorder:5];
 //    [self testBGView];
 //    [self testChildThreadCrash];
-    [self testDB];
+//    [self testDB];
 //    [self testRuntime];
+//    [self testNumberFormatter];
+//    [self testRegularAndmd5];
     
 }
 #pragma mark - Test
+
+- (void)testLanguage {
+
+    DDLogVerbose(@"%ld",[[InternationalControl shareLanguageControl] getLanguage]);
+}
+
+- (void)testRegularAndmd5 {
+
+    DDLogVerbose(@"%@",[@"123" md5]);
+    DDLogVerbose(@"%d",[RegularCheck checkEmail:@"yixianxueqiqq.com"]);
+}
+
+- (void)testNumberFormatter {
+
+    NSNumber *num1 = @1.5;
+    DDLogVerbose(@"%@",[num1 percentageFormatter]);
+    NSNumber *num2 = @112345678;
+    DDLogVerbose(@"%@",[num2 scienceFormatter]);
+}
 
 - (void)testRuntime {
 
@@ -237,6 +263,27 @@
     free(properties);
     return list;
 }
+
+- (void)languageChanged {
+
+    DDLogVerbose(@"viewcontroller 1");
+    DDLogVerbose(@"%@",LLanguage(@"gg"));
+    [self.btn setTitle:LocalLanguage(@"say",nil) forState:UIControlStateNormal];
+}
+
+#pragma mark - btn
+
+- (IBAction)btnClick:(UIButton *)sender {
+    
+    if ([[InternationalControl shareLanguageControl] getLanguage] == 1) {
+        [[InternationalControl shareLanguageControl] setLanguage:LanguageEnum_EN];
+    } else {
+        [[InternationalControl shareLanguageControl] setLanguage:LanguageEnum_ZHCN];
+    }
+//    [sender setTitle:[InternationalControl localString:@"say" annotate:@""] forState:UIControlStateNormal];  
+    [sender setTitle:LocalLanguage(@"say",nil) forState:UIControlStateNormal];
+}
+
 
 #pragma mark - YHLoggerHandle
 
