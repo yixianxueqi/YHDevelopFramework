@@ -12,6 +12,7 @@
 
 @interface YHInternationalControl ()
 
+@property (nonatomic,assign) NSUInteger type;
 
 @end
 
@@ -40,7 +41,7 @@ static YHInternationalControl *control;
 //获取本地化语言
 + (NSString *)localString:(NSString *)key Annotate:(NSString *)annotate {
 
-    NSInteger index = [[NSUserDefaults standardUserDefaults] integerForKey:kLanguageType];
+    NSInteger index = control.type;
     
     if (index == LanguageEnum_ZHCN) {
         //中文
@@ -58,12 +59,22 @@ static YHInternationalControl *control;
     if (!(index == [self getLanguage])) {
         [[NSUserDefaults standardUserDefaults] setInteger:index forKey:kLanguageType];
         [[NSNotificationCenter defaultCenter] postNotificationName:LanguageChangeNotifiacation object:[NSNumber numberWithInteger:index]];
+        control.type = index;
     }
 }
 
 - (LanguageEnum)getLanguage {
 
     return [[NSUserDefaults standardUserDefaults] integerForKey:kLanguageType];
+}
+
+#pragma mark - getter/setter
+- (NSUInteger)type {
+
+    if (!_type) {
+        _type = [self getLanguage];
+    }
+    return _type;
 }
 
 @end

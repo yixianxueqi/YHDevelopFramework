@@ -264,11 +264,11 @@
 }
 
 - (void)languageChanged {
-    NSString *str = LLanguage(@"23");
+
     DDLogVerbose(@"viewcontroller 1");
+
     DDLogVerbose(@"%@",LLanguage(@"gg"));
-//    DDLogVerbose(@"%@",LLanguage(@"gg"));
-//    [self.btn setTitle:LocalLanguage(@"say",nil) forState:UIControlStateNormal];
+    [self.btn setTitle:LocalLanguage(@"say",nil) forState:UIControlStateNormal];
 }
 
 #pragma mark - btn
@@ -280,8 +280,7 @@
     } else {
         [[YHInternationalControl shareLanguageControl] setLanguage:LanguageEnum_ZHCN];
     }
-//    [sender setTitle:[InternationalControl localString:@"say" annotate:@""] forState:UIControlStateNormal];  
-//    [sender setTitle:LocalLanguage(@"say",nil) forState:UIControlStateNormal];
+    [sender setTitle:LocalLanguage(@"say",nil) forState:UIControlStateNormal];
 }
 
 

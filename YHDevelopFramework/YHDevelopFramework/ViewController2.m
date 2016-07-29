@@ -44,7 +44,7 @@
 - (void)languageChanged {
 
     NSLog(@"viewcontroller 2");
-//    [self.btn2 setTitle:LocalLanguage(@"gg", nil) forState:UIControlStateNormal];
+    [self.btn2 setTitle:LocalLanguage(@"gg", nil) forState:UIControlStateNormal];
 }
 
 #pragma mark - define
