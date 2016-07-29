@@ -8,16 +8,16 @@
 
 #define kLanguageType @"LanguageType"
 
-#import "InternationalControl.h"
+#import "YHInternationalControl.h"
 
-@interface InternationalControl ()
+@interface YHInternationalControl ()
 
 
 @end
 
-@implementation InternationalControl
+@implementation YHInternationalControl
 
-static InternationalControl *control;
+static YHInternationalControl *control;
 + (instancetype)shareLanguageControl {
 
     static dispatch_once_t onceToken;

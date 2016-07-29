@@ -22,7 +22,7 @@
 		DB53F70A1D4892F00065F49E /* NSNumber+Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7091D4892F00065F49E /* NSNumber+Formatter.m */; };
 		DB53F7101D4898160065F49E /* NSString+Secret.m in Sources */ = {isa = PBXBuildFile; fileRef = DB53F70F1D4898160065F49E /* NSString+Secret.m */; };
 		DB53F7131D48A02D0065F49E /* RegularCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7121D48A02D0065F49E /* RegularCheck.m */; };
-		DB53F7241D48AF800065F49E /* InternationalControl.m in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7231D48AF800065F49E /* InternationalControl.m */; };
+		DB53F7241D48AF800065F49E /* YHInternationalControl.m in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7231D48AF800065F49E /* YHInternationalControl.m */; };
 		DB63FAC11D37811B000C06F5 /* YHCrashCatch.m in Sources */ = {isa = PBXBuildFile; fileRef = DB63FAC01D37811B000C06F5 /* YHCrashCatch.m */; };
 		DBA450B01D2CE5E8001ADEDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA450AF1D2CE5E8001ADEDC /* main.m */; };
 		DBA450B31D2CE5E8001ADEDC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA450B21D2CE5E8001ADEDC /* AppDelegate.m */; };
@@ -76,8 +76,8 @@
 		DB53F70F1D4898160065F49E /* NSString+Secret.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Secret.m"; sourceTree = "<group>"; };
 		DB53F7111D48A02D0065F49E /* RegularCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularCheck.h; sourceTree = "<group>"; };
 		DB53F7121D48A02D0065F49E /* RegularCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularCheck.m; sourceTree = "<group>"; };
-		DB53F7221D48AF800065F49E /* InternationalControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InternationalControl.h; sourceTree = "<group>"; };
-		DB53F7231D48AF800065F49E /* InternationalControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InternationalControl.m; sourceTree = "<group>"; };
+		DB53F7221D48AF800065F49E /* YHInternationalControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHInternationalControl.h; sourceTree = "<group>"; };
+		DB53F7231D48AF800065F49E /* YHInternationalControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHInternationalControl.m; sourceTree = "<group>"; };
 		DB63FABF1D37811B000C06F5 /* YHCrashCatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHCrashCatch.h; sourceTree = "<group>"; };
 		DB63FAC01D37811B000C06F5 /* YHCrashCatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHCrashCatch.m; sourceTree = "<group>"; };
 		DBA450AB1D2CE5E8001ADEDC /* YHDevelopFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YHDevelopFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -230,6 +230,7 @@
 		DBA450C71D2CE975001ADEDC /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				DBC66F531D4B5179009666AF /* fileComponent */,
 				DBA450D81D2CEC1B001ADEDC /* DBComponent */,
 				DBA450D71D2CEB5F001ADEDC /* logComponent */,
 				DBA450D61D2CEB3B001ADEDC /* languageComponent */,
@@ -288,8 +289,8 @@
 		DBA450D61D2CEB3B001ADEDC /* languageComponent */ = {
 			isa = PBXGroup;
 			children = (
-				DB53F7221D48AF800065F49E /* InternationalControl.h */,
-				DB53F7231D48AF800065F49E /* InternationalControl.m */,
+				DB53F7221D48AF800065F49E /* YHInternationalControl.h */,
+				DB53F7231D48AF800065F49E /* YHInternationalControl.m */,
 			);
 			path = languageComponent;
 			sourceTree = "<group>";
@@ -392,6 +393,13 @@
 				DBB8629C1D3CD60500A5951F /* Entity.m */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		DBC66F531D4B5179009666AF /* fileComponent */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = fileComponent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -534,7 +542,7 @@
 				DB3DA0C21D34E0190016D137 /* YHLogger.m in Sources */,
 				DB53F70A1D4892F00065F49E /* NSNumber+Formatter.m in Sources */,
 				DBA450CE1D2CEA91001ADEDC /* BaseViewController.m in Sources */,
-				DB53F7241D48AF800065F49E /* InternationalControl.m in Sources */,
+				DB53F7241D48AF800065F49E /* YHInternationalControl.m in Sources */,
 				DB44B54A1D3F5CE0000D98C5 /* YHDBSQLite.m in Sources */,
 				DB3DA0BF1D34D2500016D137 /* UIView+Frame.m in Sources */,
 				DB44B54D1D3F8371000D98C5 /* YHDBManager.m in Sources */,

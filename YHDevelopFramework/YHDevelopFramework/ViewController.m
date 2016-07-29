@@ -20,7 +20,6 @@
 #import "NSNumber+Formatter.h"
 #import "NSString+Secret.h"
 #import "RegularCheck.h"
-#import "InternationalControl.h"
 
 @interface ViewController ()<YHCrashHandle,YHLoggerHandle>
 
@@ -275,10 +274,10 @@
 
 - (IBAction)btnClick:(UIButton *)sender {
     
-    if ([[InternationalControl shareLanguageControl] getLanguage] == 1) {
-        [[InternationalControl shareLanguageControl] setLanguage:LanguageEnum_EN];
+    if ([[YHInternationalControl shareLanguageControl] getLanguage] == 1) {
+        [[YHInternationalControl shareLanguageControl] setLanguage:LanguageEnum_EN];
     } else {
-        [[InternationalControl shareLanguageControl] setLanguage:LanguageEnum_ZHCN];
+        [[YHInternationalControl shareLanguageControl] setLanguage:LanguageEnum_ZHCN];
     }
 //    [sender setTitle:[InternationalControl localString:@"say" annotate:@""] forState:UIControlStateNormal];  
     [sender setTitle:LocalLanguage(@"say",nil) forState:UIControlStateNormal];

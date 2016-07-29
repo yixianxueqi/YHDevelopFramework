@@ -34,17 +34,17 @@
 
 - (IBAction)btnClick:(UIButton *)sender {
     
-    if ([[InternationalControl shareLanguageControl] getLanguage] == 1) {
-        [[InternationalControl shareLanguageControl] setLanguage:LanguageEnum_EN];
+    if ([[YHInternationalControl shareLanguageControl] getLanguage] == 1) {
+        [[YHInternationalControl shareLanguageControl] setLanguage:LanguageEnum_EN];
     } else {
-        [[InternationalControl shareLanguageControl] setLanguage:LanguageEnum_ZHCN];
+        [[YHInternationalControl shareLanguageControl] setLanguage:LanguageEnum_ZHCN];
     }
 }
 
 - (void)languageChanged {
 
     NSLog(@"viewcontroller 2");
-    [self.btn2 setTitle:LocalLanguage(@"gg", nil) forState:UIControlStateNormal];
+//    [self.btn2 setTitle:LocalLanguage(@"gg", nil) forState:UIControlStateNormal];
 }
 
 #pragma mark - define

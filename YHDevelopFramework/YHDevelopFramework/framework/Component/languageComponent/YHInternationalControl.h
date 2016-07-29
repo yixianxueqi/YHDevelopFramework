@@ -33,7 +33,7 @@ typedef NS_ENUM(NSUInteger,LanguageEnum) {
  * @abstract 语言国际化
  *
  */
-@interface InternationalControl : NSObject
+@interface YHInternationalControl : NSObject
 
 + (instancetype)shareLanguageControl;
 //设置语言

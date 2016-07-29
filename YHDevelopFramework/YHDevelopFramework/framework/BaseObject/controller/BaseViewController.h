@@ -13,7 +13,7 @@
 #import "UIView+Frame.h"
 #import "NSDate+YHDateFormat.h"
 #import "YHTools.h"
-#import "InternationalControl.h"
+#import "YHInternationalControl.h"
 /**
  * @class  BaseViewController
  *
