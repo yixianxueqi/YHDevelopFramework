@@ -65,7 +65,7 @@
 
 - (void)testLanguage {
 
-    DDLogVerbose(@"%ld",[[InternationalControl shareLanguageControl] getLanguage]);
+    DDLogVerbose(@"%ld",[[YHInternationalControl shareLanguageControl] getLanguage]);
 }
 
 - (void)testRegularAndmd5 {
@@ -264,10 +264,11 @@
 }
 
 - (void)languageChanged {
-
+    NSString *str = LLanguage(@"23");
     DDLogVerbose(@"viewcontroller 1");
     DDLogVerbose(@"%@",LLanguage(@"gg"));
-    [self.btn setTitle:LocalLanguage(@"say",nil) forState:UIControlStateNormal];
+//    DDLogVerbose(@"%@",LLanguage(@"gg"));
+//    [self.btn setTitle:LocalLanguage(@"say",nil) forState:UIControlStateNormal];
 }
 
 #pragma mark - btn
@@ -280,7 +281,7 @@
         [[YHInternationalControl shareLanguageControl] setLanguage:LanguageEnum_ZHCN];
     }
 //    [sender setTitle:[InternationalControl localString:@"say" annotate:@""] forState:UIControlStateNormal];  
-    [sender setTitle:LocalLanguage(@"say",nil) forState:UIControlStateNormal];
+//    [sender setTitle:LocalLanguage(@"say",nil) forState:UIControlStateNormal];
 }
 
 

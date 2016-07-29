@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 //国际化语言调用宏
-#define LocalLanguage(key,annotate) [InternationalControl localString:(key) Annotate:(annotate)]
+#define LocalLanguage(key,annotate) [YHInternationalControl localString:(key) Annotate:(annotate)]
 // 简便国际化语言调用宏
 #define LLanguage(key) LocalLanguage(key,nil)
 //语言变更通知
