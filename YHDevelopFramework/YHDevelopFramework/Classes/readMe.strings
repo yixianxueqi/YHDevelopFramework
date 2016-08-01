@@ -31,6 +31,8 @@
 #       |
 #       Compontent/    :功能组件
 #           |
+#           fileComponent/  :文件组件
+#           |
 #           DBComponent/    :数据库组件
 #           |
 #           logComponent/   :日志组件

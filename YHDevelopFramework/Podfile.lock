@@ -39,6 +39,7 @@ PODS:
   - YYKit (1.0.7):
     - YYKit/no-arc (= 1.0.7)
   - YYKit/no-arc (1.0.7)
+  - ZipArchive (1.4.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
@@ -53,6 +54,7 @@ DEPENDENCIES:
   - SDWebImage (~> 3.8.1)
   - YTKKeyValueStore (~> 0.1.2)
   - YYKit (~> 1.0.7)
+  - ZipArchive (~> 1.4.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -67,5 +69,6 @@ SPEC CHECKSUMS:
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   YTKKeyValueStore: 4d002941540dd5108fa23009b71e0f2f937f7a0f
   YYKit: 843d1b26e20b82c695790c9a89907eaa1e99907f
+  ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
 
 COCOAPODS: 0.39.0

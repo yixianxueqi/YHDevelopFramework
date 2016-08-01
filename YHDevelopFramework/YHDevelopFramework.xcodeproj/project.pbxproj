@@ -43,6 +43,9 @@
 		DBC66F4D1D4B2B21009666AF /* ZHCN_Language.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBC66F4C1D4B2B21009666AF /* ZHCN_Language.strings */; };
 		DBC66F4F1D4B2B44009666AF /* EN_Language.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBC66F4E1D4B2B44009666AF /* EN_Language.strings */; };
 		DBC66F521D4B382B009666AF /* ViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC66F511D4B382B009666AF /* ViewController3.m */; };
+		DBF277171D4C830100EDB2EB /* YHFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF277161D4C830100EDB2EB /* YHFileManager.m */; };
+		DBF2771A1D4C847800EDB2EB /* YHFileCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF277191D4C847800EDB2EB /* YHFileCompress.m */; };
+		DBF2771D1D4C84BE00EDB2EB /* YHFileAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF2771C1D4C84BE00EDB2EB /* YHFileAction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +116,12 @@
 		DBC66F4E1D4B2B44009666AF /* EN_Language.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = EN_Language.strings; sourceTree = "<group>"; };
 		DBC66F501D4B382B009666AF /* ViewController3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController3.h; sourceTree = "<group>"; };
 		DBC66F511D4B382B009666AF /* ViewController3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController3.m; sourceTree = "<group>"; };
+		DBF277151D4C830100EDB2EB /* YHFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHFileManager.h; sourceTree = "<group>"; };
+		DBF277161D4C830100EDB2EB /* YHFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHFileManager.m; sourceTree = "<group>"; };
+		DBF277181D4C847800EDB2EB /* YHFileCompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHFileCompress.h; sourceTree = "<group>"; };
+		DBF277191D4C847800EDB2EB /* YHFileCompress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHFileCompress.m; sourceTree = "<group>"; };
+		DBF2771B1D4C84BE00EDB2EB /* YHFileAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHFileAction.h; sourceTree = "<group>"; };
+		DBF2771C1D4C84BE00EDB2EB /* YHFileAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHFileAction.m; sourceTree = "<group>"; };
 		DD0E1219D0BEF083B310C3CF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -398,6 +407,12 @@
 		DBC66F531D4B5179009666AF /* fileComponent */ = {
 			isa = PBXGroup;
 			children = (
+				DBF277151D4C830100EDB2EB /* YHFileManager.h */,
+				DBF277161D4C830100EDB2EB /* YHFileManager.m */,
+				DBF277181D4C847800EDB2EB /* YHFileCompress.h */,
+				DBF277191D4C847800EDB2EB /* YHFileCompress.m */,
+				DBF2771B1D4C84BE00EDB2EB /* YHFileAction.h */,
+				DBF2771C1D4C84BE00EDB2EB /* YHFileAction.m */,
 			);
 			path = fileComponent;
 			sourceTree = "<group>";
@@ -533,6 +548,7 @@
 				DB53F7131D48A02D0065F49E /* RegularCheck.m in Sources */,
 				DBA450B61D2CE5E8001ADEDC /* ViewController.m in Sources */,
 				DB22B6061D40C5530009A973 /* Person.m in Sources */,
+				DBF277171D4C830100EDB2EB /* YHFileManager.m in Sources */,
 				DBBCA3D71D3DD4F800ED7014 /* ViewController2.m in Sources */,
 				DBB862991D3CBF2000A5951F /* UIImageView+BorderChange.m in Sources */,
 				DBC66F521D4B382B009666AF /* ViewController3.m in Sources */,
@@ -540,6 +556,7 @@
 				DBA450E91D2D0771001ADEDC /* NSDate+YHDateFormat.m in Sources */,
 				DB53F7101D4898160065F49E /* NSString+Secret.m in Sources */,
 				DB3DA0C21D34E0190016D137 /* YHLogger.m in Sources */,
+				DBF2771A1D4C847800EDB2EB /* YHFileCompress.m in Sources */,
 				DB53F70A1D4892F00065F49E /* NSNumber+Formatter.m in Sources */,
 				DBA450CE1D2CEA91001ADEDC /* BaseViewController.m in Sources */,
 				DB53F7241D48AF800065F49E /* YHInternationalControl.m in Sources */,
@@ -550,6 +567,7 @@
 				DBA450D41D2CEADD001ADEDC /* BaseService.m in Sources */,
 				DB53F7041D488C990065F49E /* BaseTableViewCell.m in Sources */,
 				DB3DA0BC1D34BC360016D137 /* YHDeviceTools.m in Sources */,
+				DBF2771D1D4C84BE00EDB2EB /* YHFileAction.m in Sources */,
 				DBA450D11D2CEAAE001ADEDC /* BaseView.m in Sources */,
 				DB53F7071D488D290065F49E /* BaseCollectionViewCell.m in Sources */,
 				DBBCA3E11D3E074B00ED7014 /* UIImage+ChangeSize.m in Sources */,

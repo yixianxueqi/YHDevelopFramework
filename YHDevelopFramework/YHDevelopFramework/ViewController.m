@@ -20,6 +20,7 @@
 #import "NSNumber+Formatter.h"
 #import "NSString+Secret.h"
 #import "RegularCheck.h"
+#import "YHFileManager.h"
 
 @interface ViewController ()<YHCrashHandle,YHLoggerHandle>
 
@@ -35,17 +36,22 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     NSLog(@"%s",__func__);
+    [self testLogger];
     DDLogVerbose(@"%@",NSHomeDirectory());
 //    [self testDate];
 //    [self testDevice];
-    [self testLogger];
 //    [self testYYModel];
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        
 //        [self testHUD];
 //    });
 //    [self testTools];
-    [self testLanguage];
+//    [self testLanguage];
+    [self testFileManager];
+//    NSString *str = @"1,111.00";
+//    NSString *temp = [str stringByReplacingOccurrencesOfString:@"," withString:@""];
+//    NSNumber *num = @([temp doubleValue]);
+//    DDLogVerbose(@"%@",num);
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -62,6 +68,30 @@
     
 }
 #pragma mark - Test
+
+- (void)testFileManager {
+
+    YHFileManager *manager = [[YHFileManager alloc] init];
+    NSString *path = [YHFileManager tmpPath];
+    NSString *fileName = @"3.txt";
+    NSString *filePath = [path stringByAppendingPathComponent:fileName];
+    [manager isExistAtPath:filePath type:FileTypeFile];
+    NSString *dirPath = [NSHomeDirectory() stringByAppendingPathComponent:@"yh"];
+//    NSString *fileName = @"1.txt";
+//    [manager isExistAtPath:dirPath type:FileTypeDirectory];
+//    [manager isExistAtPath:[dirPath stringByAppendingPathComponent:fileName] type:FileTypeFile];
+//    DDLogVerbose(@"%@",[YHFileManager documentsPath]);
+//    DDLogVerbose(@"%@",[YHFileManager libraryPath]);
+//    DDLogVerbose(@"%@",[YHFileManager tmpPath]);
+//    DDLogVerbose(@"%@",[YHFileManager cachesPath]);
+//    DDLogVerbose(@"%@",[YHFileManager preferencesPath]);
+    [YHFileManager zipArchiveFolderWithPath:path toPath:path fileName:@"23" pwd:nil];
+    [YHFileManager unzipOpenFileWithPath:[path stringByAppendingPathComponent:@"23.zip"] toPath:dirPath pwd:nil];
+    DDLogVerbose(@"%@",[manager fileNameWithPath:path]);
+    [manager clearFile:[path stringByAppendingPathComponent:@"23.zip"]];
+    DDLogVerbose(@"%@",[manager fileNameWithPath:path]);
+    
+}
 
 - (void)testLanguage {
 

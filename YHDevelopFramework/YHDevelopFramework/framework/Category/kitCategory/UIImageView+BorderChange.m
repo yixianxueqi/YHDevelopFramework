@@ -13,13 +13,12 @@
 //圆形图片
 - (void)circleBorder {
   //添加遮罩形成圆形
-  CAShapeLayer *shapeLayer = [[CAShapeLayer alloc] init];
-  CGFloat width = self.bounds.size.width;
-  UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, width, width)];
-  shapeLayer.path = path.CGPath;
-  shapeLayer.fillColor = [UIColor whiteColor].CGColor;
-  self.layer.mask = shapeLayer;
-    
+    CAShapeLayer *shapeLayer = [[CAShapeLayer alloc] init];
+    CGFloat width = self.bounds.size.width;
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, width, width)];
+    shapeLayer.path = path.CGPath;
+    shapeLayer.fillColor = [UIColor whiteColor].CGColor;
+    self.layer.mask = shapeLayer;
 }
 //圆角图片
 - (void)cornerBorder:(CGFloat)radius {
