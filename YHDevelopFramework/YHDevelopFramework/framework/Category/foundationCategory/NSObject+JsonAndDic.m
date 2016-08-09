@@ -11,8 +11,8 @@
 
 @implementation NSObject (JsonAndDic)
 
-//将对象转化为json
-- (id)toJsonString {
+//将字典转化为json
+- (NSString *)toJsonString {
     
     if (![NSJSONSerialization isValidJSONObject:self]) {
         return nil;
@@ -22,7 +22,7 @@
     return jsonString;
 }
 //将对象转化为Dic
-- (id)toDic {
+- (NSDictionary *)toDic {
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     unsigned int propsCount;
     objc_property_t *props = class_copyPropertyList([self class], &propsCount);
@@ -42,9 +42,32 @@
         }
     }
     return dic;
-    return nil;
+}
+//字典转json
+- (NSString *)dicToJson:(NSDictionary *)dic {
+
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
+    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+}
+//json转字典
+- (NSDictionary *)jsonToDic:(NSString *)jsonStr {
+
+    if (!jsonStr || jsonStr.length == 0) {
+        return nil;
+    }
+    NSData *jsonData = [jsonStr dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *err;
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                        options:NSJSONReadingMutableContainers
+                                                          error:&err];
+    if(err) {
+        NSLog(@"json解析失败：%@",err);
+        return nil;
+    }
+    return dic;
 }
 
+#pragma mark - private
 - (id)getObjectInternal:(id)obj{
     if(!obj
        || [obj isKindOfClass:[NSString class]]

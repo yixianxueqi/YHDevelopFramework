@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6BA7A0B108064810A864A538 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9628ACA354870A8FADE8F0D1 /* libPods.a */; };
+		DB0243331D54268000E99FA8 /* NSString+Rect.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0243321D54268000E99FA8 /* NSString+Rect.m */; };
+		DB0243361D54290900E99FA8 /* YHNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0243351D54290900E99FA8 /* YHNetWork.m */; };
+		DB02433C1D54656C00E99FA8 /* YHReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02433B1D54656C00E99FA8 /* YHReachability.m */; };
 		DB22B6061D40C5530009A973 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22B6051D40C5530009A973 /* Person.m */; };
 		DB315B5E1D41FE9100069C87 /* YHDBYTKValueStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DB315B5D1D41FE9100069C87 /* YHDBYTKValueStore.m */; };
 		DB3DA0BC1D34BC360016D137 /* YHDeviceTools.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3DA0BB1D34BC360016D137 /* YHDeviceTools.m */; };
@@ -43,6 +46,8 @@
 		DBC66F4D1D4B2B21009666AF /* ZHCN_Language.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBC66F4C1D4B2B21009666AF /* ZHCN_Language.strings */; };
 		DBC66F4F1D4B2B44009666AF /* EN_Language.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBC66F4E1D4B2B44009666AF /* EN_Language.strings */; };
 		DBC66F521D4B382B009666AF /* ViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC66F511D4B382B009666AF /* ViewController3.m */; };
+		DBE835D81D587AAC00DABBBA /* testResources.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBE835D71D587AAC00DABBBA /* testResources.strings */; };
+		DBEAAC0F1D55D9A200A4E76A /* YHNetCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEAAC0E1D55D9A200A4E76A /* YHNetCache.m */; };
 		DBF277171D4C830100EDB2EB /* YHFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF277161D4C830100EDB2EB /* YHFileManager.m */; };
 		DBF2771A1D4C847800EDB2EB /* YHFileCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF277191D4C847800EDB2EB /* YHFileCompress.m */; };
 		DBF2771D1D4C84BE00EDB2EB /* YHFileAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF2771C1D4C84BE00EDB2EB /* YHFileAction.m */; };
@@ -51,6 +56,12 @@
 /* Begin PBXFileReference section */
 		7C43B3DB5A87B567429D9E18 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9628ACA354870A8FADE8F0D1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB0243311D54268000E99FA8 /* NSString+Rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Rect.h"; sourceTree = "<group>"; };
+		DB0243321D54268000E99FA8 /* NSString+Rect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Rect.m"; sourceTree = "<group>"; };
+		DB0243341D54290900E99FA8 /* YHNetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHNetWork.h; sourceTree = "<group>"; };
+		DB0243351D54290900E99FA8 /* YHNetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHNetWork.m; sourceTree = "<group>"; };
+		DB02433A1D54656C00E99FA8 /* YHReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHReachability.h; sourceTree = "<group>"; };
+		DB02433B1D54656C00E99FA8 /* YHReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHReachability.m; sourceTree = "<group>"; };
 		DB22B6041D40C5520009A973 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		DB22B6051D40C5530009A973 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		DB315B5C1D41FE9100069C87 /* YHDBYTKValueStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHDBYTKValueStore.h; sourceTree = "<group>"; };
@@ -116,6 +127,9 @@
 		DBC66F4E1D4B2B44009666AF /* EN_Language.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = EN_Language.strings; sourceTree = "<group>"; };
 		DBC66F501D4B382B009666AF /* ViewController3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController3.h; sourceTree = "<group>"; };
 		DBC66F511D4B382B009666AF /* ViewController3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController3.m; sourceTree = "<group>"; };
+		DBE835D71D587AAC00DABBBA /* testResources.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = testResources.strings; sourceTree = "<group>"; };
+		DBEAAC0D1D55D9A200A4E76A /* YHNetCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHNetCache.h; sourceTree = "<group>"; };
+		DBEAAC0E1D55D9A200A4E76A /* YHNetCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHNetCache.m; sourceTree = "<group>"; };
 		DBF277151D4C830100EDB2EB /* YHFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHFileManager.h; sourceTree = "<group>"; };
 		DBF277161D4C830100EDB2EB /* YHFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHFileManager.m; sourceTree = "<group>"; };
 		DBF277181D4C847800EDB2EB /* YHFileCompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHFileCompress.h; sourceTree = "<group>"; };
@@ -210,6 +224,7 @@
 				DB22B6051D40C5530009A973 /* Person.m */,
 				DBC66F501D4B382B009666AF /* ViewController3.h */,
 				DBC66F511D4B382B009666AF /* ViewController3.m */,
+				DBE835D71D587AAC00DABBBA /* testResources.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -291,6 +306,12 @@
 		DBA450D51D2CEB13001ADEDC /* httpComponent */ = {
 			isa = PBXGroup;
 			children = (
+				DB0243341D54290900E99FA8 /* YHNetWork.h */,
+				DB0243351D54290900E99FA8 /* YHNetWork.m */,
+				DB02433A1D54656C00E99FA8 /* YHReachability.h */,
+				DB02433B1D54656C00E99FA8 /* YHReachability.m */,
+				DBEAAC0D1D55D9A200A4E76A /* YHNetCache.h */,
+				DBEAAC0E1D55D9A200A4E76A /* YHNetCache.m */,
 			);
 			path = httpComponent;
 			sourceTree = "<group>";
@@ -354,6 +375,8 @@
 				DB53F7091D4892F00065F49E /* NSNumber+Formatter.m */,
 				DB53F70E1D4898160065F49E /* NSString+Secret.h */,
 				DB53F70F1D4898160065F49E /* NSString+Secret.m */,
+				DB0243311D54268000E99FA8 /* NSString+Rect.h */,
+				DB0243321D54268000E99FA8 /* NSString+Rect.m */,
 			);
 			path = foundationCategory;
 			sourceTree = "<group>";
@@ -479,6 +502,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBE835D81D587AAC00DABBBA /* testResources.strings in Resources */,
 				DBA450E61D2CEE2E001ADEDC /* readMe.strings in Resources */,
 				DBC66F4D1D4B2B21009666AF /* ZHCN_Language.strings in Resources */,
 				DBBCA3DE1D3DFC1300ED7014 /* YHList.plist in Resources */,
@@ -553,10 +577,12 @@
 				DBB862991D3CBF2000A5951F /* UIImageView+BorderChange.m in Sources */,
 				DBC66F521D4B382B009666AF /* ViewController3.m in Sources */,
 				DB3DA0C51D34ECF30016D137 /* YHLogFormat.m in Sources */,
+				DB02433C1D54656C00E99FA8 /* YHReachability.m in Sources */,
 				DBA450E91D2D0771001ADEDC /* NSDate+YHDateFormat.m in Sources */,
 				DB53F7101D4898160065F49E /* NSString+Secret.m in Sources */,
 				DB3DA0C21D34E0190016D137 /* YHLogger.m in Sources */,
 				DBF2771A1D4C847800EDB2EB /* YHFileCompress.m in Sources */,
+				DBEAAC0F1D55D9A200A4E76A /* YHNetCache.m in Sources */,
 				DB53F70A1D4892F00065F49E /* NSNumber+Formatter.m in Sources */,
 				DBA450CE1D2CEA91001ADEDC /* BaseViewController.m in Sources */,
 				DB53F7241D48AF800065F49E /* YHInternationalControl.m in Sources */,
@@ -566,11 +592,13 @@
 				DB53F7011D4889CF0065F49E /* NSObject+JsonAndDic.m in Sources */,
 				DBA450D41D2CEADD001ADEDC /* BaseService.m in Sources */,
 				DB53F7041D488C990065F49E /* BaseTableViewCell.m in Sources */,
+				DB0243361D54290900E99FA8 /* YHNetWork.m in Sources */,
 				DB3DA0BC1D34BC360016D137 /* YHDeviceTools.m in Sources */,
 				DBF2771D1D4C84BE00EDB2EB /* YHFileAction.m in Sources */,
 				DBA450D11D2CEAAE001ADEDC /* BaseView.m in Sources */,
 				DB53F7071D488D290065F49E /* BaseCollectionViewCell.m in Sources */,
 				DBBCA3E11D3E074B00ED7014 /* UIImage+ChangeSize.m in Sources */,
+				DB0243331D54268000E99FA8 /* NSString+Rect.m in Sources */,
 				DBA450B31D2CE5E8001ADEDC /* AppDelegate.m in Sources */,
 				DB63FAC11D37811B000C06F5 /* YHCrashCatch.m in Sources */,
 				DBA450B01D2CE5E8001ADEDC /* main.m in Sources */,

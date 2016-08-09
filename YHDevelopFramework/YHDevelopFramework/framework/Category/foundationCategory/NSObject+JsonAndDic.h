@@ -16,9 +16,13 @@
  */
 @interface NSObject (JsonAndDic)
 
-//将对象转化为json
-- (id)toJsonString;
+//将字典转化为json
+- (NSString *)toJsonString;
 //将对象转化为Dic
-- (id)toDic;
+- (NSDictionary *)toDic;
+//字典转json
+- (NSString *)dicToJson:(NSDictionary *)dic;
+//json转字典
+- (NSDictionary *)jsonToDic:(NSString *)jsonStr;
 
 @end

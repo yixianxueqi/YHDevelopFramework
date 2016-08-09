@@ -21,6 +21,8 @@
 #import "NSString+Secret.h"
 #import "RegularCheck.h"
 #import "YHFileManager.h"
+#import "YHNetCache.h"
+#import "YHNetWork.h"
 
 @interface ViewController ()<YHCrashHandle,YHLoggerHandle>
 
@@ -47,11 +49,9 @@
 //    });
 //    [self testTools];
 //    [self testLanguage];
-    [self testFileManager];
-//    NSString *str = @"1,111.00";
-//    NSString *temp = [str stringByReplacingOccurrencesOfString:@"," withString:@""];
-//    NSNumber *num = @([temp doubleValue]);
-//    DDLogVerbose(@"%@",num);
+//    [self testFileManager];
+    [self testYHNetwork];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -68,6 +68,38 @@
     
 }
 #pragma mark - Test
+
+- (void)testYHNetwork {
+
+//    YHNetCache *cache = [YHNetCache sharedCache];
+    NSString *get1 = @"http://59.42.254.235:8004/membermgt/mvc/member/queryNeighbourhood.json";
+    NSDictionary *dic1 = @{@"memberId":@"6060"};
+    NSString *get2 = @"http://bea.wufazhuce.com/OneForWeb/one/getHp_N";
+    NSDictionary *dic2 = @{@"strDate":@"2015-05-25",@"strRow":@"1"};
+    YHNetWork *network = [[YHNetWork alloc] init];
+    [YHNetWork setRequestTimeOut:30.f];
+    DDLogVerbose(@"Header: %@",[network getAllHeader]);
+    DDLogVerbose(@"responseAcceptableType: %@",[network getAllresponseAcceptableContentType]);
+    
+#if 0
+    [YHNetWork setCommonParam:dic1];
+    [network POST:get1 parameters:@{} success:^(id responseObj) {
+        DDLogVerbose(@"result: %@",responseObj);
+    } failure:^(NSError *error) {
+        DDLogVerbose(@"error: %@",error);
+    }];
+#endif
+#if 1
+    [YHNetWork setCommonParam:dic2];
+    [network isUseCache:YES];
+    [network GET:get2 parameters:nil success:^(id responseObj) {
+        
+        DDLogVerbose(@"result: %@",responseObj);
+    } failure:^(NSError *error) {
+        DDLogVerbose(@"error: %@",error);
+    }];
+#endif
+}
 
 - (void)testFileManager {
 

@@ -19,6 +19,10 @@
 #define RGBAColor(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
 //设置16进制颜色s
 #define XColor(rgbValue,a) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:(a)]
+//沙盒写数据
+#define sanBoxStore(key,value) [[NSUserDefaults standardUserDefaults] setValue:(value) forKey:(key)]
+//沙盒取数据
+#define sanBoxTake(key) [[NSUserDefaults standardUserDefaults] valueForKey:(key)]
 //读取本地图片
 #define localImage(file,ext) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:file ofType:ext]]
 //从plist获取字典
