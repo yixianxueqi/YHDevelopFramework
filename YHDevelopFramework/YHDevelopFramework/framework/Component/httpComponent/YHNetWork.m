@@ -23,6 +23,11 @@
 
 @end
 
+#pragma mark - UploadObj
+@implementation UploadObj
+
+@end
+
 #pragma mark - YHNetwork
 
 @interface YHNetWork ()
@@ -96,9 +101,11 @@ static NSArray *blackList;
     //发送请求
     NSString *beginTime = [self getCurrentTimeStamp];
     __weak typeof(self) weakSelf = self;
+    NSLog(@"http -> url:%@ \nparameters:\n%@ \n",URLString,realDic);
     return [self.sessionManager GET:URLString parameters:realDic progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         //缓存请求成功的内容
         [weakSelf cacheHttpRequestBeginTime:beginTime responseObj:responseObject requestEndTime:[self getCurrentTimeStamp] sigleID:sigleID];
+        NSLog(@"responseObject: %@",responseObject);
         if (success) {
             success(responseObject);
         }
@@ -146,15 +153,93 @@ static NSArray *blackList;
     //发送请求
     NSString *beginTime = [self getCurrentTimeStamp];
     __weak typeof(self) weakSelf = self;
+    NSLog(@"http -> url:%@ \nparameters:\n%@ \n",URLString,realDic);
     return [self.sessionManager POST:URLString parameters:realDic progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         //缓存请求成功的内容
         [weakSelf cacheHttpRequestBeginTime:beginTime responseObj:responseObject requestEndTime:[self getCurrentTimeStamp] sigleID:sigleID];
+        NSLog(@"responseObject: %@",responseObject);
         if (success) {
             success(responseObject);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [self networkFailureHandle:error];
     }];
+}
+/**
+ *  上传文件
+ *
+ *  @param obj                 上传文件配置对象
+ *  @param uploadProgressBlock 上传进度，需要更新UI的可放在此处
+ *  @param completionHandler   上传完成回调
+ *
+ *  @return NSURLSessionDataTask可以用来取消任务
+ */
+- (NSURLSessionUploadTask *)uploadTaskWithUploadObj:(UploadObj *)obj
+                                           progress:(void (^)(NSProgress *uploadProgress)) uploadProgressBlock
+                                  completionHandler:(void (^)(NSURLResponse *response, id responseObject, NSError *error))completionHandler {
+    
+    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST" URLString:obj.url parameters:obj.parameter constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        if (obj.type == UploadData) {
+            //上传data
+            [formData appendPartWithFileData:obj.data name:obj.name fileName:obj.fileName mimeType:obj.mimeType];
+        } else {
+            //上传文件
+            [formData appendPartWithFileURL:[NSURL fileURLWithPath:obj.fileUrl] name:obj.name fileName:obj.fileName mimeType:obj.mimeType error:nil];
+        }
+    } error:nil];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    AFHTTPResponseSerializer *serializer = [AFHTTPResponseSerializer serializer];
+    [serializer setAcceptableContentTypes:[NSSet setWithArray:@[@"application/json",@"text/json",@"text/html",@"text/javascript"]]];
+    manager.responseSerializer = serializer;
+    NSURLSessionUploadTask *uploadTask = [manager uploadTaskWithStreamedRequest:request progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+        if (uploadProgressBlock) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                uploadProgressBlock(uploadProgress);
+            });
+        }
+    } completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+        if (completionHandler) {
+            completionHandler(response,responseObject,error);
+        }
+    }];
+    [uploadTask resume];
+    return uploadTask;
+}
+/**
+ *  下载文件
+ *
+ *  @param URLString           请求地址
+ *  @param uploadProgressBlock 下载进度
+ *  @param fileLocationURL     文件下载本地存放路径
+ *  @param completionHandler   下载完成回调
+ *
+ *  @return NSURLSessionDataTask可以用来取消任务
+ */
+- (NSURLSessionDownloadTask *)downlaodTaskWithUrl:(NSString *)URLString
+                                         progress:(void (^)(NSProgress *downloadProgress)) downloadProgressBlock
+                                      destination:(NSString *)fileLocationURL
+                                completionHandler:(void (^)(NSURLResponse *response, NSURL *filePath, NSError *error))completionHandler {
+
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:URLString]];
+    [manager setDownloadTaskDidFinishDownloadingBlock:^NSURL * _Nullable(NSURLSession * _Nonnull session, NSURLSessionDownloadTask * _Nonnull downloadTask, NSURL * _Nonnull location) {
+        
+        return [NSURL fileURLWithPath:[fileLocationURL stringByAppendingPathComponent:downloadTask.response.suggestedFilename]];
+    }];
+    NSURLSessionDownloadTask *dowloadTask = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
+        if (downloadProgressBlock) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                downloadProgressBlock(downloadProgress);
+            });
+        }
+    } destination:nil completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+        if (completionHandler) {
+            completionHandler(response,filePath,error);
+        }
+    }];
+    [dowloadTask resume];
+    return dowloadTask;
 }
 
 #pragma mark - settings

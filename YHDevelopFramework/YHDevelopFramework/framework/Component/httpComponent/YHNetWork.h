@@ -19,7 +19,28 @@
 @property (nonatomic,copy) NSString *responseJsonStr;
 
 @end
+#pragma mark - UploadObj
 
+typedef NS_ENUM(NSInteger,UploadType) {
+
+    UploadFile = 1,
+    UploadData = 1 << 1,
+};
+//上传文件配置对象
+@interface UploadObj : NSObject
+
+@property (nonatomic,copy) NSString *url;
+@property (nonatomic,strong) NSDictionary *parameter;
+@property (nonatomic,assign) UploadType type;
+
+@property (nonatomic,copy) NSString *name;
+@property (nonatomic,copy) NSString *fileName;
+@property (nonatomic,copy) NSString *mimeType;
+
+@property (nonatomic,copy) NSString *fileUrl;
+@property (nonatomic,strong) NSData *data;
+
+@end
 
 //成功回调
 typedef void(^requestSuccessBlock)(id responseObj);
@@ -65,6 +86,33 @@ typedef void(^requestFailureBlock)(NSError *error);
                              parameters:(id)parameters
                                 success:(requestSuccessBlock)success
                                 failure:(requestFailureBlock)failure;
+
+/**
+ *  上传文件
+ *
+ *  @param obj                 上传文件配置对象
+ *  @param uploadProgressBlock 上传进度，需要更新UI的可放在此处
+ *  @param completionHandler   上传完成回调
+ *
+ *  @return NSURLSessionDataTask可以用来取消任务
+ */
+- (NSURLSessionUploadTask *)uploadTaskWithUploadObj:(UploadObj *)obj
+                                           progress:(void (^)(NSProgress *uploadProgress)) uploadProgressBlock
+                                  completionHandler:(void (^)(NSURLResponse *response, id responseObject, NSError *error))completionHandler;
+/**
+ *  下载文件
+ *
+ *  @param URLString           请求地址
+ *  @param uploadProgressBlock 下载进度
+ *  @param fileLocationURL     文件下载本地存放路径
+ *  @param completionHandler   下载完成回调
+ *
+ *  @return NSURLSessionDataTask可以用来取消任务
+ */
+- (NSURLSessionDownloadTask *)downlaodTaskWithUrl:(NSString *)URLString
+                                         progress:(void (^)(NSProgress *downloadProgress)) downloadProgressBlock
+                                      destination:(NSString *)fileLocationURL
+                                completionHandler:(void (^)(NSURLResponse *response, NSURL *filePath, NSError *error))completionHandler;
 
 #pragma mark - settings
 //设置请求超时时间

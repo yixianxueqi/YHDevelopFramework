@@ -76,6 +76,8 @@
     NSDictionary *dic1 = @{@"memberId":@"6060"};
     NSString *get2 = @"http://bea.wufazhuce.com/OneForWeb/one/getHp_N";
     NSDictionary *dic2 = @{@"strDate":@"2015-05-25",@"strRow":@"1"};
+    NSString *download1 = @"http://dl_dir.qq.com/qqfile/qq/QQforMac/QQ_V2.4.1.dmg";
+    NSString *download2 = @"http://farm3.staticflickr.com/2831/9823890176_82b4165653_b_d.jpg";
     YHNetWork *network = [[YHNetWork alloc] init];
     [YHNetWork setRequestTimeOut:30.f];
     DDLogVerbose(@"Header: %@",[network getAllHeader]);
@@ -89,9 +91,9 @@
         DDLogVerbose(@"error: %@",error);
     }];
 #endif
-#if 1
+#if 0
     [YHNetWork setCommonParam:dic2];
-    [network isUseCache:YES];
+//    [network isUseCache:YES];
     [network GET:get2 parameters:nil success:^(id responseObj) {
         
         DDLogVerbose(@"result: %@",responseObj);
@@ -99,6 +101,43 @@
         DDLogVerbose(@"error: %@",error);
     }];
 #endif
+#if 0
+    UploadObj *obj = [[UploadObj alloc] init];
+//    obj.type = UploadData;
+//    obj.fileName = [NSString stringWithFormat:@"%ld",(long)([[NSDate date] timeIntervalSince1970] * 1000)];
+//    obj.name = @"file";
+//    obj.mimeType = @"image/jpeg";
+//    obj.data = UIImageJPEGRepresentation([UIImage imageNamed:@"nodata_zore"], 0.15);
+    [network uploadTaskWithUploadObj:obj progress:^(NSProgress *uploadProgress) {
+        
+        DDLogVerbose(@"%f",uploadProgress.fractionCompleted);
+    } completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        
+        NSDictionary *dicJson=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        if (error) {
+            NSLog(@"error: %@",error);
+        } else {
+            NSLog(@"responseObject: %@",dicJson);
+        }
+        
+    }];
+    
+#endif
+#if 0
+    NSString *filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSURLSessionDownloadTask *task = [network downlaodTaskWithUrl:download2 progress:^(NSProgress *downloadProgress) {
+      
+        DDLogVerbose(@"progress: %f",downloadProgress.fractionCompleted);
+    } destination:filePath completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+        if (error) {
+            DDLogVerbose(@"error:%@",error);
+        } else {
+            DDLogVerbose(@"complete:filePath:%@",filePath);
+        }
+    }];
+    
+#endif
+    
 }
 
 - (void)testFileManager {
