@@ -23,12 +23,14 @@
 #import "YHFileManager.h"
 #import "YHNetCache.h"
 #import "YHNetWork.h"
-
+#import "Son.h"
+#import "YHFileDownLoadManager.h"
 @interface ViewController ()<YHCrashHandle,YHLoggerHandle>
 
 @property (weak, nonatomic) IBOutlet UIImageView *igv1;
 @property (weak, nonatomic) IBOutlet UIImageView *igv2;
 @property (weak, nonatomic) IBOutlet UIButton *btn;
+@property (nonatomic,strong) NSMutableArray *list;
 
 @end
 
@@ -50,7 +52,8 @@
 //    [self testTools];
 //    [self testLanguage];
 //    [self testFileManager];
-    [self testYHNetwork];
+//    [self testYHNetwork];
+    [self testFileMutableDownload];
 
 }
 
@@ -65,19 +68,42 @@
 //    [self testRuntime];
 //    [self testNumberFormatter];
 //    [self testRegularAndmd5];
-    
+
+}
+- (void)dealloc {
+
+    [self removeObserver:self forKeyPath:@"list"];
 }
 #pragma mark - Test
 
+- (void)testFileMutableDownload {
+
+    /*
+     @"http://farm6.staticflickr.com/5505/9824098016_0e28a047c2_b_d.jpg",
+     @"http://farm3.staticflickr.com/2846/9823925914_78cd653ac9_b_d.jpg",
+     @"http://farm3.staticflickr.com/2831/9823890176_82b4165653_b_d.jpg",
+     @"http://dl_dir.qq.com/qqfile/qq/QQforMac/QQ_V2.4.1.dmg",
+     @"http://download.xitongxz.com/Ylmf_Ghost_Win7_SP1_x64_2016_0512.iso"
+     */
+    NSString *path = [YHFileManager documentsPath];
+    NSString *filePath1 = [path stringByAppendingPathComponent:@"1"];
+    
+    
+    
+    
+
+}
+
+
 - (void)testYHNetwork {
 
-//    YHNetCache *cache = [YHNetCache sharedCache];
-    NSString *get1 = @"http://59.42.254.235:8004/membermgt/mvc/member/queryNeighbourhood.json";
-    NSDictionary *dic1 = @{@"memberId":@"6060"};
-    NSString *get2 = @"http://bea.wufazhuce.com/OneForWeb/one/getHp_N";
-    NSDictionary *dic2 = @{@"strDate":@"2015-05-25",@"strRow":@"1"};
-    NSString *download1 = @"http://dl_dir.qq.com/qqfile/qq/QQforMac/QQ_V2.4.1.dmg";
-    NSString *download2 = @"http://farm3.staticflickr.com/2831/9823890176_82b4165653_b_d.jpg";
+    YHNetCache *cache = [YHNetCache sharedCache];
+//    NSString *get1 = @"http://59.42.254.235:8004/membermgt/mvc/member/queryNeighbourhood.json";
+//    NSDictionary *dic1 = @{@"memberId":@"6060"};
+//    NSString *get2 = @"http://bea.wufazhuce.com/OneForWeb/one/getHp_N";
+//    NSDictionary *dic2 = @{@"strDate":@"2015-05-25",@"strRow":@"1"};
+//    NSString *download1 = @"http://dl_dir.qq.com/qqfile/qq/QQforMac/QQ_V2.4.1.dmg";
+//    NSString *download2 = @"http://farm3.staticflickr.com/2831/9823890176_82b4165653_b_d.jpg";
     YHNetWork *network = [[YHNetWork alloc] init];
     [YHNetWork setRequestTimeOut:30.f];
     DDLogVerbose(@"Header: %@",[network getAllHeader]);

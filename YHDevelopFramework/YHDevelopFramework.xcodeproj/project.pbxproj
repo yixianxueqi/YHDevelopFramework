@@ -13,6 +13,8 @@
 		DB02433C1D54656C00E99FA8 /* YHReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02433B1D54656C00E99FA8 /* YHReachability.m */; };
 		DB22B6061D40C5530009A973 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22B6051D40C5530009A973 /* Person.m */; };
 		DB315B5E1D41FE9100069C87 /* YHDBYTKValueStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DB315B5D1D41FE9100069C87 /* YHDBYTKValueStore.m */; };
+		DB378E251D5C21B900A375DA /* YHFileDownloadStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DB378E241D5C21B900A375DA /* YHFileDownloadStore.m */; };
+		DB378E281D5C806A00A375DA /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = DB378E271D5C806A00A375DA /* Son.m */; };
 		DB3DA0BC1D34BC360016D137 /* YHDeviceTools.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3DA0BB1D34BC360016D137 /* YHDeviceTools.m */; };
 		DB3DA0BF1D34D2500016D137 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3DA0BE1D34D2500016D137 /* UIView+Frame.m */; };
 		DB3DA0C21D34E0190016D137 /* YHLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3DA0C11D34E0190016D137 /* YHLogger.m */; };
@@ -51,6 +53,10 @@
 		DBF277171D4C830100EDB2EB /* YHFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF277161D4C830100EDB2EB /* YHFileManager.m */; };
 		DBF2771A1D4C847800EDB2EB /* YHFileCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF277191D4C847800EDB2EB /* YHFileCompress.m */; };
 		DBF2771D1D4C84BE00EDB2EB /* YHFileAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF2771C1D4C84BE00EDB2EB /* YHFileAction.m */; };
+		DBF7BD451D5B1DD700320F62 /* YHFileDownLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF7BD441D5B1DD700320F62 /* YHFileDownLoadManager.m */; };
+		DBF7BD481D5B1EF600320F62 /* YHFileDownLoadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF7BD471D5B1EF600320F62 /* YHFileDownLoadModel.m */; };
+		DBF7BD4B1D5B1F1900320F62 /* YHFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF7BD4A1D5B1F1900320F62 /* YHFileHelper.m */; };
+		DBF7BD4E1D5B1F6100320F62 /* YHFileDownLoadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF7BD4D1D5B1F6100320F62 /* YHFileDownLoadOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +72,10 @@
 		DB22B6051D40C5530009A973 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		DB315B5C1D41FE9100069C87 /* YHDBYTKValueStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHDBYTKValueStore.h; sourceTree = "<group>"; };
 		DB315B5D1D41FE9100069C87 /* YHDBYTKValueStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHDBYTKValueStore.m; sourceTree = "<group>"; };
+		DB378E231D5C21B900A375DA /* YHFileDownloadStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHFileDownloadStore.h; sourceTree = "<group>"; };
+		DB378E241D5C21B900A375DA /* YHFileDownloadStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHFileDownloadStore.m; sourceTree = "<group>"; };
+		DB378E261D5C806A00A375DA /* Son.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Son.h; sourceTree = "<group>"; };
+		DB378E271D5C806A00A375DA /* Son.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Son.m; sourceTree = "<group>"; };
 		DB3DA0BA1D34BC360016D137 /* YHDeviceTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHDeviceTools.h; sourceTree = "<group>"; };
 		DB3DA0BB1D34BC360016D137 /* YHDeviceTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHDeviceTools.m; sourceTree = "<group>"; };
 		DB3DA0BD1D34D2500016D137 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
@@ -136,6 +146,14 @@
 		DBF277191D4C847800EDB2EB /* YHFileCompress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHFileCompress.m; sourceTree = "<group>"; };
 		DBF2771B1D4C84BE00EDB2EB /* YHFileAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHFileAction.h; sourceTree = "<group>"; };
 		DBF2771C1D4C84BE00EDB2EB /* YHFileAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHFileAction.m; sourceTree = "<group>"; };
+		DBF7BD431D5B1DD700320F62 /* YHFileDownLoadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHFileDownLoadManager.h; sourceTree = "<group>"; };
+		DBF7BD441D5B1DD700320F62 /* YHFileDownLoadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHFileDownLoadManager.m; sourceTree = "<group>"; };
+		DBF7BD461D5B1EF600320F62 /* YHFileDownLoadModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHFileDownLoadModel.h; sourceTree = "<group>"; };
+		DBF7BD471D5B1EF600320F62 /* YHFileDownLoadModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHFileDownLoadModel.m; sourceTree = "<group>"; };
+		DBF7BD491D5B1F1900320F62 /* YHFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHFileHelper.h; sourceTree = "<group>"; };
+		DBF7BD4A1D5B1F1900320F62 /* YHFileHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHFileHelper.m; sourceTree = "<group>"; };
+		DBF7BD4C1D5B1F6100320F62 /* YHFileDownLoadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHFileDownLoadOperation.h; sourceTree = "<group>"; };
+		DBF7BD4D1D5B1F6100320F62 /* YHFileDownLoadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHFileDownLoadOperation.m; sourceTree = "<group>"; };
 		DD0E1219D0BEF083B310C3CF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -225,6 +243,8 @@
 				DBC66F501D4B382B009666AF /* ViewController3.h */,
 				DBC66F511D4B382B009666AF /* ViewController3.m */,
 				DBE835D71D587AAC00DABBBA /* testResources.strings */,
+				DB378E261D5C806A00A375DA /* Son.h */,
+				DB378E271D5C806A00A375DA /* Son.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -254,6 +274,7 @@
 		DBA450C71D2CE975001ADEDC /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				DBF7BD421D5B18D500320F62 /* mutableFileDownload */,
 				DBC66F531D4B5179009666AF /* fileComponent */,
 				DBA450D81D2CEC1B001ADEDC /* DBComponent */,
 				DBA450D71D2CEB5F001ADEDC /* logComponent */,
@@ -440,6 +461,23 @@
 			path = fileComponent;
 			sourceTree = "<group>";
 		};
+		DBF7BD421D5B18D500320F62 /* mutableFileDownload */ = {
+			isa = PBXGroup;
+			children = (
+				DBF7BD431D5B1DD700320F62 /* YHFileDownLoadManager.h */,
+				DBF7BD441D5B1DD700320F62 /* YHFileDownLoadManager.m */,
+				DBF7BD461D5B1EF600320F62 /* YHFileDownLoadModel.h */,
+				DBF7BD471D5B1EF600320F62 /* YHFileDownLoadModel.m */,
+				DBF7BD491D5B1F1900320F62 /* YHFileHelper.h */,
+				DBF7BD4A1D5B1F1900320F62 /* YHFileHelper.m */,
+				DBF7BD4C1D5B1F6100320F62 /* YHFileDownLoadOperation.h */,
+				DBF7BD4D1D5B1F6100320F62 /* YHFileDownLoadOperation.m */,
+				DB378E231D5C21B900A375DA /* YHFileDownloadStore.h */,
+				DB378E241D5C21B900A375DA /* YHFileDownloadStore.m */,
+			);
+			path = mutableFileDownload;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -568,13 +606,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBF7BD4E1D5B1F6100320F62 /* YHFileDownLoadOperation.m in Sources */,
 				DBB8629D1D3CD60500A5951F /* Entity.m in Sources */,
 				DB53F7131D48A02D0065F49E /* RegularCheck.m in Sources */,
 				DBA450B61D2CE5E8001ADEDC /* ViewController.m in Sources */,
+				DBF7BD4B1D5B1F1900320F62 /* YHFileHelper.m in Sources */,
 				DB22B6061D40C5530009A973 /* Person.m in Sources */,
 				DBF277171D4C830100EDB2EB /* YHFileManager.m in Sources */,
 				DBBCA3D71D3DD4F800ED7014 /* ViewController2.m in Sources */,
+				DBF7BD481D5B1EF600320F62 /* YHFileDownLoadModel.m in Sources */,
 				DBB862991D3CBF2000A5951F /* UIImageView+BorderChange.m in Sources */,
+				DBF7BD451D5B1DD700320F62 /* YHFileDownLoadManager.m in Sources */,
 				DBC66F521D4B382B009666AF /* ViewController3.m in Sources */,
 				DB3DA0C51D34ECF30016D137 /* YHLogFormat.m in Sources */,
 				DB02433C1D54656C00E99FA8 /* YHReachability.m in Sources */,
@@ -596,12 +638,14 @@
 				DB3DA0BC1D34BC360016D137 /* YHDeviceTools.m in Sources */,
 				DBF2771D1D4C84BE00EDB2EB /* YHFileAction.m in Sources */,
 				DBA450D11D2CEAAE001ADEDC /* BaseView.m in Sources */,
+				DB378E281D5C806A00A375DA /* Son.m in Sources */,
 				DB53F7071D488D290065F49E /* BaseCollectionViewCell.m in Sources */,
 				DBBCA3E11D3E074B00ED7014 /* UIImage+ChangeSize.m in Sources */,
 				DB0243331D54268000E99FA8 /* NSString+Rect.m in Sources */,
 				DBA450B31D2CE5E8001ADEDC /* AppDelegate.m in Sources */,
 				DB63FAC11D37811B000C06F5 /* YHCrashCatch.m in Sources */,
 				DBA450B01D2CE5E8001ADEDC /* main.m in Sources */,
+				DB378E251D5C21B900A375DA /* YHFileDownloadStore.m in Sources */,
 				DB315B5E1D41FE9100069C87 /* YHDBYTKValueStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

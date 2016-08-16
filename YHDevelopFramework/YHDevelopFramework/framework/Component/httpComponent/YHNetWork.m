@@ -81,6 +81,7 @@ static NSArray *blackList;
     self.url = URLString;
     self.success = success;
     self.failure = failure;
+    self.dic = parameters;
     //请求超时时间
     [self setRequestTimeoutSeconds:networkTimeout];
     //公用参数
@@ -133,6 +134,7 @@ static NSArray *blackList;
     self.url = URLString;
     self.success = success;
     self.failure = failure;
+    self.dic = parameters;
     //请求超时时间
     [self setRequestTimeoutSeconds:networkTimeout];
     //公用参数

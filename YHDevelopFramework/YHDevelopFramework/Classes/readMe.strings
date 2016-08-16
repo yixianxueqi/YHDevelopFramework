@@ -23,6 +23,8 @@
 #
 #   framework/
 #       |
+#       tools/      :工具类
+#       |
 #       Category/   :类增强
 #           |
 #           foundationCategory/    :foundation框架下类增强
@@ -30,6 +32,8 @@
 #           kitCategory/    :UIKit框架下类增强
 #       |
 #       Compontent/    :功能组件
+#           |
+#           mutableFileDownload/ :多文件下载
 #           |
 #           fileComponent/  :文件组件
 #           |
