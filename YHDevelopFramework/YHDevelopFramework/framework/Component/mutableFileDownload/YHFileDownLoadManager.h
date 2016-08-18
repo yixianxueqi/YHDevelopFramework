@@ -12,9 +12,10 @@
 #import "YHFileHelper.h"
 #import "YHFileDownloadStore.h"
 
-//观察任务变化
+//观察任务变化block
 typedef void(^FileDownLoadObserveTaskBlock)(YHFileDownloadStatus status,double progress);
-
+//当任务完成后，将会在此block抛出，并且从下载管理中心移除此项
+typedef void(^FileDownLoadCompleteBlock)(YHFileDownLoadModel *model);
 /**
  * @class FileDownLoadManager
  *
@@ -37,6 +38,8 @@ typedef void(^FileDownLoadObserveTaskBlock)(YHFileDownloadStatus status,double p
 - (YHFileDownloadStatus)getTaskStatusWithSigleID:(NSString *)sigleID;
 //观察任务执行情况
 - (void)observeTaskWithSigleID:(NSString *)sigleID block:(FileDownLoadObserveTaskBlock)block;
+//当下载任务项完成时会在此抛出
+- (void)completeBlock:(FileDownLoadCompleteBlock)block;
 /**
  *  添加一个新任务
  *

@@ -15,6 +15,7 @@
 
 @property (nonatomic,strong) NSOperationQueue *taskQueue;
 @property (nonatomic,strong) NSMutableArray *taskLists;
+@property (nonatomic,copy) FileDownLoadCompleteBlock completeBlock;
 
 @end
 
@@ -87,13 +88,22 @@ static YHFileDownLoadManager *manager;
 
     YHFileDownLoadModel *model = [self modelWithSigleID:sigleID];
     if (block) {
+        __weak typeof(self) weakSelf = self;
         model.statusBlock = ^(YHFileDownLoadModel *model){
             block(model.status,model.progress);
+            if (model.status == YHFileDownloadFinshed) {
+                weakSelf.completeBlock(model) ;
+            }
         };
         model.progressBlock = ^(YHFileDownLoadModel *model){
             block(model.status,model.progress);
         };
     }
+}
+//当下载任务项完成时会在此抛出
+- (void)completeBlock:(FileDownLoadCompleteBlock)block {
+
+    self.completeBlock = block;
 }
 /**
  *  添加一个新任务

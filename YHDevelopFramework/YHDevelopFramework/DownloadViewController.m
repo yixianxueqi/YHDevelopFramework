@@ -40,6 +40,13 @@
     [self.downloadList addObject:sigleID];
     sigleID = [self.manager addTaskWithUrl:kDownload5 saveDirectory:docPath];
     [self.downloadList addObject:sigleID];
+    __weak typeof(self) weakSelf = self;
+    [self.manager completeBlock:^(YHFileDownLoadModel *model) {
+        NSLog(@"finsh: %@",model.absolutePath);
+        [weakSelf.downloadList removeObject:model.sigleID];
+        [weakSelf.tableView reloadData];
+        
+    }];
     
 }
 
