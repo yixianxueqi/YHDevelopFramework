@@ -93,6 +93,7 @@ static YHFileDownLoadManager *manager;
             block(model.status,model.progress);
             if (model.status == YHFileDownloadFinshed) {
                 weakSelf.completeBlock(model) ;
+                [weakSelf.taskLists removeObject:model];
             }
         };
         model.progressBlock = ^(YHFileDownLoadModel *model){
