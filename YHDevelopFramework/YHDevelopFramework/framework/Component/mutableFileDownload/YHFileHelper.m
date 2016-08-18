@@ -21,26 +21,6 @@
     long long size = [manager attributesOfItemAtPath:filePath error:nil].fileSize;
     return size;
 }
-//获取文件创建日期
-+ (NSDate *)fileCreateTime:(NSString *)filePath {
-
-    NSFileManager *manager = [NSFileManager defaultManager];
-    if (![manager fileExistsAtPath:filePath]) {
-        return nil;
-    }
-    NSDate *date = [manager attributesOfItemAtPath:filePath error:nil].fileCreationDate;
-    return date;
-}
-//获取文件修改日期
-+ (NSDate *)fileModifyTime:(NSString *)filePath {
-
-    NSFileManager *manager = [NSFileManager defaultManager];
-    if (![manager fileExistsAtPath:filePath]) {
-        return nil;
-    }
-    NSDate *date = [manager attributesOfItemAtPath:filePath error:nil].fileModificationDate;
-    return date;
-}
 //文件是否存在，若不存在，则创建并返回结果，若存在则返回YES
 + (BOOL)fileIsExistAtPath:(NSString *)path {
     

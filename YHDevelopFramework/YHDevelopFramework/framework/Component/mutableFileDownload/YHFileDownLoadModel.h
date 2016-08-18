@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSString+Secret.h"
+#import <NSObject+YYModel.h>
+
 @class YHFileDownLoadOperation;
+@class YHFileDownLoadModel;
 //文件状态
 typedef NS_ENUM(NSInteger,YHFileDownloadStatus) {
     //开始
@@ -23,7 +27,10 @@ typedef NS_ENUM(NSInteger,YHFileDownloadStatus) {
     //失败
     YHFileDownloadFailure = 1 << 5,
 };
-
+//状态变化回调
+typedef void(^ObserveStatusBlock)(YHFileDownLoadModel *model);
+//进度变化回调
+typedef void(^ObserveProgressBlock)(YHFileDownLoadModel *model);
 /**
  * @class  FileDownLoadModel
  *
@@ -43,15 +50,19 @@ typedef NS_ENUM(NSInteger,YHFileDownloadStatus) {
 //下载文件的绝对路径
 @property (nonatomic,copy) NSString *absolutePath;
 //总大小
-@property (nonatomic,assign) double totalSize;
+@property (nonatomic,assign) NSInteger totalSize;
 //当前下载大小
-@property (nonatomic,assign) double currentSize;
+@property (nonatomic,assign) NSInteger currentSize;
 //进度状况
 @property (nonatomic,assign) double progress;
 //当前状态
 @property (nonatomic,assign) YHFileDownloadStatus status;
-//下载具体对象
+//下载具体执行对象
 @property (nonatomic,strong) YHFileDownLoadOperation *operation;
+//状态回调block
+@property (nonatomic,copy) ObserveStatusBlock statusBlock;
+//进度回调
+@property (nonatomic,copy) ObserveProgressBlock progressBlock;
 
 //创建一个新任务
 + (instancetype)modelWithUrl:(NSString *)url filePath:(NSString *)filePath;

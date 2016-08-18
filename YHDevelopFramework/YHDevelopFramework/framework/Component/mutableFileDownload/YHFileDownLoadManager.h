@@ -12,7 +12,8 @@
 #import "YHFileHelper.h"
 #import "YHFileDownloadStore.h"
 
-typedef void(^TaskStatusObserveBlock)(YHFileDownLoadModel *model);
+//观察任务变化
+typedef void(^FileDownLoadObserveTaskBlock)(YHFileDownloadStatus status,double progress);
 
 /**
  * @class FileDownLoadManager
@@ -23,51 +24,51 @@ typedef void(^TaskStatusObserveBlock)(YHFileDownLoadModel *model);
 @interface YHFileDownLoadManager : NSObject
 
 + (instancetype)sharedManager;
-//返回所有任务sigleID(包含:未开始的，正在进行的，失败的)
-- (NSArray *)showAllTask;
-//根据唯一标识查询下载对象
-- (YHFileDownLoadModel *)modelWithSigleID:(NSString *)sigleID;
-//设置同时最多任务下载数,最多5（不符合的将会设置为默认:3）
-- (void)setMaxDownloadCount:(NSInteger)count;
 /**
- *  创建一个任务
+ *  设置最大并发量
  *
- *  @param URLString 下载地址
- *  @param filePath  文件存储目录
- *  @param name 文件名字
- *  @return 该任务唯一标识
+ *  @notice 上限为5，默认3，不能为0
+ *  @param count 个数
  */
-- (NSString *)addTaskWithURL:(NSString *)URLString filePath:(NSString *)filePath;
+- (void)setMaxSubThread:(NSInteger)count;
+//获取下载对象
+- (YHFileDownLoadModel *)getFileDownloadModelWithSigleID:(NSString *)sigleID;
+//获取任务状态
+- (YHFileDownloadStatus)getTaskStatusWithSigleID:(NSString *)sigleID;
+//观察任务执行情况
+- (void)observeTaskWithSigleID:(NSString *)sigleID block:(FileDownLoadObserveTaskBlock)block;
 /**
- *  启动下载任务
+ *  添加一个新任务
  *
- *  @param sigleID 任务的唯一标识
+ *  @param url 下载链接地址
+ *  @param dir 存储目录，Document目录下+自定义目录
+ *
+ *  @return 该任务的唯一标示
  */
-- (void)startTask:(NSString *)sigleID;
+- (NSString *)addTaskWithUrl:(NSString *)url saveDirectory:(NSString *)dir;
 /**
- *  暂停下载任务
+ *  开始任务
  *
- *  @param sigleID 任务的唯一标识
+ *  @param sigleID 任务sigleID
  */
-- (void)suspendTask:(NSString *)sigleID;
+- (void)startTaskWithSigleID:(NSString *)sigleID;
 /**
- *  继续下载任务
+ *  暂停任务
  *
- *  @param sigleID 任务的唯一标识
+ *  @param sigleID 任务sigleID
  */
-- (void)continueTask:(NSString *)sigleID;
+- (void)suspendTaskWithSigleID:(NSString *)sigleID;
 /**
- *  停止任务
+ *  继续任务
  *
- *  @param sigleID 任务的唯一标识
+ *  @param sigleID 任务sigleID
  */
-- (void)stopTask:(NSString *)sigleID;
+- (void)resumeTaskWithSigleID:(NSString *)sigleID;
 /**
- *  删除任务
+ *  撤销任务
  *
- *  @param sigleID 任务的唯一标识
+ *  @param sigleID 任务sigleID
  */
-- (void)deleteTask:(NSString *)sigleID;
-
+- (void)cancelTaskWithSigleID:(NSString *)sigleID;
 
 @end

@@ -7,7 +7,8 @@
 //
 
 #import "YHFileDownLoadModel.h"
-#import "NSString+Secret.h"
+
+#define kDocumentPath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]
 
 @implementation YHFileDownLoadModel
 
@@ -18,14 +19,38 @@
     model.url = url;
     model.filePath = filePath;
     model.name = url.lastPathComponent;
-    model.sigleID = [[NSString stringWithFormat:@"%@%@%@",url,filePath,[self getCurrentDateStamp]] md5];
-    model.absolutePath = [filePath stringByAppendingPathComponent:url.lastPathComponent];
+    model.sigleID = [url md5];
+    model.status = YHFileDownloadWaiting;
     return model;
 }
-//获取当前时间戳
-+ (NSString *)getCurrentDateStamp {
 
-    return [NSString stringWithFormat:@"%ld",(long)([[NSDate date] timeIntervalSince1970] * 1000)];
+- (NSString *)absolutePath {
+
+    return [[kDocumentPath stringByAppendingPathComponent:self.filePath] stringByAppendingPathComponent:self.name];
+}
+
+- (void)setStatus:(YHFileDownloadStatus)status {
+
+    _status = status;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.statusBlock) {
+            self.statusBlock(self);
+        }
+    });
+}
+
+- (void)setProgress:(double)progress {
+
+    _progress = progress;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.progressBlock) {
+            self.progressBlock(self);
+        }
+    });
+}
+// 如果实现了该方法，则处理过程中会忽略该列表内的所有属性
++ (NSArray *)modelPropertyBlacklist {
+    return @[@"operation",@"absolutePath"];
 }
 
 @end

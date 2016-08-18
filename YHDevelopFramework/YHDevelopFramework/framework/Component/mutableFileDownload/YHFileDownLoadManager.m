@@ -9,6 +9,7 @@
 #import "YHFileDownLoadManager.h"
 
 #define kArrayName @"taskLists"
+#define kDocumentPath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]
 
 @interface YHFileDownLoadManager ()
 
@@ -24,13 +25,12 @@ static YHFileDownLoadManager *manager;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         manager = [[self alloc] init];
-        manager.taskQueue.maxConcurrentOperationCount = 3;
-        //从数据库加载数据
-        [manager.taskLists addObjectsFromArray:[[YHFileDownloadStore sharedStore] showAllObject]];
-        //添加对容器的观察，当容器元素个数发生变化，但不包含元素本身的变化
-        [manager addObserver:manager forKeyPath:kArrayName options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
-        //注册通知，以便app退出时退出任务并保存当前状态
-        [manager careAppLeave];
+        //注册通知，当应用将要退出时
+        [[NSNotificationCenter defaultCenter] addObserver:manager selector:@selector(storeDownloadList) name:UIApplicationWillTerminateNotification object:nil];
+        //从数据库读取之前的下载列表
+        [manager getDownloadListFromStore];
+        //观察self.taskLists
+        [manager addObserver:manager forKeyPath:@"taskLists" options:NSKeyValueObservingOptionNew context:nil];
     });
     return manager;
 }
@@ -49,87 +49,113 @@ static YHFileDownLoadManager *manager;
 
 - (void)dealloc {
 
-    [self removeObserver:self forKeyPath:kArrayName];
+    //销毁前，需要将当前下载列表对象进行存储
+    [self storeDownloadList];
+    //移除观察
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
-    
-    if ([keyPath isEqualToString:kArrayName]) {
-        YHFileDownLoadModel *model = [change valueForKey:@"new"];
-        //根据容器元素数量变化更新数据库
-        if (model) {
-            //增加新的
-            [[YHFileDownloadStore sharedStore] putObjct:model];
-        } else {
-            //删除旧的
-            model = [change valueForKey:@"old"];
-            [[YHFileDownloadStore sharedStore] deleteObjctForKey:model.sigleID];
-        }
-    }
-}
-
-#pragma mark - 观察数组容器变化，必须重写的两个方法
-- (void)insertObject:(YHFileDownLoadModel *)object inTaskListsAtIndex:(NSUInteger)index {
-    
-    [self.taskLists insertObject:object atIndex:index];
-}
-
-- (void)removeObjectFromTaskListsAtIndex:(NSUInteger)index {
-    
-    [self.taskLists removeObjectAtIndex:index];
+    [self removeObserver:self forKeyPath:@"taskLists"];
 }
 
 #pragma mark - define
-//返回所有任务sigleID(包含:未开始的，正在进行的，失败的)
-- (NSArray *)showAllTask {
-    
-    return self.taskLists;
-}
-//根据唯一标识查询下载对象
-- (YHFileDownLoadModel *)modelWithSigleID:(NSString *)sigleID {
-    
-    return [self getModelWithSigleID:sigleID];
-}
-//设置同时最多任务下载数
-- (void)setMaxDownloadCount:(NSInteger)count {
+/**
+ *  设置最大并发量
+ *
+ *  @notice 上限为5，默认3，不能为0
+ *  @param count 个数
+ */
+- (void)setMaxSubThread:(NSInteger)count {
 
-    if (count <= 0 || count > 5) {
-        count = 3;
+    if (count >= 5) {
+        self.taskQueue.maxConcurrentOperationCount = 5;
+    } else if (count <= 0) {
+        self.taskQueue.maxConcurrentOperationCount = 1;
+    } else {
+        self.taskQueue.maxConcurrentOperationCount = count;
     }
-    self.taskQueue.maxConcurrentOperationCount = count;
+}
+//获取下载对象
+- (YHFileDownLoadModel *)getFileDownloadModelWithSigleID:(NSString *)sigleID {
+    return [self modelWithSigleID:sigleID];
+}
+//获取任务状态
+- (YHFileDownloadStatus)getTaskStatusWithSigleID:(NSString *)sigleID {
+
+    return [[self modelWithSigleID:sigleID] status];
+}
+//观察任务执行情况
+- (void)observeTaskWithSigleID:(NSString *)sigleID block:(FileDownLoadObserveTaskBlock)block {
+
+    YHFileDownLoadModel *model = [self modelWithSigleID:sigleID];
+    if (block) {
+        model.statusBlock = ^(YHFileDownLoadModel *model){
+            block(model.status,model.progress);
+        };
+        model.progressBlock = ^(YHFileDownLoadModel *model){
+            block(model.status,model.progress);
+        };
+    }
 }
 /**
- *  创建一个任务
+ *  添加一个新任务
  *
- *  @param URLString 下载地址
- *  @param filePath  文件存储目录
- *  @param name 文件名字
- *  @return 该任务唯一标识
+ *  @param url 下载链接地址
+ *  @param dir 存储目录,Document目录下
+ *
+ *  @return 该任务的唯一标示
  */
-- (NSString *)addTaskWithURL:(NSString *)URLString filePath:(NSString *)filePath {
+- (NSString *)addTaskWithUrl:(NSString *)url saveDirectory:(NSString *)dir {
 
     YHFileDownLoadModel *model;
-    if ([YHFileHelper directoryIsExistAtPath:filePath]) {
-        model = [YHFileDownLoadModel modelWithUrl:URLString filePath:filePath];
-        if ([[NSFileManager defaultManager] fileExistsAtPath:model.absolutePath]) {
-            //此文件已经存在
-            NSLog(@"文件名不能重复!");
-            return nil;
+    NSString *path = [kDocumentPath stringByAppendingPathComponent:dir];
+    if ([YHFileHelper directoryIsExistAtPath:path]) {
+        model = [YHFileDownLoadModel modelWithUrl:url filePath:dir];
+        YHFileDownLoadModel *temp = [self modelWithSigleID:model.sigleID];
+        if (temp) {
+            NSLog(@"Task is existed at download list");
+        } else {
+            [self.taskLists addObject:model];
         }
-        [[self getValueArray] addObject:model];
     }
     return model.sigleID;
 }
 /**
- *  启动下载任务
+ *  开始任务
  *
- *  @param sigleID 任务的唯一标识
+ *  @param sigleID 任务sigleID
  */
-- (void)startTask:(NSString *)sigleID {
-    
-    YHFileDownLoadModel *model = [self getModelWithSigleID:sigleID];
-    if (model.status != YHFileDownloadFinshed) {
+- (void)startTaskWithSigleID:(NSString *)sigleID {
+
+    YHFileDownLoadModel *model = [self modelWithSigleID:sigleID];
+    if (model.operation) {
+        [model.operation resumeTask];
+    } else {
+        model.operation = [[YHFileDownLoadOperation alloc] initWithModel:model];
+        [self.taskQueue addOperation:model.operation];
+    }
+}
+/**
+ *  暂停任务
+ *
+ *  @param sigleID 任务sigleID
+ */
+- (void)suspendTaskWithSigleID:(NSString *)sigleID {
+
+    YHFileDownLoadModel *model = [self modelWithSigleID:sigleID];
+    if (model.status == YHFileDownloaddownload) {
+        //只有下载中，才存在暂停操作
+        [model.operation suspendTask];
+    }
+}
+/**
+ *  继续任务
+ *
+ *  @param sigleID 任务sigleID
+ */
+- (void)resumeTaskWithSigleID:(NSString *)sigleID {
+
+    YHFileDownLoadModel *model = [self modelWithSigleID:sigleID];
+    if (model.status == YHFileDownloadSuspend) {
+        //只有暂停，才存在继续操作
         if (model.operation) {
             [model.operation resumeTask];
         } else {
@@ -139,99 +165,49 @@ static YHFileDownLoadManager *manager;
     }
 }
 /**
- *  暂停下载任务
+ *  撤销任务
  *
- *  @param sigleID 任务的唯一标识
+ *  @param sigleID 任务sigleID
  */
-- (void)suspendTask:(NSString *)sigleID {
- 
-    YHFileDownLoadModel *model = [self getModelWithSigleID:sigleID];
-    if (model.status != YHFileDownloadSuspend) {
-        [model.operation suspendTask];
-        [[YHFileDownloadStore sharedStore] putObjct:model];
-    }
-}
-/**
- *  继续下载任务
- *
- *  @param sigleID 任务的唯一标识
- */
-- (void)continueTask:(NSString *)sigleID {
-
-    YHFileDownLoadModel *model = [self getModelWithSigleID:sigleID];
-    if (model.operation) {
-        [model.operation resumeTask];
-    } else {
-        model.operation = [[YHFileDownLoadOperation alloc] initWithModel:model];
-        [self.taskQueue addOperation:model.operation];
-    }
-}
-/**
- *  停止任务
- *
- *  @param sigleID 任务的唯一标识
- */
-- (void)stopTask:(NSString *)sigleID {
-
-    YHFileDownLoadModel *model = [self getModelWithSigleID:sigleID];
-    if (model.operation) {
-        [model.operation cancel];
-    }
-}
-/**
- *  删除任务
- *
- *  @param sigleID 任务的唯一标识
- */
-- (void)deleteTask:(NSString *)sigleID {
-
-    YHFileDownLoadModel *model = [self getModelWithSigleID:sigleID];
-    if (model.operation) {
-        [model.operation cancel];
-    }
-    [[self getValueArray] removeObject:model];
-}
-
-#pragma mark - private
-//注册app退出时的通知
-- (void)careAppLeave {
-
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopDownloadAndStore) name:UIApplicationWillTerminateNotification object:nil];
-}
-//当app即将退出时所作
-- (void)stopDownloadAndStore {
-
-    //所有等待的任务取消任务
-    for (YHFileDownLoadModel *model in self.taskLists) {
-        if (model.status == YHFileDownloadWaiting) {
-            [model.operation cancel];
-        }
-    }
-    //所有正在进行的任务挂起
-    for (YHFileDownLoadModel *model in self.taskLists) {
-        if (model.status == YHFileDownloaddownload) {
-            [model.operation suspendTask];
-        }
-    }
+- (void)cancelTaskWithSigleID:(NSString *)sigleID {
     
+    YHFileDownLoadModel *model = [self modelWithSigleID:sigleID];
+    //任何状态都存在撤销操作
+    [model.operation cancel];
 }
-//根据sigleID获取model
-- (YHFileDownLoadModel *)getModelWithSigleID:(NSString *)sigleID {
+#pragma mark - private
+//根据标识从列表获取下载对象
+- (YHFileDownLoadModel *)modelWithSigleID:(NSString *)sigleID {
 
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"sigleID = %@",sigleID];
     NSArray *list = [self.taskLists filteredArrayUsingPredicate:predicate];
     return [list firstObject];
 }
-//特殊方法获取数组，观察者模式
-- (NSMutableArray *)getValueArray {
-    
-    return [self mutableArrayValueForKey:kArrayName];
+//销毁前，处理状态，存储列表
+- (void)storeDownloadList {
+
+    for (YHFileDownLoadModel *model in self.taskLists) {
+        if (model.status == YHFileDownloaddownload) {
+            //下载中的暂停
+            [self suspendTaskWithSigleID:model.sigleID];
+        }
+        //存储到数据库中
+        [[YHFileDownloadStore sharedStore] putObjct:model];
+    }
 }
+//从数据库读取之前的下载列表数据
+- (void)getDownloadListFromStore {
+
+    NSArray *list = [[YHFileDownloadStore sharedStore] showAllObject];
+    [self.taskLists addObjectsFromArray:list];
+}
+
 #pragma mark - getter/setter 
 - (NSOperationQueue *)taskQueue {
 
     if (!_taskQueue) {
         _taskQueue = [[NSOperationQueue alloc] init];
+        _taskQueue.maxConcurrentOperationCount = 3;
     }
     return _taskQueue;
 }

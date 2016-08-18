@@ -44,10 +44,12 @@ static YHFileDownloadStore *store;
 
 #pragma mark - define
 - (void)putObjct:(YHFileDownLoadModel *)obj {
-    [self.kvStore putObject:obj withId:obj.sigleID intoTable:kFileDownloadDBTableName];
+    NSDictionary *dic = [obj modelToJSONObject];
+    [self.kvStore putObject:dic withId:obj.sigleID intoTable:kFileDownloadDBTableName];
 }
 - (YHFileDownLoadModel *)getObjctforKey:(NSString *)key {
-   return [self.kvStore getObjectById:key fromTable:kFileDownloadDBTableName];
+    id obj = [self.kvStore getObjectById:key fromTable:kFileDownloadDBTableName];
+    return [YHFileDownLoadModel modelWithJSON:obj];
 }
 - (void)deleteObjctForKey:(NSString *)key {
     [self.kvStore deleteObjectById:key fromTable:kFileDownloadDBTableName];
@@ -56,7 +58,9 @@ static YHFileDownloadStore *store;
     NSArray *list = [self.kvStore getAllItemsFromTable:kFileDownloadDBTableName];
     NSMutableArray *listM = [NSMutableArray array];
     for (YTKKeyValueItem *item in list) {
-        [listM addObject:(YHFileDownLoadModel *)item.itemObject];
+        id obj = item.itemObject;
+        YHFileDownLoadModel *model = [YHFileDownLoadModel modelWithJSON:obj];
+        [listM addObject:model];
     }
     return listM;
 }

@@ -13,6 +13,9 @@
 		DB02433C1D54656C00E99FA8 /* YHReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02433B1D54656C00E99FA8 /* YHReachability.m */; };
 		DB22B6061D40C5530009A973 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22B6051D40C5530009A973 /* Person.m */; };
 		DB315B5E1D41FE9100069C87 /* YHDBYTKValueStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DB315B5D1D41FE9100069C87 /* YHDBYTKValueStore.m */; };
+		DB375E311D655C4B005A7855 /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB375E301D655C4B005A7855 /* DownloadViewController.m */; };
+		DB375E341D6585A6005A7855 /* DownloadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB375E331D6585A6005A7855 /* DownloadCell.m */; };
+		DB375E361D6585AF005A7855 /* DownloadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB375E351D6585AF005A7855 /* DownloadCell.xib */; };
 		DB378E251D5C21B900A375DA /* YHFileDownloadStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DB378E241D5C21B900A375DA /* YHFileDownloadStore.m */; };
 		DB378E281D5C806A00A375DA /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = DB378E271D5C806A00A375DA /* Son.m */; };
 		DB3DA0BC1D34BC360016D137 /* YHDeviceTools.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3DA0BB1D34BC360016D137 /* YHDeviceTools.m */; };
@@ -72,6 +75,11 @@
 		DB22B6051D40C5530009A973 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		DB315B5C1D41FE9100069C87 /* YHDBYTKValueStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHDBYTKValueStore.h; sourceTree = "<group>"; };
 		DB315B5D1D41FE9100069C87 /* YHDBYTKValueStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHDBYTKValueStore.m; sourceTree = "<group>"; };
+		DB375E2F1D655C4B005A7855 /* DownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadViewController.h; sourceTree = "<group>"; };
+		DB375E301D655C4B005A7855 /* DownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadViewController.m; sourceTree = "<group>"; };
+		DB375E321D6585A6005A7855 /* DownloadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadCell.h; sourceTree = "<group>"; };
+		DB375E331D6585A6005A7855 /* DownloadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadCell.m; sourceTree = "<group>"; };
+		DB375E351D6585AF005A7855 /* DownloadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DownloadCell.xib; sourceTree = "<group>"; };
 		DB378E231D5C21B900A375DA /* YHFileDownloadStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHFileDownloadStore.h; sourceTree = "<group>"; };
 		DB378E241D5C21B900A375DA /* YHFileDownloadStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHFileDownloadStore.m; sourceTree = "<group>"; };
 		DB378E261D5C806A00A375DA /* Son.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Son.h; sourceTree = "<group>"; };
@@ -245,6 +253,11 @@
 				DBE835D71D587AAC00DABBBA /* testResources.strings */,
 				DB378E261D5C806A00A375DA /* Son.h */,
 				DB378E271D5C806A00A375DA /* Son.m */,
+				DB375E2F1D655C4B005A7855 /* DownloadViewController.h */,
+				DB375E301D655C4B005A7855 /* DownloadViewController.m */,
+				DB375E321D6585A6005A7855 /* DownloadCell.h */,
+				DB375E331D6585A6005A7855 /* DownloadCell.m */,
+				DB375E351D6585AF005A7855 /* DownloadCell.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -542,6 +555,7 @@
 			files = (
 				DBE835D81D587AAC00DABBBA /* testResources.strings in Resources */,
 				DBA450E61D2CEE2E001ADEDC /* readMe.strings in Resources */,
+				DB375E361D6585AF005A7855 /* DownloadCell.xib in Resources */,
 				DBC66F4D1D4B2B21009666AF /* ZHCN_Language.strings in Resources */,
 				DBBCA3DE1D3DFC1300ED7014 /* YHList.plist in Resources */,
 				DBA450BE1D2CE5E8001ADEDC /* LaunchScreen.storyboard in Resources */,
@@ -614,6 +628,7 @@
 				DB22B6061D40C5530009A973 /* Person.m in Sources */,
 				DBF277171D4C830100EDB2EB /* YHFileManager.m in Sources */,
 				DBBCA3D71D3DD4F800ED7014 /* ViewController2.m in Sources */,
+				DB375E311D655C4B005A7855 /* DownloadViewController.m in Sources */,
 				DBF7BD481D5B1EF600320F62 /* YHFileDownLoadModel.m in Sources */,
 				DBB862991D3CBF2000A5951F /* UIImageView+BorderChange.m in Sources */,
 				DBF7BD451D5B1DD700320F62 /* YHFileDownLoadManager.m in Sources */,
@@ -646,6 +661,7 @@
 				DB63FAC11D37811B000C06F5 /* YHCrashCatch.m in Sources */,
 				DBA450B01D2CE5E8001ADEDC /* main.m in Sources */,
 				DB378E251D5C21B900A375DA /* YHFileDownloadStore.m in Sources */,
+				DB375E341D6585A6005A7855 /* DownloadCell.m in Sources */,
 				DB315B5E1D41FE9100069C87 /* YHDBYTKValueStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

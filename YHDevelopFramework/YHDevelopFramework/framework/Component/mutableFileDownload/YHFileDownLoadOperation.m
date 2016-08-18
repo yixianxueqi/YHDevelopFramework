@@ -9,22 +9,22 @@
 #import "YHFileDownLoadOperation.h"
 
 
-#define k_executing @"executing"
-#define k_cancelled @"cancelled"
-#define k_finished @"finished"
-#define k_ready @"ready"
+#define k_executing @"isExecuting"
+#define k_cancelled @"isCancelled"
+#define k_finished @"isFinished"
+//#define k_ready @"ready"
 
-@interface YHFileDownLoadOperation ()<NSURLSessionDownloadDelegate>
+@interface YHFileDownLoadOperation ()<NSURLSessionDataDelegate>
 {
     BOOL _executing;
-    BOOL _cancelled;
+//    BOOL _cancelled;
     BOOL _finished;
-    BOOL _ready;
+    //    BOOL _ready;
 }
 @property (nonatomic,strong) YHFileDownLoadModel *model;
 @property (nonatomic,strong) NSURLSession *session;
-@property (nonatomic,strong) NSURLSessionDownloadTask *downloadTask;
-@property (nonatomic,strong) NSData *resumeData;
+@property (nonatomic,strong) NSURLSessionDataTask *dataTask;
+@property (nonatomic,strong) NSOutputStream *outputStream;
 
 @end
 
@@ -32,7 +32,7 @@
 
 //创建任务
 - (instancetype)initWithModel:(YHFileDownLoadModel *)model {
-
+    
     self = [super init];
     if (self) {
         self.model = model;
@@ -42,71 +42,120 @@
 }
 //暂停任务
 - (void)suspendTask {
-
+    
     [self willChangeValueForKey:k_executing];
     _executing = NO;
+    [self.dataTask suspend];
+    self.model.status = YHFileDownloadSuspend;
     [self didChangeValueForKey:k_executing];
-    [self.downloadTask cancelByProducingResumeData:^(NSData * _Nullable resumeData) {
-        //暂停下载时获取已下载的数据
-        self.resumeData = resumeData;
-    }];
     
 }
 //继续任务
 - (void)resumeTask {
-
+    
     [self willChangeValueForKey:k_executing];
     _executing = YES;
+    [self.dataTask resume];
+    self.model.status = YHFileDownloaddownload;
     [self didChangeValueForKey:k_executing];
 }
 #pragma mark - private
 //创建下载任务
 - (void)creatDownloadSessionTask {
-
+    
+    self.model.currentSize = [YHFileHelper fileSize:self.model.absolutePath];
+    self.model.status = YHFileDownloadWaiting;
     self.session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:[[NSOperationQueue alloc] init]];
-    self.downloadTask = [self.session downloadTaskWithURL:[NSURL URLWithString:self.model.url]];
-}
-
-#pragma mark - NSURLSessionDownloadDelegate
-
-- (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask
-didFinishDownloadingToURL:(NSURL *)location {
-
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:self.model.url]];
+    //设置请求头
+    NSString *range = [NSString stringWithFormat:@"bytes=%zd-",self.model.currentSize];
+    [request setValue:range forHTTPHeaderField:@"Range"];
+    self.dataTask = [self.session dataTaskWithRequest:request];
     
 }
+#pragma mark - NSURLSessionDataDelegate
 
-- (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask
-      didWriteData:(int64_t)bytesWritten
- totalBytesWritten:(int64_t)totalBytesWritten
-totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite {
+- (void)URLSession:(NSURLSession *)session
+          dataTask:(NSURLSessionDataTask *)dataTask
+didReceiveResponse:(NSURLResponse *)response
+ completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler {
 
-    self.model.currentSize = totalBytesWritten;
-    self.model.totalSize = totalBytesExpectedToWrite;
-    self.model.progress = (double)totalBytesWritten/totalBytesExpectedToWrite;
-    
+    self.outputStream = [NSOutputStream outputStreamToFileAtPath:self.model.absolutePath append:YES];
+    [self.outputStream open];
+    self.model.totalSize = response.expectedContentLength;
+    self.model.status = YHFileDownloaddownload;
+    //允许收到响应
+    completionHandler(NSURLSessionResponseAllow);
 }
-
-- (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask
- didResumeAtOffset:(int64_t)fileOffset
-expectedTotalBytes:(int64_t)expectedTotalBytes {
+- (void)URLSession:(NSURLSession *)session
+          dataTask:(NSURLSessionDataTask *)dataTask
+    didReceiveData:(NSData *)data {
     
+    [self.outputStream write:data.bytes maxLength:data.length];
+    self.model.currentSize += data.length;
+    if (self.model.totalSize > 0) {
+        double pg = (double)self.model.currentSize / self.model.totalSize;
+        self.model.progress = pg;
+    }
 }
-
+- (void)URLSession:(NSURLSession *)session
+              task:(NSURLSessionTask *)task
+didCompleteWithError:(NSError *)error {
+    
+    if (error) {
+        NSLog(@"error: %@",error);
+        self.model.status = YHFileDownloadFailure;
+    } else {
+        self.model.status = YHFileDownloadFinshed;
+        [self completion];
+    }
+    [self.outputStream close];
+    self.outputStream = nil;
+    [self.session finishTasksAndInvalidate];
+}
 #pragma mark - override
-
-- (void)main {
-
-}
 
 - (void)start {
 
+    self.model.status = YHFileDownloadBegin;
+    if (self.isCancelled) {
+        [self willChangeValueForKey:k_finished];
+        _finished = YES;
+        [self didChangeValueForKey:k_finished];
+    } else {
+        [self willChangeValueForKey:k_executing];
+        _executing = YES;
+        [self.dataTask resume];
+        self.model.status = YHFileDownloadBegin;
+        [self didChangeValueForKey:k_executing];
+    }
 }
 
 - (void)cancel {
-
+    
+    [self willChangeValueForKey:k_cancelled];
+    [super cancel];
+    [self.dataTask cancel];
+    self.dataTask = nil;
+    [self didChangeValueForKey:k_cancelled];
+    [self completion];
 }
 
+- (void)completion {
 
+    [self willChangeValueForKey:k_executing];
+    [self willChangeValueForKey:k_finished];
+    _executing = NO;
+    _finished = YES;
+    [self didChangeValueForKey:k_executing];
+    [self didChangeValueForKey:k_finished];
+}
+- (BOOL)isExecuting {
+    return _executing;
+}
 
+- (BOOL)isFinished {
+    return _finished;
+}
 
 @end
