@@ -31,7 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    regNibCell(self.tableView, @"DownloadCell", @"cell")
+    regNibCellT(self.tableView, @"DownloadCell", @"cell");
     self.manager = [YHFileDownLoadManager sharedManager];
     NSString *docPath = @"YHFileDownloads";
     NSString *sigleID = [self.manager addTaskWithUrl:kDownload1 saveDirectory:docPath];

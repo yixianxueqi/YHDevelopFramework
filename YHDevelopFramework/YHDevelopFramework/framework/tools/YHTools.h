@@ -33,9 +33,12 @@
 #define dicFromJSON(name) [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:(name) ofType:@"json"]] options:NSJSONReadingAllowFragments error:nil]
 //读取xib
 #define nibView(viewClass) [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([viewClass class]) owner:self options:nil].lastObject
-//注册tableViewCell/collectionViewCell,class
-#define regClsCell(tableView,clsName,identifier) [(tableView) registerClass:[(clsName) class] forCellReuseIdentifier:(identifier)];
-//注册tableViewCell/collectionViewCell,xib
-#define regNibCell(tableView,nibName,identifier) [(tableView) registerNib:[UINib nibWithNibName:(nibName) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:(identifier)];
-
+//注册tableViewCell，class
+#define regClsCellT(tableView,cls,identifier) [(tableView) registerClass:(cls) forCellReuseIdentifier:(identifier)]
+//注册tableViewCell,nib
+#define regNibCellT(tableView,nibName,identifier) [(tableView) registerNib:[UINib nibWithNibName:(nibName) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:(identifier)]
+//注册collectionViewCell,class
+#define regClsCellC(collectionView,cls,identifier) [(collectionView) registerClass:cls forCellWithReuseIdentifier:identifier]
+//注册collectionViewCell,nib
+#define regNibCellC(collectionView,nibName,identifier)   [(collectionView) registerNib:[UINib nibWithNibName:(nibName) bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:(identifier)]
 #endif /* YHTools_h */

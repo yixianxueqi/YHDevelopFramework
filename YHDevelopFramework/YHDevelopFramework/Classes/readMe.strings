@@ -23,6 +23,8 @@
 #
 #   framework/
 #       |
+#       subClass/   :继承父类，自定义子类，提供一些特殊功能
+#       |
 #       tools/      :工具类
 #       |
 #       Category/   :类增强
