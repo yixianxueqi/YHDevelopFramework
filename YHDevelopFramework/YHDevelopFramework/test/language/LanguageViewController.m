@@ -5,9 +5,6 @@
 //  Created by 君若见故 on 16/8/22.
 //  Copyright © 2016年 isoftstone. All rights reserved.
 //
-/*
-    @notice bug: 点击两次才生效（click twice effective）
- */
 #import "LanguageViewController.h"
 
 @interface LanguageViewController ()

@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Entity.h"
+#import "ReadMeViewController.h"
 
 @interface VCModel : Entity
 
@@ -20,7 +21,7 @@
 
 @end
 
-
+#pragma mark - ViewController
 @interface ViewController ()<YHCrashHandle,YHLoggerHandle,UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -34,6 +35,7 @@
     [super viewDidLoad];
     
     [self addLogger];
+    [self defineRightBarButtonItem];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -43,6 +45,11 @@
     
 }
 #pragma mark - define
+
+- (void)defineRightBarButtonItem {
+
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"readMe" style:UIBarButtonItemStylePlain target:self action:@selector(readMeVC)];
+}
 
 - (void)addLogger {
 
@@ -58,6 +65,12 @@
     UIViewController *viewController = [[NSClassFromString(model.vcName) alloc] init];
     viewController.navigationItem.title = model.vcTitle;
     return viewController;
+}
+
+- (void)readMeVC {
+
+    ReadMeViewController *readMeVC = [[ReadMeViewController alloc] init];
+    [self.navigationController pushViewController:readMeVC animated:YES];
 }
 
 #pragma mark - YHLoggerHandle

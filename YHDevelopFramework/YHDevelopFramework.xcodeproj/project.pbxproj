@@ -47,6 +47,9 @@
 		DB5DFB821D6AD0B80094C6B1 /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5DFB811D6AD0B80094C6B1 /* BaseNavigationViewController.m */; };
 		DB5DFB871D6ADD670094C6B1 /* FileManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5DFB851D6ADD670094C6B1 /* FileManagerViewController.m */; };
 		DB5DFB881D6ADD670094C6B1 /* FileManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5DFB861D6ADD670094C6B1 /* FileManagerViewController.xib */; };
+		DB5DFB8A1D6AEE7F0094C6B1 /* readMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = DB5DFB891D6AEE7F0094C6B1 /* readMe.txt */; };
+		DB5DFB8F1D6AEF370094C6B1 /* ReadMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5DFB8D1D6AEF370094C6B1 /* ReadMeViewController.m */; };
+		DB5DFB901D6AEF370094C6B1 /* ReadMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5DFB8E1D6AEF370094C6B1 /* ReadMeViewController.xib */; };
 		DB63FAC11D37811B000C06F5 /* YHCrashCatch.m in Sources */ = {isa = PBXBuildFile; fileRef = DB63FAC01D37811B000C06F5 /* YHCrashCatch.m */; };
 		DBA450B01D2CE5E8001ADEDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA450AF1D2CE5E8001ADEDC /* main.m */; };
 		DBA450BB1D2CE5E8001ADEDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA450BA1D2CE5E8001ADEDC /* Assets.xcassets */; };
@@ -145,6 +148,10 @@
 		DB5DFB841D6ADD670094C6B1 /* FileManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManagerViewController.h; sourceTree = "<group>"; };
 		DB5DFB851D6ADD670094C6B1 /* FileManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManagerViewController.m; sourceTree = "<group>"; };
 		DB5DFB861D6ADD670094C6B1 /* FileManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FileManagerViewController.xib; sourceTree = "<group>"; };
+		DB5DFB891D6AEE7F0094C6B1 /* readMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readMe.txt; sourceTree = "<group>"; };
+		DB5DFB8C1D6AEF370094C6B1 /* ReadMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadMeViewController.h; sourceTree = "<group>"; };
+		DB5DFB8D1D6AEF370094C6B1 /* ReadMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadMeViewController.m; sourceTree = "<group>"; };
+		DB5DFB8E1D6AEF370094C6B1 /* ReadMeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadMeViewController.xib; sourceTree = "<group>"; };
 		DB63FABF1D37811B000C06F5 /* YHCrashCatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHCrashCatch.h; sourceTree = "<group>"; };
 		DB63FAC01D37811B000C06F5 /* YHCrashCatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHCrashCatch.m; sourceTree = "<group>"; };
 		DBA450AB1D2CE5E8001ADEDC /* YHDevelopFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YHDevelopFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,6 +258,7 @@
 		DB5DFB481D6A936D0094C6B1 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				DB5DFB8B1D6AEF170094C6B1 /* readMe */,
 				DB5DFB831D6ADD400094C6B1 /* fileManager */,
 				DB5DFB7A1D6ACE3B0094C6B1 /* language */,
 				DB5DFB741D6AAA880094C6B1 /* deviceInfo */,
@@ -333,6 +341,16 @@
 				DB5DFB861D6ADD670094C6B1 /* FileManagerViewController.xib */,
 			);
 			path = fileManager;
+			sourceTree = "<group>";
+		};
+		DB5DFB8B1D6AEF170094C6B1 /* readMe */ = {
+			isa = PBXGroup;
+			children = (
+				DB5DFB8C1D6AEF370094C6B1 /* ReadMeViewController.h */,
+				DB5DFB8D1D6AEF370094C6B1 /* ReadMeViewController.m */,
+				DB5DFB8E1D6AEF370094C6B1 /* ReadMeViewController.xib */,
+			);
+			path = readMe;
 			sourceTree = "<group>";
 		};
 		DBA450A21D2CE5E8001ADEDC = {
@@ -542,6 +560,7 @@
 				DBA450DD1D2CECF5001ADEDC /* Sources */,
 				DBA450DC1D2CECD3001ADEDC /* Modules */,
 				DBA450E51D2CEE2E001ADEDC /* readMe.strings */,
+				DB5DFB891D6AEE7F0094C6B1 /* readMe.txt */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -679,10 +698,12 @@
 				DBA450E61D2CEE2E001ADEDC /* readMe.strings in Resources */,
 				DBC66F4D1D4B2B21009666AF /* ZHCN_Language.strings in Resources */,
 				DB5DFB641D6A94F80094C6B1 /* VCList.plist in Resources */,
+				DB5DFB901D6AEF370094C6B1 /* ReadMeViewController.xib in Resources */,
 				DB5DFB581D6A936D0094C6B1 /* DownloadCell.xib in Resources */,
 				DB5DFB621D6A93ED0094C6B1 /* Main.storyboard in Resources */,
 				DB5DFB881D6ADD670094C6B1 /* FileManagerViewController.xib in Resources */,
 				DB5DFB721D6AA1B70094C6B1 /* NetworkViewController.xib in Resources */,
+				DB5DFB8A1D6AEE7F0094C6B1 /* readMe.txt in Resources */,
 				DBBCA3DE1D3DFC1300ED7014 /* YHList.plist in Resources */,
 				DBA450BE1D2CE5E8001ADEDC /* LaunchScreen.storyboard in Resources */,
 				DBC66F4F1D4B2B44009666AF /* EN_Language.strings in Resources */,
@@ -767,6 +788,7 @@
 				DB2F49301D66A1C6001E5B30 /* YHWaterFallLayout.m in Sources */,
 				DBEAAC0F1D55D9A200A4E76A /* YHNetCache.m in Sources */,
 				DB5DFB821D6AD0B80094C6B1 /* BaseNavigationViewController.m in Sources */,
+				DB5DFB8F1D6AEF370094C6B1 /* ReadMeViewController.m in Sources */,
 				DB53F70A1D4892F00065F49E /* NSNumber+Formatter.m in Sources */,
 				DBA450CE1D2CEA91001ADEDC /* BaseViewController.m in Sources */,
 				DB53F7241D48AF800065F49E /* YHInternationalControl.m in Sources */,

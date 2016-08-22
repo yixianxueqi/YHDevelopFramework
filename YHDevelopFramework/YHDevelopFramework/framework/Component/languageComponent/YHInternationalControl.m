@@ -57,9 +57,9 @@ static YHInternationalControl *control;
 
     //当设置的语言不等于当前语言时，记录当前的新语言版本，并发送语言变更通知
     if (!(index == [self getLanguage])) {
+        control.type = index;
         [[NSUserDefaults standardUserDefaults] setInteger:index forKey:kLanguageType];
         [[NSNotificationCenter defaultCenter] postNotificationName:LanguageChangeNotifiacation object:[NSNumber numberWithInteger:index]];
-        control.type = index;
     }
 }
 
