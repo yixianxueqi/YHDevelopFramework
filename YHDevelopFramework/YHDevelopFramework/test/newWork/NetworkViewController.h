@@ -1,13 +1,13 @@
 //
-//  ViewController3.h
+//  NetworkViewController.h
 //  YHDevelopFramework
 //
-//  Created by 君若见故 on 16/7/29.
+//  Created by 君若见故 on 16/8/22.
 //  Copyright © 2016年 isoftstone. All rights reserved.
 //
 
 #import "BaseViewController.h"
 
-@interface ViewController3 : BaseViewController
+@interface NetworkViewController : BaseViewController
 
 @end

@@ -10,9 +10,9 @@
 
 @interface NSString (Rect)
 
-//获取文本宽度
-- (CGFloat)stringHeightForWidth:(CGFloat)width fontSize:(CGFloat)size;
 //获取文本高度
+- (CGFloat)stringHeightForWidth:(CGFloat)width fontSize:(CGFloat)size;
+//获取文本宽度
 - (CGFloat)stringWidthForHeight:(CGFloat)height fontSize:(CGFloat)size;
 
 @end

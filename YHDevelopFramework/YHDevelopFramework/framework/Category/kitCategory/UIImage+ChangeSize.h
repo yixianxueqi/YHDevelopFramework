@@ -17,5 +17,6 @@
 - (UIImage *)compressToTargetWidth:(CGFloat)defineWidth;
 //img 需要压缩的对象 限制最高数据量KB step每循环一次步进值(0~1.0)
 - (NSData *)adjustlimitSize:(NSInteger)size step:(float)delta;
-
+//圆形图片
+- (UIImage *)circleImage;
 @end

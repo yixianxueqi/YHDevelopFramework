@@ -6,45 +6,24 @@
 //  Copyright © 2016年 isoftstone. All rights reserved.
 //
 
-#import "WaterVViewController.h"
+#import "WaterViewController.h"
 #import "YHWaterFallLayout.h"
 
-@interface WaterVViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,YHWaterFallLayoutDelegate>
+@interface WaterViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,YHWaterFallLayoutDelegate>
 
 @property (nonatomic,strong) UICollectionView *collectionView;
 
 @end
 
-@implementation WaterVViewController
+@implementation WaterViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"瀑布流";
     regClsCellC(self.collectionView, [UICollectionViewCell class], @"cell");
     
 }
 #pragma mark -define
-
-- (NSUInteger)randomNum {
-
-    return arc4random_uniform(100);
-}
-
-- (UIColor *)randomColor {
-
-    NSUInteger num = [self randomNum];
-    NSInteger index = num % 3;
-    UIColor *color;
-    if (index == 0) {
-        color = [UIColor redColor];
-    } else if (index == 1) {
-        color = [UIColor redColor];
-    } else {
-        color = [UIColor redColor];
-    }
-    return color;
-}
 
 - (CGFloat)getHight:(NSUInteger)index {
     
@@ -83,7 +62,7 @@
     if (!_collectionView) {
         YHWaterFallLayout *waterLayout = [[YHWaterFallLayout alloc] init];
         waterLayout.column = 3;
-        _collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:waterLayout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:waterLayout];
         [self.view addSubview:_collectionView];
         _collectionView.backgroundColor = [UIColor whiteColor];
         _collectionView.delegate = self;

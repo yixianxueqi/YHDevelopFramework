@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FileManagerViewController">
+            <connections>
+                <outlet property="tableView" destination="6bw-Pz-1Yn" id="teo-R4-IDs"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6bw-Pz-1Yn">
+                    <rect key="frame" x="0.0" y="64" width="600" height="472"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="9qN-UN-HmB"/>
+                        <outlet property="delegate" destination="-1" id="U7T-ED-pBh"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dv5-Qg-bGg">
+                    <rect key="frame" x="210" y="556" width="30" height="30"/>
+                    <state key="normal" title="压缩">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="clickBtn:" destination="-1" eventType="touchUpInside" id="qwL-Ik-dsz"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSv-gr-RZ0">
+                    <rect key="frame" x="352.5" y="556" width="45" height="30"/>
+                    <state key="normal" title="解压缩">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="clickBtn:" destination="-1" eventType="touchUpInside" id="Fkx-wv-v2B"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="6bw-Pz-1Yn" secondAttribute="trailing" id="5Vy-5A-p3i"/>
+                <constraint firstItem="dv5-Qg-bGg" firstAttribute="top" secondItem="6bw-Pz-1Yn" secondAttribute="bottom" constant="20" id="61J-5S-upa"/>
+                <constraint firstItem="6bw-Pz-1Yn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="ReW-sf-7bE"/>
+                <constraint firstItem="kSv-gr-RZ0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="1.25" id="Sx9-TD-vy8"/>
+                <constraint firstAttribute="bottom" secondItem="6bw-Pz-1Yn" secondAttribute="bottom" constant="64" id="W85-Vs-4wR"/>
+                <constraint firstItem="dv5-Qg-bGg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="0.75" id="Zch-Cg-tB6"/>
+                <constraint firstItem="6bw-Pz-1Yn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dSm-vb-fHJ"/>
+                <constraint firstItem="kSv-gr-RZ0" firstAttribute="top" secondItem="6bw-Pz-1Yn" secondAttribute="bottom" constant="20" id="jWV-Tn-p3J"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

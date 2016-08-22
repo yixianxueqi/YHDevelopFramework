@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>vcName</key>
+		<string>DownloadViewController</string>
+		<key>vcTitle</key>
+		<string>Download&amp;&amp;Resume</string>
+	</dict>
+	<dict>
+		<key>vcName</key>
+		<string>WaterViewController</string>
+		<key>vcTitle</key>
+		<string>waterFall</string>
+	</dict>
+	<dict>
+		<key>vcName</key>
+		<string>NetworkViewController</string>
+		<key>vcTitle</key>
+		<string>network</string>
+	</dict>
+	<dict>
+		<key>vcName</key>
+		<string>DeviceInfoViewController</string>
+		<key>vcTitle</key>
+		<string>DeviceInfo</string>
+	</dict>
+	<dict>
+		<key>vcName</key>
+		<string>LanguageViewController</string>
+		<key>vcTitle</key>
+		<string>language</string>
+	</dict>
+	<dict>
+		<key>vcName</key>
+		<string>FileManagerViewController</string>
+		<key>vcTitle</key>
+		<string>file</string>
+	</dict>
+</array>
+</plist>

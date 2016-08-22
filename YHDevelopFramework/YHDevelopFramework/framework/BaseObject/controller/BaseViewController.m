@@ -20,6 +20,7 @@
     [super viewDidLoad];
     //注册语言变换通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(languageChanged) name:LanguageChangeNotifiacation object:nil];
+    self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

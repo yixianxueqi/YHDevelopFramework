@@ -1,13 +1,13 @@
 //
-//  ViewController2.h
+//  DeviceInfoViewController.h
 //  YHDevelopFramework
 //
-//  Created by 君若见故 on 16/7/19.
+//  Created by 君若见故 on 16/8/22.
 //  Copyright © 2016年 isoftstone. All rights reserved.
 //
 
 #import "BaseViewController.h"
 
-@interface ViewController2 : BaseViewController
+@interface DeviceInfoViewController : BaseViewController
 
 @end

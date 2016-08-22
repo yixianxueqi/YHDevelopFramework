@@ -18,11 +18,11 @@
 @interface UIImageView (BorderChange)
 
 /**
- *  圆形图片
+ *  圆形图片(mak)
  */
 - (void)circleBorder;
 /**
- *  圆角图片
+ *  圆角图片(mask)
  */
 - (void)cornerBorder:(CGFloat)radius;
 

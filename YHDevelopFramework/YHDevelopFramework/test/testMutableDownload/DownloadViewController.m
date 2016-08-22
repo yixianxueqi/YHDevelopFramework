@@ -31,6 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    DDLogVerbose(@"sanBox: %@",NSHomeDirectory());
     regNibCellT(self.tableView, @"DownloadCell", @"cell");
     self.manager = [YHFileDownLoadManager sharedManager];
     NSString *docPath = @"YHFileDownloads";
@@ -47,7 +48,6 @@
         [weakSelf.tableView reloadData];
         
     }];
-    
 }
 
 #pragma mark - tableView delegate dataSource
