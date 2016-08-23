@@ -68,6 +68,7 @@
 		DBC8DB451D6C236300115D0A /* FlowContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC8DB441D6C236300115D0A /* FlowContentView.m */; };
 		DBC8DB4F1D6C253800115D0A /* FlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC8DB4D1D6C253800115D0A /* FlowViewController.m */; };
 		DBC8DB501D6C253800115D0A /* FlowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBC8DB4E1D6C253800115D0A /* FlowViewController.xib */; };
+		DBC8DB541D6C39BB00115D0A /* NewsView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC8DB531D6C39BB00115D0A /* NewsView.m */; };
 		DBEAAC0F1D55D9A200A4E76A /* YHNetCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEAAC0E1D55D9A200A4E76A /* YHNetCache.m */; };
 		DBF277171D4C830100EDB2EB /* YHFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF277161D4C830100EDB2EB /* YHFileManager.m */; };
 		DBF2771A1D4C847800EDB2EB /* YHFileCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF277191D4C847800EDB2EB /* YHFileCompress.m */; };
@@ -186,6 +187,8 @@
 		DBC8DB4C1D6C253800115D0A /* FlowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowViewController.h; sourceTree = "<group>"; };
 		DBC8DB4D1D6C253800115D0A /* FlowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowViewController.m; sourceTree = "<group>"; };
 		DBC8DB4E1D6C253800115D0A /* FlowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlowViewController.xib; sourceTree = "<group>"; };
+		DBC8DB521D6C39BB00115D0A /* NewsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsView.h; sourceTree = "<group>"; };
+		DBC8DB531D6C39BB00115D0A /* NewsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsView.m; sourceTree = "<group>"; };
 		DBEAAC0D1D55D9A200A4E76A /* YHNetCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHNetCache.h; sourceTree = "<group>"; };
 		DBEAAC0E1D55D9A200A4E76A /* YHNetCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHNetCache.m; sourceTree = "<group>"; };
 		DBF277151D4C830100EDB2EB /* YHFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHFileManager.h; sourceTree = "<group>"; };
@@ -654,6 +657,8 @@
 		DBC8DB511D6C390400115D0A /* newsView */ = {
 			isa = PBXGroup;
 			children = (
+				DBC8DB521D6C39BB00115D0A /* NewsView.h */,
+				DBC8DB531D6C39BB00115D0A /* NewsView.m */,
 			);
 			path = newsView;
 			sourceTree = "<group>";
@@ -837,6 +842,7 @@
 				DB5DFB821D6AD0B80094C6B1 /* BaseNavigationViewController.m in Sources */,
 				DBC8DB451D6C236300115D0A /* FlowContentView.m in Sources */,
 				DB5DFB8F1D6AEF370094C6B1 /* ReadMeViewController.m in Sources */,
+				DBC8DB541D6C39BB00115D0A /* NewsView.m in Sources */,
 				DB53F70A1D4892F00065F49E /* NSNumber+Formatter.m in Sources */,
 				DBA450CE1D2CEA91001ADEDC /* BaseViewController.m in Sources */,
 				DB53F7241D48AF800065F49E /* YHInternationalControl.m in Sources */,
