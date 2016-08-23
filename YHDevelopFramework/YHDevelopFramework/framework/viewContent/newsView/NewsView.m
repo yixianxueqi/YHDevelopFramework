@@ -37,6 +37,7 @@
     [self customTopTitleView];
     [self customBottomView];
 
+    NSLog(@"1111111111");
 }
 
 - (void)caculateWidth {
