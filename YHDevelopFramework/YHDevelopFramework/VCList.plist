@@ -38,5 +38,11 @@
 		<key>vcTitle</key>
 		<string>file</string>
 	</dict>
+	<dict>
+		<key>vcName</key>
+		<string>FlowViewController</string>
+		<key>vcTitle</key>
+		<string>flow</string>
+	</dict>
 </array>
 </plist>

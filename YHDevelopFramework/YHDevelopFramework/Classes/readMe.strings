@@ -23,6 +23,8 @@
 #
 #   framework/
 #       |
+#       viewContent/ :自定义特殊视图容器
+#       |
 #       subClass/   :继承父类，自定义子类，提供一些特殊功能
 #       |
 #       tools/      :工具类

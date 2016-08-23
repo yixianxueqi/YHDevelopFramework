@@ -65,6 +65,9 @@
 		DBBCA3E11D3E074B00ED7014 /* UIImage+ChangeSize.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBCA3E01D3E074B00ED7014 /* UIImage+ChangeSize.m */; };
 		DBC66F4D1D4B2B21009666AF /* ZHCN_Language.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBC66F4C1D4B2B21009666AF /* ZHCN_Language.strings */; };
 		DBC66F4F1D4B2B44009666AF /* EN_Language.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBC66F4E1D4B2B44009666AF /* EN_Language.strings */; };
+		DBC8DB451D6C236300115D0A /* FlowContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC8DB441D6C236300115D0A /* FlowContentView.m */; };
+		DBC8DB4F1D6C253800115D0A /* FlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC8DB4D1D6C253800115D0A /* FlowViewController.m */; };
+		DBC8DB501D6C253800115D0A /* FlowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBC8DB4E1D6C253800115D0A /* FlowViewController.xib */; };
 		DBEAAC0F1D55D9A200A4E76A /* YHNetCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEAAC0E1D55D9A200A4E76A /* YHNetCache.m */; };
 		DBF277171D4C830100EDB2EB /* YHFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF277161D4C830100EDB2EB /* YHFileManager.m */; };
 		DBF2771A1D4C847800EDB2EB /* YHFileCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF277191D4C847800EDB2EB /* YHFileCompress.m */; };
@@ -178,6 +181,11 @@
 		DBBCA3E01D3E074B00ED7014 /* UIImage+ChangeSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ChangeSize.m"; sourceTree = "<group>"; };
 		DBC66F4C1D4B2B21009666AF /* ZHCN_Language.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = ZHCN_Language.strings; sourceTree = "<group>"; };
 		DBC66F4E1D4B2B44009666AF /* EN_Language.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = EN_Language.strings; sourceTree = "<group>"; };
+		DBC8DB431D6C236300115D0A /* FlowContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowContentView.h; sourceTree = "<group>"; };
+		DBC8DB441D6C236300115D0A /* FlowContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowContentView.m; sourceTree = "<group>"; };
+		DBC8DB4C1D6C253800115D0A /* FlowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowViewController.h; sourceTree = "<group>"; };
+		DBC8DB4D1D6C253800115D0A /* FlowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowViewController.m; sourceTree = "<group>"; };
+		DBC8DB4E1D6C253800115D0A /* FlowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlowViewController.xib; sourceTree = "<group>"; };
 		DBEAAC0D1D55D9A200A4E76A /* YHNetCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHNetCache.h; sourceTree = "<group>"; };
 		DBEAAC0E1D55D9A200A4E76A /* YHNetCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHNetCache.m; sourceTree = "<group>"; };
 		DBF277151D4C830100EDB2EB /* YHFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHFileManager.h; sourceTree = "<group>"; };
@@ -226,6 +234,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DB184B761D6BFBD3004F04FD /* viewContent */ = {
+			isa = PBXGroup;
+			children = (
+				DBC8DB511D6C390400115D0A /* newsView */,
+				DBC8DB421D6C236300115D0A /* flowView */,
+			);
+			path = viewContent;
+			sourceTree = "<group>";
+		};
 		DB2F492C1D669A96001E5B30 /* subClass */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +275,7 @@
 		DB5DFB481D6A936D0094C6B1 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				DBC8DB4B1D6C24FF00115D0A /* flowView */,
 				DB5DFB8B1D6AEF170094C6B1 /* readMe */,
 				DB5DFB831D6ADD400094C6B1 /* fileManager */,
 				DB5DFB7A1D6ACE3B0094C6B1 /* language */,
@@ -400,6 +418,7 @@
 		DBA450C51D2CE874001ADEDC /* framework */ = {
 			isa = PBXGroup;
 			children = (
+				DB184B761D6BFBD3004F04FD /* viewContent */,
 				DB2F492C1D669A96001E5B30 /* subClass */,
 				DB3DA0B91D34BBC40016D137 /* tools */,
 				DBA450C81D2CE9B6001ADEDC /* Category */,
@@ -613,6 +632,32 @@
 			path = fileComponent;
 			sourceTree = "<group>";
 		};
+		DBC8DB421D6C236300115D0A /* flowView */ = {
+			isa = PBXGroup;
+			children = (
+				DBC8DB431D6C236300115D0A /* FlowContentView.h */,
+				DBC8DB441D6C236300115D0A /* FlowContentView.m */,
+			);
+			path = flowView;
+			sourceTree = "<group>";
+		};
+		DBC8DB4B1D6C24FF00115D0A /* flowView */ = {
+			isa = PBXGroup;
+			children = (
+				DBC8DB4C1D6C253800115D0A /* FlowViewController.h */,
+				DBC8DB4D1D6C253800115D0A /* FlowViewController.m */,
+				DBC8DB4E1D6C253800115D0A /* FlowViewController.xib */,
+			);
+			path = flowView;
+			sourceTree = "<group>";
+		};
+		DBC8DB511D6C390400115D0A /* newsView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = newsView;
+			sourceTree = "<group>";
+		};
 		DBF7BD421D5B18D500320F62 /* mutableFileDownload */ = {
 			isa = PBXGroup;
 			children = (
@@ -704,6 +749,7 @@
 				DB5DFB881D6ADD670094C6B1 /* FileManagerViewController.xib in Resources */,
 				DB5DFB721D6AA1B70094C6B1 /* NetworkViewController.xib in Resources */,
 				DB5DFB8A1D6AEE7F0094C6B1 /* readMe.txt in Resources */,
+				DBC8DB501D6C253800115D0A /* FlowViewController.xib in Resources */,
 				DBBCA3DE1D3DFC1300ED7014 /* YHList.plist in Resources */,
 				DBA450BE1D2CE5E8001ADEDC /* LaunchScreen.storyboard in Resources */,
 				DBC66F4F1D4B2B44009666AF /* EN_Language.strings in Resources */,
@@ -780,6 +826,7 @@
 				DBF7BD451D5B1DD700320F62 /* YHFileDownLoadManager.m in Sources */,
 				DB5DFB571D6A936D0094C6B1 /* DownloadCell.m in Sources */,
 				DB3DA0C51D34ECF30016D137 /* YHLogFormat.m in Sources */,
+				DBC8DB4F1D6C253800115D0A /* FlowViewController.m in Sources */,
 				DB02433C1D54656C00E99FA8 /* YHReachability.m in Sources */,
 				DBA450E91D2D0771001ADEDC /* NSDate+YHDateFormat.m in Sources */,
 				DB53F7101D4898160065F49E /* NSString+Secret.m in Sources */,
@@ -788,6 +835,7 @@
 				DB2F49301D66A1C6001E5B30 /* YHWaterFallLayout.m in Sources */,
 				DBEAAC0F1D55D9A200A4E76A /* YHNetCache.m in Sources */,
 				DB5DFB821D6AD0B80094C6B1 /* BaseNavigationViewController.m in Sources */,
+				DBC8DB451D6C236300115D0A /* FlowContentView.m in Sources */,
 				DB5DFB8F1D6AEF370094C6B1 /* ReadMeViewController.m in Sources */,
 				DB53F70A1D4892F00065F49E /* NSNumber+Formatter.m in Sources */,
 				DBA450CE1D2CEA91001ADEDC /* BaseViewController.m in Sources */,
