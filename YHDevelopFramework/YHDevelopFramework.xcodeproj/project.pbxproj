@@ -312,7 +312,7 @@
 				DB5DFB831D6ADD400094C6B1 /* fileManager */,
 				DB5DFB7A1D6ACE3B0094C6B1 /* language */,
 				DB5DFB741D6AAA880094C6B1 /* deviceInfo */,
-				DB5DFB6D1D6AA18E0094C6B1 /* newWork */,
+				DB5DFB6D1D6AA18E0094C6B1 /* netWork */,
 				DB5DFB491D6A936D0094C6B1 /* testMutableDownload */,
 				DB5DFB4F1D6A936D0094C6B1 /* testObject */,
 				DB5DFB541D6A936D0094C6B1 /* waterFallLayout */,
@@ -353,14 +353,14 @@
 			path = waterFallLayout;
 			sourceTree = "<group>";
 		};
-		DB5DFB6D1D6AA18E0094C6B1 /* newWork */ = {
+		DB5DFB6D1D6AA18E0094C6B1 /* netWork */ = {
 			isa = PBXGroup;
 			children = (
 				DB5DFB6E1D6AA1B70094C6B1 /* NetworkViewController.h */,
 				DB5DFB6F1D6AA1B70094C6B1 /* NetworkViewController.m */,
 				DB5DFB701D6AA1B70094C6B1 /* NetworkViewController.xib */,
 			);
-			path = newWork;
+			path = netWork;
 			sourceTree = "<group>";
 		};
 		DB5DFB741D6AAA880094C6B1 /* deviceInfo */ = {
