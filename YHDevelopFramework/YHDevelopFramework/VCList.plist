@@ -44,5 +44,11 @@
 		<key>vcTitle</key>
 		<string>flow</string>
 	</dict>
+	<dict>
+		<key>vcName</key>
+		<string>NewsViewController</string>
+		<key>vcTitle</key>
+		<string>newsView</string>
+	</dict>
 </array>
 </plist>
