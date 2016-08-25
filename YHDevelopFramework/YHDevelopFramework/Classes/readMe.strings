@@ -37,6 +37,8 @@
 #       |
 #       Compontent/    :功能组件
 #           |
+#           QRCode/     :二维码
+#           |
 #           mutableFileDownload/ :多文件下载
 #           |
 #           fileComponent/  :文件组件
