@@ -56,5 +56,6 @@
 #define regNibCellC(collectionView,nibName,identifier)   [(collectionView) registerNib:[UINib nibWithNibName:(nibName) bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:(identifier)]
 
 
+#define isNullString(obj) 
 
 #endif /* YHTools_h */

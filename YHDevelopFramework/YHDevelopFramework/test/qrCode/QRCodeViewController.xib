@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QRCodeViewController">
+            <connections>
+                <outlet property="imgView1" destination="KhL-aT-5dX" id="wTF-0m-KOK"/>
+                <outlet property="imgView2" destination="YTP-Fy-1YM" id="O96-Tf-CV6"/>
+                <outlet property="resultLabel" destination="zmO-0d-PGh" id="bvx-BW-jHc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydu-GI-Qme">
+                    <rect key="frame" x="187" y="108" width="75" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="摄像头读取">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="clickBtn:" destination="-1" eventType="touchUpInside" id="oWM-0w-4tc"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iq2-Uh-q10">
+                    <rect key="frame" x="345" y="108" width="60" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="相册读取">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="clickBtn:" destination="-1" eventType="touchUpInside" id="W2d-3P-4CV"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8u-CR-SEp">
+                    <rect key="frame" x="45" y="372" width="75" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="生成二维码">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="clickBtn:" destination="-1" eventType="touchUpInside" id="O3B-wd-HKm"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZpC-dV-Jxk">
+                    <rect key="frame" x="166" y="372" width="150" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="生成有中心logo二维码">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="clickBtn:" destination="-1" eventType="touchUpInside" id="ukt-hZ-S5b"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YTP-Fy-1YM">
+                    <rect key="frame" x="166" y="202" width="150" height="150"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmO-0d-PGh">
+                    <rect key="frame" x="279" y="515" width="42" height="21"/>
+                    <color key="backgroundColor" red="0.95541351009999997" green="0.14987080359999999" blue="0.1244348934" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KhL-aT-5dX">
+                    <rect key="frame" x="8" y="202" width="150" height="150"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="4zD-gz-m2U"/>
+                        <constraint firstAttribute="width" constant="150" id="mfS-YG-SjM"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="YTP-Fy-1YM" firstAttribute="centerX" secondItem="ZpC-dV-Jxk" secondAttribute="centerX" id="0Y8-F6-IMP"/>
+                <constraint firstItem="ZpC-dV-Jxk" firstAttribute="top" secondItem="YTP-Fy-1YM" secondAttribute="bottom" constant="20" id="541-nJ-qNc"/>
+                <constraint firstItem="iq2-Uh-q10" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="108" id="6Kg-Nl-T0Z"/>
+                <constraint firstItem="iq2-Uh-q10" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="1.25" id="6y6-Uk-HYH"/>
+                <constraint firstItem="YTP-Fy-1YM" firstAttribute="height" secondItem="KhL-aT-5dX" secondAttribute="height" id="AwN-Vi-i6y"/>
+                <constraint firstItem="zmO-0d-PGh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BuV-6P-Y41"/>
+                <constraint firstItem="YTP-Fy-1YM" firstAttribute="width" secondItem="KhL-aT-5dX" secondAttribute="width" id="ED7-ub-tSD"/>
+                <constraint firstItem="ydu-GI-Qme" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="108" id="H05-1x-bkJ"/>
+                <constraint firstItem="P8u-CR-SEp" firstAttribute="top" secondItem="KhL-aT-5dX" secondAttribute="bottom" constant="20" id="SZf-yQ-Y8E"/>
+                <constraint firstItem="KhL-aT-5dX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="bM3-GZ-LRb"/>
+                <constraint firstItem="KhL-aT-5dX" firstAttribute="top" secondItem="ydu-GI-Qme" secondAttribute="bottom" constant="64" id="dag-xt-onT"/>
+                <constraint firstItem="ydu-GI-Qme" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="0.75" id="j1m-WI-09P"/>
+                <constraint firstItem="YTP-Fy-1YM" firstAttribute="leading" secondItem="KhL-aT-5dX" secondAttribute="trailing" constant="8" id="joX-HR-DxE"/>
+                <constraint firstItem="P8u-CR-SEp" firstAttribute="centerX" secondItem="KhL-aT-5dX" secondAttribute="centerX" id="oTp-Az-O2r"/>
+                <constraint firstAttribute="bottom" secondItem="zmO-0d-PGh" secondAttribute="bottom" constant="64" id="rTB-tC-jSm"/>
+                <constraint firstItem="YTP-Fy-1YM" firstAttribute="centerY" secondItem="KhL-aT-5dX" secondAttribute="centerY" id="tzc-a4-HOd"/>
+                <constraint firstAttribute="trailing" secondItem="YTP-Fy-1YM" secondAttribute="trailing" constant="20" id="wIT-3Y-fsf"/>
+                <constraint firstItem="KhL-aT-5dX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="yBk-qb-QEK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="bM3-GZ-LRb"/>
+                    <exclude reference="wIT-3Y-fsf"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

@@ -16,6 +16,13 @@
 		DB2192001D6D843300AD48DB /* NewContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2191FF1D6D843300AD48DB /* NewContentView.m */; };
 		DB2192031D6D86AA00AD48DB /* NewsTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2192021D6D86AA00AD48DB /* NewsTableViewDelegate.m */; };
 		DB2192051D6D9C7300AD48DB /* newsView.png in Resources */ = {isa = PBXBuildFile; fileRef = DB2192041D6D9C7300AD48DB /* newsView.png */; };
+		DB2A88181D6EDC89006010C8 /* QRCodeCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2A88111D6EDC89006010C8 /* QRCodeCameraViewController.m */; };
+		DB2A88191D6EDC89006010C8 /* QRCodeCreate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2A88131D6EDC89006010C8 /* QRCodeCreate.m */; };
+		DB2A881A1D6EDC89006010C8 /* QRCodePhotoLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2A88151D6EDC89006010C8 /* QRCodePhotoLibrary.m */; };
+		DB2A881B1D6EDC89006010C8 /* QRCodeTools.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2A88171D6EDC89006010C8 /* QRCodeTools.m */; };
+		DB2A881D1D6EDC97006010C8 /* QRCodeScanLine.png in Resources */ = {isa = PBXBuildFile; fileRef = DB2A881C1D6EDC97006010C8 /* QRCodeScanLine.png */; };
+		DB2A88221D6EDCC0006010C8 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2A88201D6EDCC0006010C8 /* QRCodeViewController.m */; };
+		DB2A88231D6EDCC0006010C8 /* QRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB2A88211D6EDCC0006010C8 /* QRCodeViewController.xib */; };
 		DB2F49301D66A1C6001E5B30 /* YHWaterFallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F492F1D66A1C6001E5B30 /* YHWaterFallLayout.m */; };
 		DB315B5E1D41FE9100069C87 /* YHDBYTKValueStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DB315B5D1D41FE9100069C87 /* YHDBYTKValueStore.m */; };
 		DB378E251D5C21B900A375DA /* YHFileDownloadStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DB378E241D5C21B900A375DA /* YHFileDownloadStore.m */; };
@@ -101,6 +108,18 @@
 		DB2192011D6D86AA00AD48DB /* NewsTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewDelegate.h; sourceTree = "<group>"; };
 		DB2192021D6D86AA00AD48DB /* NewsTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewDelegate.m; sourceTree = "<group>"; };
 		DB2192041D6D9C7300AD48DB /* newsView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newsView.png; sourceTree = "<group>"; };
+		DB2A88101D6EDC89006010C8 /* QRCodeCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeCameraViewController.h; sourceTree = "<group>"; };
+		DB2A88111D6EDC89006010C8 /* QRCodeCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeCameraViewController.m; sourceTree = "<group>"; };
+		DB2A88121D6EDC89006010C8 /* QRCodeCreate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeCreate.h; sourceTree = "<group>"; };
+		DB2A88131D6EDC89006010C8 /* QRCodeCreate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeCreate.m; sourceTree = "<group>"; };
+		DB2A88141D6EDC89006010C8 /* QRCodePhotoLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodePhotoLibrary.h; sourceTree = "<group>"; };
+		DB2A88151D6EDC89006010C8 /* QRCodePhotoLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodePhotoLibrary.m; sourceTree = "<group>"; };
+		DB2A88161D6EDC89006010C8 /* QRCodeTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeTools.h; sourceTree = "<group>"; };
+		DB2A88171D6EDC89006010C8 /* QRCodeTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeTools.m; sourceTree = "<group>"; };
+		DB2A881C1D6EDC97006010C8 /* QRCodeScanLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QRCodeScanLine.png; sourceTree = "<group>"; };
+		DB2A881F1D6EDCC0006010C8 /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
+		DB2A88201D6EDCC0006010C8 /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
+		DB2A88211D6EDCC0006010C8 /* QRCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRCodeViewController.xib; sourceTree = "<group>"; };
 		DB2F492E1D66A1C6001E5B30 /* YHWaterFallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHWaterFallLayout.h; sourceTree = "<group>"; };
 		DB2F492F1D66A1C6001E5B30 /* YHWaterFallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHWaterFallLayout.m; sourceTree = "<group>"; };
 		DB315B5C1D41FE9100069C87 /* YHDBYTKValueStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHDBYTKValueStore.h; sourceTree = "<group>"; };
@@ -274,6 +293,32 @@
 			path = newsView;
 			sourceTree = "<group>";
 		};
+		DB2A880F1D6EC194006010C8 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				DB2A881C1D6EDC97006010C8 /* QRCodeScanLine.png */,
+				DB2A88101D6EDC89006010C8 /* QRCodeCameraViewController.h */,
+				DB2A88111D6EDC89006010C8 /* QRCodeCameraViewController.m */,
+				DB2A88121D6EDC89006010C8 /* QRCodeCreate.h */,
+				DB2A88131D6EDC89006010C8 /* QRCodeCreate.m */,
+				DB2A88141D6EDC89006010C8 /* QRCodePhotoLibrary.h */,
+				DB2A88151D6EDC89006010C8 /* QRCodePhotoLibrary.m */,
+				DB2A88161D6EDC89006010C8 /* QRCodeTools.h */,
+				DB2A88171D6EDC89006010C8 /* QRCodeTools.m */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
+		DB2A881E1D6EDCA1006010C8 /* qrCode */ = {
+			isa = PBXGroup;
+			children = (
+				DB2A881F1D6EDCC0006010C8 /* QRCodeViewController.h */,
+				DB2A88201D6EDCC0006010C8 /* QRCodeViewController.m */,
+				DB2A88211D6EDCC0006010C8 /* QRCodeViewController.xib */,
+			);
+			path = qrCode;
+			sourceTree = "<group>";
+		};
 		DB2F492C1D669A96001E5B30 /* subClass */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +351,7 @@
 		DB5DFB481D6A936D0094C6B1 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				DB2A881E1D6EDCA1006010C8 /* qrCode */,
 				DB2191F81D6D3A4C00AD48DB /* newsView */,
 				DBC8DB4B1D6C24FF00115D0A /* flowView */,
 				DB5DFB8B1D6AEF170094C6B1 /* readMe */,
@@ -474,6 +520,7 @@
 		DBA450C71D2CE975001ADEDC /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				DB2A880F1D6EC194006010C8 /* QRCode */,
 				DBF7BD421D5B18D500320F62 /* mutableFileDownload */,
 				DBC66F531D4B5179009666AF /* fileComponent */,
 				DBA450D81D2CEC1B001ADEDC /* DBComponent */,
@@ -783,10 +830,12 @@
 				DB5DFB621D6A93ED0094C6B1 /* Main.storyboard in Resources */,
 				DB5DFB881D6ADD670094C6B1 /* FileManagerViewController.xib in Resources */,
 				DB5DFB721D6AA1B70094C6B1 /* NetworkViewController.xib in Resources */,
+				DB2A88231D6EDCC0006010C8 /* QRCodeViewController.xib in Resources */,
 				DB5DFB8A1D6AEE7F0094C6B1 /* readMe.txt in Resources */,
 				DBC8DB501D6C253800115D0A /* FlowViewController.xib in Resources */,
 				DBBCA3DE1D3DFC1300ED7014 /* YHList.plist in Resources */,
 				DBA450BE1D2CE5E8001ADEDC /* LaunchScreen.storyboard in Resources */,
+				DB2A881D1D6EDC97006010C8 /* QRCodeScanLine.png in Resources */,
 				DBC66F4F1D4B2B44009666AF /* EN_Language.strings in Resources */,
 				DBA450BB1D2CE5E8001ADEDC /* Assets.xcassets in Resources */,
 				DB2191FD1D6D3A7B00AD48DB /* NewsViewController.xib in Resources */,
@@ -854,6 +903,7 @@
 				DBB8629D1D3CD60500A5951F /* Entity.m in Sources */,
 				DB53F7131D48A02D0065F49E /* RegularCheck.m in Sources */,
 				DBF7BD4B1D5B1F1900320F62 /* YHFileHelper.m in Sources */,
+				DB2A881A1D6EDC89006010C8 /* QRCodePhotoLibrary.m in Sources */,
 				DBF277171D4C830100EDB2EB /* YHFileManager.m in Sources */,
 				DB5DFB5C1D6A936D0094C6B1 /* WaterViewController.m in Sources */,
 				DBF7BD481D5B1EF600320F62 /* YHFileDownLoadModel.m in Sources */,
@@ -893,12 +943,16 @@
 				DB2191FC1D6D3A7B00AD48DB /* NewsViewController.m in Sources */,
 				DBF2771D1D4C84BE00EDB2EB /* YHFileAction.m in Sources */,
 				DBA450D11D2CEAAE001ADEDC /* BaseView.m in Sources */,
+				DB2A88181D6EDC89006010C8 /* QRCodeCameraViewController.m in Sources */,
 				DB53F7071D488D290065F49E /* BaseCollectionViewCell.m in Sources */,
 				DB5DFB591D6A936D0094C6B1 /* DownloadViewController.m in Sources */,
 				DBBCA3E11D3E074B00ED7014 /* UIImage+ChangeSize.m in Sources */,
+				DB2A88221D6EDCC0006010C8 /* QRCodeViewController.m in Sources */,
 				DB2192001D6D843300AD48DB /* NewContentView.m in Sources */,
 				DB5DFB5B1D6A936D0094C6B1 /* Son.m in Sources */,
 				DB0243331D54268000E99FA8 /* NSString+Rect.m in Sources */,
+				DB2A88191D6EDC89006010C8 /* QRCodeCreate.m in Sources */,
+				DB2A881B1D6EDC89006010C8 /* QRCodeTools.m in Sources */,
 				DB63FAC11D37811B000C06F5 /* YHCrashCatch.m in Sources */,
 				DBA450B01D2CE5E8001ADEDC /* main.m in Sources */,
 				DB378E251D5C21B900A375DA /* YHFileDownloadStore.m in Sources */,

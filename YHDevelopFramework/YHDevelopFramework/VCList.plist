@@ -50,5 +50,11 @@
 		<key>vcTitle</key>
 		<string>newsView</string>
 	</dict>
+	<dict>
+		<key>vcName</key>
+		<string>QRCodeViewController</string>
+		<key>vcTitle</key>
+		<string>QRCode</string>
+	</dict>
 </array>
 </plist>

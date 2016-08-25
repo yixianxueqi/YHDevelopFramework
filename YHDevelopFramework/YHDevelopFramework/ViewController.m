@@ -35,6 +35,7 @@
     [super viewDidLoad];
     
     [self addLogger];
+    [self setAPPLanguage];
     [self defineRightBarButtonItem];
 }
 
@@ -58,6 +59,11 @@
     [YHLogger setFileLogLevel:DDLogLevelInfo];
     [YHLogger startCatchCrashInfo];
     [YHLogger getLogger].delegate = self;
+}
+
+- (void)setAPPLanguage {
+
+    [[YHInternationalControl shareLanguageControl] getLanguage];
 }
 
 - (UIViewController *)viewControllerWithModel:(VCModel *)model {
