@@ -17,15 +17,15 @@ typedef NS_ENUM(NSInteger,YHFileDownloadStatus) {
     //开始
     YHFileDownloadBegin = 1,
     //下载中
-    YHFileDownloaddownload = 1 << 1,
+    YHFileDownloaddownload,
     //暂停
-    YHFileDownloadSuspend = 1 << 2,
+    YHFileDownloadSuspend,
     //完成
-    YHFileDownloadFinshed = 1 << 3,
+    YHFileDownloadFinshed,
     //等待
-    YHFileDownloadWaiting = 1 << 4,
+    YHFileDownloadWaiting,
     //失败
-    YHFileDownloadFailure = 1 << 5,
+    YHFileDownloadFailure,
 };
 //状态变化回调
 typedef void(^ObserveStatusBlock)(YHFileDownLoadModel *model);

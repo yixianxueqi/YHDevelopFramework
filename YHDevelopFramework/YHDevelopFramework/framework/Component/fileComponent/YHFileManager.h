@@ -11,7 +11,7 @@
 typedef NS_ENUM(NSUInteger,FileType) {
 
     FileTypeFile = 1,
-    FileTypeDirectory = 1 << 1,
+    FileTypeDirectory,
 };
 /**
  * @class YHFileManager

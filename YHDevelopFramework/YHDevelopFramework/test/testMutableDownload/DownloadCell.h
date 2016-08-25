@@ -11,7 +11,7 @@
 typedef NS_ENUM(NSUInteger,downloadIncident) {
     
     incidentDoBtn = 1,
-    incidentCancel = 1 << 1,
+    incidentCancel = 2,
 };
 
 typedef void(^incidentBlock)(downloadIncident index);

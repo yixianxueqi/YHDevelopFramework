@@ -23,8 +23,14 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    DDLogInfo(@"%@ viewWillAppear",NSStringFromClass([self class]));
+}
+
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
+    DDLogInfo(@"%@ viewWillDisappear",NSStringFromClass([self class]));
     [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
 }
 

@@ -24,7 +24,7 @@
 typedef NS_ENUM(NSUInteger,LanguageEnum) {
 
     LanguageEnum_ZHCN = 1,
-    LanguageEnum_EN = 1 << 1,
+    LanguageEnum_EN,
     
 };
 /**

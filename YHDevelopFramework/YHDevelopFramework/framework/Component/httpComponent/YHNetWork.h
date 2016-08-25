@@ -24,7 +24,7 @@
 typedef NS_ENUM(NSInteger,UploadType) {
 
     UploadFile = 1,
-    UploadData = 1 << 1,
+    UploadData,
 };
 //上传文件配置对象
 @interface UploadObj : NSObject
