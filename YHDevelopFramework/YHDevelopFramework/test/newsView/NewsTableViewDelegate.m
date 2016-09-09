@@ -28,4 +28,9 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    NSLog(@"click At Index: %ld,%ld",indexPath.section,indexPath.row);
+}
+
 @end

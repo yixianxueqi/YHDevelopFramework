@@ -33,6 +33,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [YHNetWork setRequestTimeOut:15.f];
+    [self requestLKB];
 }
 
 - (IBAction)clickBtn:(UIButton *)sender {
@@ -125,6 +126,26 @@
         }
         
     }];
+}
+
+- (void)requestLKB {
+
+    /*
+        http://www.lvkeworld.com/ashx/App.ashx?
+     action=getMyDatas&apikey=b6a26fb81b2429e1&userid=521
+     */
+    NSString *url = @"http://www.lvkeworld.com/ashx/App.ashx";
+    NSDictionary *dic = @{@"action":@"getMyDatas",@"apikey":@"b6a26fb81b2429e1",@"userid":@"521"};
+    YHNetWork *network = [[YHNetWork alloc] init];
+    DDLogVerbose(@"Header: %@",[network getAllHeader]);
+    DDLogVerbose(@"responseAcceptableType: %@",[network getAllresponseAcceptableContentType]);
+    [YHNetWork blackListNotUseCommonParam:@[kHttp1,url]];
+    [network GET:url parameters:dic success:^(id responseObj) {
+        DDLogVerbose(@"responseObj: %@",responseObj);
+    } failure:^(NSError *error) {
+        DDLogVerbose(@"error: %@",error);
+    }];
+
 }
 
 @end
