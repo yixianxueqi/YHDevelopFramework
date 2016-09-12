@@ -34,7 +34,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setAPPLanguage];
     [self defineRightBarButtonItem];
 }
 
@@ -49,11 +48,6 @@
 - (void)defineRightBarButtonItem {
 
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"readMe" style:UIBarButtonItemStylePlain target:self action:@selector(readMeVC)];
-}
-
-- (void)setAPPLanguage {
-
-    [[YHInternationalControl shareLanguageControl] getLanguage];
 }
 
 - (UIViewController *)viewControllerWithModel:(VCModel *)model {

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "YHLogger.h"
 #import <IQKeyboardManager/IQKeyboardManager.h>
+#import "YHInternationalControl.h"
 
 @interface AppDelegate ()<YHLoggerHandle>
 
@@ -23,6 +24,8 @@
     [self addLogger];
     //键盘控制
     [self addKeyboardManager];
+    //语言控制
+    [self setAPPLanguage];
     return YES;
 }
 
@@ -48,6 +51,11 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 #pragma mark -define
+//语言
+- (void)setAPPLanguage {
+    
+    [[YHInternationalControl shareLanguageControl] getLanguage];
+}
 //键盘
 - (void)addKeyboardManager {
     [IQKeyboardManager sharedManager].enable = YES;
