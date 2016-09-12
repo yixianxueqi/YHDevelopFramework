@@ -33,7 +33,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [YHNetWork setRequestTimeOut:15.f];
-    [self requestLKB];
+//    [self requestLKB];
 }
 
 - (IBAction)clickBtn:(UIButton *)sender {
