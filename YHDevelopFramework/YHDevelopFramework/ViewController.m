@@ -22,7 +22,7 @@
 @end
 
 #pragma mark - ViewController
-@interface ViewController ()<YHCrashHandle,YHLoggerHandle,UITableViewDelegate,UITableViewDataSource>
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic,strong) NSMutableArray *list;
@@ -34,7 +34,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self addLogger];
     [self setAPPLanguage];
     [self defineRightBarButtonItem];
 }
@@ -50,15 +49,6 @@
 - (void)defineRightBarButtonItem {
 
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"readMe" style:UIBarButtonItemStylePlain target:self action:@selector(readMeVC)];
-}
-
-- (void)addLogger {
-
-    [YHLogger defaultLog];
-    [YHLogger setLogFormat:[[YHLogFormat alloc] init]];
-    [YHLogger setFileLogLevel:DDLogLevelInfo];
-    [YHLogger startCatchCrashInfo];
-    [YHLogger getLogger].delegate = self;
 }
 
 - (void)setAPPLanguage {
@@ -77,23 +67,6 @@
 
     ReadMeViewController *readMeVC = [[ReadMeViewController alloc] init];
     [self.navigationController pushViewController:readMeVC animated:YES];
-}
-
-#pragma mark - YHLoggerHandle
-
-- (void)showAllNormalLogFilePath:(NSArray *)filePathList {
-
-    DDLogVerbose(@"Alllog:%@",filePathList);
-}
-
-- (void)showALLCrashLogFilePath:(NSArray *)filePathList {
-
-    DDLogVerbose(@"AllCrashLog: %@",filePathList);
-}
-
-- (void)oneNewCrashLogFileAvaliable:(NSString *)filePath {
-
-    DDLogVerbose(@"NewCrashLog: %@",filePath);
 }
 
 #pragma mark - tableView delegate dataSource

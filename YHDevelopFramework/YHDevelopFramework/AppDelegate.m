@@ -8,8 +8,9 @@
 
 #import "AppDelegate.h"
 #import "YHLogger.h"
+#import <IQKeyboardManager/IQKeyboardManager.h>
 
-@interface AppDelegate ()
+@interface AppDelegate ()<YHLoggerHandle>
 
 @end
 
@@ -18,7 +19,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+    //添加日志系统
+    [self addLogger];
+    //键盘控制
+    [self addKeyboardManager];
     return YES;
 }
 
@@ -43,5 +47,35 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+#pragma mark -define
+//键盘
+- (void)addKeyboardManager {
+    [IQKeyboardManager sharedManager].enable = YES;
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
+}
+//日志
+- (void)addLogger {
+    
+    [YHLogger defaultLog];
+    [YHLogger setLogFormat:[[YHLogFormat alloc] init]];
+    [YHLogger setFileLogLevel:DDLogLevelInfo];
+    [YHLogger startCatchCrashInfo];
+    [YHLogger getLogger].delegate = self;
+}
+#pragma mark - YHLoggerHandle
 
+- (void)showAllNormalLogFilePath:(NSArray *)filePathList {
+    
+    DDLogVerbose(@"Alllog:%@",filePathList);
+}
+
+- (void)showALLCrashLogFilePath:(NSArray *)filePathList {
+    
+    DDLogVerbose(@"AllCrashLog: %@",filePathList);
+}
+
+- (void)oneNewCrashLogFileAvaliable:(NSString *)filePath {
+    
+    DDLogVerbose(@"NewCrashLog: %@",filePath);
+}
 @end

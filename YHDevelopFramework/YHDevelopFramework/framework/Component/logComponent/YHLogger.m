@@ -19,7 +19,9 @@ static YHLogger *logger = nil;
 + (void)defaultLog {
 
     [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+#ifndef __OPTIMIZE__
     [DDLog addLogger:[DDTTYLogger sharedInstance]]; // TTY = Xcode console
+#endif
     [DDLog addLogger:[DDASLLogger sharedInstance]]; // ASL = Apple System Logs
     logger = [[YHLogger alloc] init];
 }

@@ -26,6 +26,7 @@ PODS:
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
+  - IQKeyboardManager (4.0.4)
   - Masonry (1.0.1)
   - MBProgressHUD (0.9.2)
   - MJRefresh (3.1.10)
@@ -46,6 +47,7 @@ DEPENDENCIES:
   - AspectsV1.4.2 (~> 1.4.2)
   - CocoaLumberjack (~> 2.3.0)
   - FMDB (~> 2.6.2)
+  - IQKeyboardManager (~> 4.0.4)
   - Masonry (~> 1.0.1)
   - MBProgressHUD (~> 0.9.2)
   - MJRefresh (~> 3.1.9)
@@ -61,6 +63,7 @@ SPEC CHECKSUMS:
   AspectsV1.4.2: a8b168606776215f5ba4790b95ff315df336aca9
   CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  IQKeyboardManager: 4a6f83b540283c2645aaeba2bd8dc0f09b5c77f8
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJRefresh: bb72948c985914b0b5cecac573a2c69a8915fb02
