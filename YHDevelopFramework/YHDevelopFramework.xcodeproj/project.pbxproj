@@ -75,6 +75,7 @@
 		DBB8629D1D3CD60500A5951F /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB8629C1D3CD60500A5951F /* Entity.m */; };
 		DBBCA3DE1D3DFC1300ED7014 /* YHList.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBBCA3DD1D3DFC1300ED7014 /* YHList.plist */; };
 		DBBCA3E11D3E074B00ED7014 /* UIImage+ChangeSize.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBCA3E01D3E074B00ED7014 /* UIImage+ChangeSize.m */; };
+		DBC579161D87996900A6CF35 /* YHPhotoPickController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC579151D87996900A6CF35 /* YHPhotoPickController.m */; };
 		DBC66F4D1D4B2B21009666AF /* ZHCN_Language.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBC66F4C1D4B2B21009666AF /* ZHCN_Language.strings */; };
 		DBC66F4F1D4B2B44009666AF /* EN_Language.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBC66F4E1D4B2B44009666AF /* EN_Language.strings */; };
 		DBC8DB451D6C236300115D0A /* FlowContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC8DB441D6C236300115D0A /* FlowContentView.m */; };
@@ -212,6 +213,8 @@
 		DBBCA3DD1D3DFC1300ED7014 /* YHList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = YHList.plist; sourceTree = "<group>"; };
 		DBBCA3DF1D3E074B00ED7014 /* UIImage+ChangeSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ChangeSize.h"; sourceTree = "<group>"; };
 		DBBCA3E01D3E074B00ED7014 /* UIImage+ChangeSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ChangeSize.m"; sourceTree = "<group>"; };
+		DBC579141D87996900A6CF35 /* YHPhotoPickController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPhotoPickController.h; sourceTree = "<group>"; };
+		DBC579151D87996900A6CF35 /* YHPhotoPickController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPhotoPickController.m; sourceTree = "<group>"; };
 		DBC66F4C1D4B2B21009666AF /* ZHCN_Language.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = ZHCN_Language.strings; sourceTree = "<group>"; };
 		DBC66F4E1D4B2B44009666AF /* EN_Language.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = EN_Language.strings; sourceTree = "<group>"; };
 		DBC8DB431D6C236300115D0A /* FlowContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowContentView.h; sourceTree = "<group>"; };
@@ -521,6 +524,7 @@
 		DBA450C71D2CE975001ADEDC /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				DBC579131D87991E00A6CF35 /* photoPick */,
 				DB2A880F1D6EC194006010C8 /* QRCode */,
 				DBF7BD421D5B18D500320F62 /* mutableFileDownload */,
 				DBC66F531D4B5179009666AF /* fileComponent */,
@@ -702,6 +706,15 @@
 		DBC579121D8792E600A6CF35 /* photoPick */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			path = photoPick;
+			sourceTree = "<group>";
+		};
+		DBC579131D87991E00A6CF35 /* photoPick */ = {
+			isa = PBXGroup;
+			children = (
+				DBC579141D87996900A6CF35 /* YHPhotoPickController.h */,
+				DBC579151D87996900A6CF35 /* YHPhotoPickController.m */,
 			);
 			path = photoPick;
 			sourceTree = "<group>";
@@ -959,6 +972,7 @@
 				DB2192001D6D843300AD48DB /* NewContentView.m in Sources */,
 				DB5DFB5B1D6A936D0094C6B1 /* Son.m in Sources */,
 				DB0243331D54268000E99FA8 /* NSString+Rect.m in Sources */,
+				DBC579161D87996900A6CF35 /* YHPhotoPickController.m in Sources */,
 				DB2A88191D6EDC89006010C8 /* QRCodeCreate.m in Sources */,
 				DB2A881B1D6EDC89006010C8 /* QRCodeTools.m in Sources */,
 				DB63FAC11D37811B000C06F5 /* YHCrashCatch.m in Sources */,
