@@ -67,6 +67,7 @@ static YHLogger *logger = nil;
 - (void)crashHandleCatchOneNewCrash:(NSString *)crashDetailInfo {
 
     [self createCrashLogFile:crashDetailInfo];
+    DDLogError(@"%@",crashDetailInfo);
 }
 
 #pragma mark - define

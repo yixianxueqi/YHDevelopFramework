@@ -351,6 +351,7 @@
 		DB5DFB481D6A936D0094C6B1 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				DBC579121D8792E600A6CF35 /* photoPick */,
 				DB2A881E1D6EDCA1006010C8 /* qrCode */,
 				DB2191F81D6D3A4C00AD48DB /* newsView */,
 				DBC8DB4B1D6C24FF00115D0A /* flowView */,
@@ -696,6 +697,13 @@
 				DBB8629C1D3CD60500A5951F /* Entity.m */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		DBC579121D8792E600A6CF35 /* photoPick */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = photoPick;
 			sourceTree = "<group>";
 		};
 		DBC66F531D4B5179009666AF /* fileComponent */ = {
