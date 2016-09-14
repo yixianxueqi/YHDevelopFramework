@@ -56,5 +56,11 @@
 		<key>vcTitle</key>
 		<string>QRCode</string>
 	</dict>
+	<dict>
+		<key>vcName</key>
+		<string>AdsViewController</string>
+		<key>vcTitle</key>
+		<string>AdsCycleView</string>
+	</dict>
 </array>
 </plist>

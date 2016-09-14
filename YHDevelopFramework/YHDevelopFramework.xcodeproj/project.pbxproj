@@ -76,6 +76,9 @@
 		DBBCA3DE1D3DFC1300ED7014 /* YHList.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBBCA3DD1D3DFC1300ED7014 /* YHList.plist */; };
 		DBBCA3E11D3E074B00ED7014 /* UIImage+ChangeSize.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBCA3E01D3E074B00ED7014 /* UIImage+ChangeSize.m */; };
 		DBC579161D87996900A6CF35 /* YHPhotoPickController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC579151D87996900A6CF35 /* YHPhotoPickController.m */; };
+		DBC5791A1D879E7E00A6CF35 /* AdsCycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC579191D879E7E00A6CF35 /* AdsCycleView.m */; };
+		DBC5791E1D87A79700A6CF35 /* AdsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC5791D1D87A79700A6CF35 /* AdsViewController.m */; };
+		DBC579221D87DE1500A6CF35 /* YHPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC579211D87DE1500A6CF35 /* YHPageControl.m */; };
 		DBC66F4D1D4B2B21009666AF /* ZHCN_Language.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBC66F4C1D4B2B21009666AF /* ZHCN_Language.strings */; };
 		DBC66F4F1D4B2B44009666AF /* EN_Language.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBC66F4E1D4B2B44009666AF /* EN_Language.strings */; };
 		DBC8DB451D6C236300115D0A /* FlowContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC8DB441D6C236300115D0A /* FlowContentView.m */; };
@@ -215,6 +218,12 @@
 		DBBCA3E01D3E074B00ED7014 /* UIImage+ChangeSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ChangeSize.m"; sourceTree = "<group>"; };
 		DBC579141D87996900A6CF35 /* YHPhotoPickController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPhotoPickController.h; sourceTree = "<group>"; };
 		DBC579151D87996900A6CF35 /* YHPhotoPickController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPhotoPickController.m; sourceTree = "<group>"; };
+		DBC579181D879E7E00A6CF35 /* AdsCycleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsCycleView.h; sourceTree = "<group>"; };
+		DBC579191D879E7E00A6CF35 /* AdsCycleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdsCycleView.m; sourceTree = "<group>"; };
+		DBC5791C1D87A79700A6CF35 /* AdsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsViewController.h; sourceTree = "<group>"; };
+		DBC5791D1D87A79700A6CF35 /* AdsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdsViewController.m; sourceTree = "<group>"; };
+		DBC579201D87DE1500A6CF35 /* YHPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPageControl.h; sourceTree = "<group>"; };
+		DBC579211D87DE1500A6CF35 /* YHPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPageControl.m; sourceTree = "<group>"; };
 		DBC66F4C1D4B2B21009666AF /* ZHCN_Language.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = ZHCN_Language.strings; sourceTree = "<group>"; };
 		DBC66F4E1D4B2B44009666AF /* EN_Language.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = EN_Language.strings; sourceTree = "<group>"; };
 		DBC8DB431D6C236300115D0A /* FlowContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowContentView.h; sourceTree = "<group>"; };
@@ -275,6 +284,7 @@
 		DB184B761D6BFBD3004F04FD /* viewContent */ = {
 			isa = PBXGroup;
 			children = (
+				DBC579171D879E4C00A6CF35 /* adsView */,
 				DBC8DB511D6C390400115D0A /* newsView */,
 				DBC8DB421D6C236300115D0A /* flowView */,
 			);
@@ -325,6 +335,7 @@
 		DB2F492C1D669A96001E5B30 /* subClass */ = {
 			isa = PBXGroup;
 			children = (
+				DBC5791F1D87DDF800A6CF35 /* pageControl */,
 				DB2F492D1D669B30001E5B30 /* waterfallLayout */,
 			);
 			path = subClass;
@@ -354,6 +365,7 @@
 		DB5DFB481D6A936D0094C6B1 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				DBC5791B1D87A76400A6CF35 /* adsView */,
 				DBC579121D8792E600A6CF35 /* photoPick */,
 				DB2A881E1D6EDCA1006010C8 /* qrCode */,
 				DB2191F81D6D3A4C00AD48DB /* newsView */,
@@ -719,6 +731,33 @@
 			path = photoPick;
 			sourceTree = "<group>";
 		};
+		DBC579171D879E4C00A6CF35 /* adsView */ = {
+			isa = PBXGroup;
+			children = (
+				DBC579181D879E7E00A6CF35 /* AdsCycleView.h */,
+				DBC579191D879E7E00A6CF35 /* AdsCycleView.m */,
+			);
+			path = adsView;
+			sourceTree = "<group>";
+		};
+		DBC5791B1D87A76400A6CF35 /* adsView */ = {
+			isa = PBXGroup;
+			children = (
+				DBC5791C1D87A79700A6CF35 /* AdsViewController.h */,
+				DBC5791D1D87A79700A6CF35 /* AdsViewController.m */,
+			);
+			path = adsView;
+			sourceTree = "<group>";
+		};
+		DBC5791F1D87DDF800A6CF35 /* pageControl */ = {
+			isa = PBXGroup;
+			children = (
+				DBC579201D87DE1500A6CF35 /* YHPageControl.h */,
+				DBC579211D87DE1500A6CF35 /* YHPageControl.m */,
+			);
+			path = pageControl;
+			sourceTree = "<group>";
+		};
 		DBC66F531D4B5179009666AF /* fileComponent */ = {
 			isa = PBXGroup;
 			children = (
@@ -928,6 +967,7 @@
 				DBF277171D4C830100EDB2EB /* YHFileManager.m in Sources */,
 				DB5DFB5C1D6A936D0094C6B1 /* WaterViewController.m in Sources */,
 				DBF7BD481D5B1EF600320F62 /* YHFileDownLoadModel.m in Sources */,
+				DBC5791A1D879E7E00A6CF35 /* AdsCycleView.m in Sources */,
 				DBB862991D3CBF2000A5951F /* UIImageView+BorderChange.m in Sources */,
 				DB5DFB5F1D6A93D70094C6B1 /* ViewController.m in Sources */,
 				DBF7BD451D5B1DD700320F62 /* YHFileDownLoadManager.m in Sources */,
@@ -958,11 +998,13 @@
 				DB5DFB781D6AAAAC0094C6B1 /* DeviceInfoViewController.m in Sources */,
 				DB5DFB871D6ADD670094C6B1 /* FileManagerViewController.m in Sources */,
 				DB53F7041D488C990065F49E /* BaseTableViewCell.m in Sources */,
+				DBC579221D87DE1500A6CF35 /* YHPageControl.m in Sources */,
 				DB0243361D54290900E99FA8 /* YHNetWork.m in Sources */,
 				DB3DA0BC1D34BC360016D137 /* YHDeviceTools.m in Sources */,
 				DB5DFB5A1D6A936D0094C6B1 /* Person.m in Sources */,
 				DB2191FC1D6D3A7B00AD48DB /* NewsViewController.m in Sources */,
 				DBF2771D1D4C84BE00EDB2EB /* YHFileAction.m in Sources */,
+				DBC5791E1D87A79700A6CF35 /* AdsViewController.m in Sources */,
 				DBA450D11D2CEAAE001ADEDC /* BaseView.m in Sources */,
 				DB2A88181D6EDC89006010C8 /* QRCodeCameraViewController.m in Sources */,
 				DB53F7071D488D290065F49E /* BaseCollectionViewCell.m in Sources */,
