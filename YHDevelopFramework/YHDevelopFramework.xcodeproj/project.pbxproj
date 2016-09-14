@@ -23,6 +23,8 @@
 		DB2A881D1D6EDC97006010C8 /* QRCodeScanLine.png in Resources */ = {isa = PBXBuildFile; fileRef = DB2A881C1D6EDC97006010C8 /* QRCodeScanLine.png */; };
 		DB2A88221D6EDCC0006010C8 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2A88201D6EDCC0006010C8 /* QRCodeViewController.m */; };
 		DB2A88231D6EDCC0006010C8 /* QRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB2A88211D6EDCC0006010C8 /* QRCodeViewController.xib */; };
+		DB2BF2921D89242A00C478C9 /* YHPhotoThrough.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2BF2911D89242A00C478C9 /* YHPhotoThrough.m */; };
+		DB2BF2961D8924A400C478C9 /* PhotoThrough.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2BF2951D8924A400C478C9 /* PhotoThrough.m */; };
 		DB2F49301D66A1C6001E5B30 /* YHWaterFallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F492F1D66A1C6001E5B30 /* YHWaterFallLayout.m */; };
 		DB315B5E1D41FE9100069C87 /* YHDBYTKValueStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DB315B5D1D41FE9100069C87 /* YHDBYTKValueStore.m */; };
 		DB378E251D5C21B900A375DA /* YHFileDownloadStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DB378E241D5C21B900A375DA /* YHFileDownloadStore.m */; };
@@ -124,6 +126,10 @@
 		DB2A881F1D6EDCC0006010C8 /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
 		DB2A88201D6EDCC0006010C8 /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
 		DB2A88211D6EDCC0006010C8 /* QRCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRCodeViewController.xib; sourceTree = "<group>"; };
+		DB2BF2901D89242A00C478C9 /* YHPhotoThrough.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPhotoThrough.h; sourceTree = "<group>"; };
+		DB2BF2911D89242A00C478C9 /* YHPhotoThrough.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPhotoThrough.m; sourceTree = "<group>"; };
+		DB2BF2941D8924A400C478C9 /* PhotoThrough.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoThrough.h; sourceTree = "<group>"; };
+		DB2BF2951D8924A400C478C9 /* PhotoThrough.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoThrough.m; sourceTree = "<group>"; };
 		DB2F492E1D66A1C6001E5B30 /* YHWaterFallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHWaterFallLayout.h; sourceTree = "<group>"; };
 		DB2F492F1D66A1C6001E5B30 /* YHWaterFallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHWaterFallLayout.m; sourceTree = "<group>"; };
 		DB315B5C1D41FE9100069C87 /* YHDBYTKValueStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHDBYTKValueStore.h; sourceTree = "<group>"; };
@@ -285,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				DBC579171D879E4C00A6CF35 /* adsView */,
+				DB2BF28F1D8923CE00C478C9 /* photothrough */,
 				DBC8DB511D6C390400115D0A /* newsView */,
 				DBC8DB421D6C236300115D0A /* flowView */,
 			);
@@ -332,6 +339,24 @@
 			path = qrCode;
 			sourceTree = "<group>";
 		};
+		DB2BF28F1D8923CE00C478C9 /* photothrough */ = {
+			isa = PBXGroup;
+			children = (
+				DB2BF2901D89242A00C478C9 /* YHPhotoThrough.h */,
+				DB2BF2911D89242A00C478C9 /* YHPhotoThrough.m */,
+			);
+			path = photothrough;
+			sourceTree = "<group>";
+		};
+		DB2BF2931D89246D00C478C9 /* photothrough */ = {
+			isa = PBXGroup;
+			children = (
+				DB2BF2941D8924A400C478C9 /* PhotoThrough.h */,
+				DB2BF2951D8924A400C478C9 /* PhotoThrough.m */,
+			);
+			path = photothrough;
+			sourceTree = "<group>";
+		};
 		DB2F492C1D669A96001E5B30 /* subClass */ = {
 			isa = PBXGroup;
 			children = (
@@ -366,6 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				DBC5791B1D87A76400A6CF35 /* adsView */,
+				DB2BF2931D89246D00C478C9 /* photothrough */,
 				DBC579121D8792E600A6CF35 /* photoPick */,
 				DB2A881E1D6EDCA1006010C8 /* qrCode */,
 				DB2191F81D6D3A4C00AD48DB /* newsView */,
@@ -958,6 +984,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB5DFB6A1D6A9AF70094C6B1 /* AppDelegate.m in Sources */,
+				DB2BF2921D89242A00C478C9 /* YHPhotoThrough.m in Sources */,
 				DBF7BD4E1D5B1F6100320F62 /* YHFileDownLoadOperation.m in Sources */,
 				DB5DFB7E1D6ACE5F0094C6B1 /* LanguageViewController.m in Sources */,
 				DBB8629D1D3CD60500A5951F /* Entity.m in Sources */,
@@ -1009,6 +1036,7 @@
 				DB2A88181D6EDC89006010C8 /* QRCodeCameraViewController.m in Sources */,
 				DB53F7071D488D290065F49E /* BaseCollectionViewCell.m in Sources */,
 				DB5DFB591D6A936D0094C6B1 /* DownloadViewController.m in Sources */,
+				DB2BF2961D8924A400C478C9 /* PhotoThrough.m in Sources */,
 				DBBCA3E11D3E074B00ED7014 /* UIImage+ChangeSize.m in Sources */,
 				DB2A88221D6EDCC0006010C8 /* QRCodeViewController.m in Sources */,
 				DB2192001D6D843300AD48DB /* NewContentView.m in Sources */,

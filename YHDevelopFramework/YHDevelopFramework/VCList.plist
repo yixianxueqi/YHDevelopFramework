@@ -62,5 +62,11 @@
 		<key>vcTitle</key>
 		<string>AdsCycleView</string>
 	</dict>
+	<dict>
+		<key>vcName</key>
+		<string>PhotoThrough</string>
+		<key>vcTitle</key>
+		<string>photo through</string>
+	</dict>
 </array>
 </plist>
