@@ -86,5 +86,6 @@ typedef NS_ENUM(NSUInteger,PageContrlAlignment) {
  */
 - (void)stopTimer;
 - (void)resumTimer;
+- (void)clearTimer;
 
 @end

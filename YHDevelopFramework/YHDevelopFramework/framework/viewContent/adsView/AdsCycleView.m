@@ -43,11 +43,6 @@
     return self;
 }
 
-- (void)dealloc {
-
-    [self.timer invalidate];
-    self.timer = nil;
-}
 #pragma mark - define
 
 - (void)setImageListWithUrlString:(NSArray<NSString *> *)list placeHoldImage:(UIImage *)image {
@@ -125,6 +120,11 @@
 - (void)resumTimer {
 
     [self.timer setFireDate:[NSDate distantPast]];
+}
+- (void)clearTimer {
+
+    [self.timer invalidate];
+    self.timer = nil;
 }
 #pragma mark - response
 //点击事件
