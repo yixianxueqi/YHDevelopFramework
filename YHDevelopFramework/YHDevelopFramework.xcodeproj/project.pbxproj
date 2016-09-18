@@ -23,8 +23,10 @@
 		DB2A881D1D6EDC97006010C8 /* QRCodeScanLine.png in Resources */ = {isa = PBXBuildFile; fileRef = DB2A881C1D6EDC97006010C8 /* QRCodeScanLine.png */; };
 		DB2A88221D6EDCC0006010C8 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2A88201D6EDCC0006010C8 /* QRCodeViewController.m */; };
 		DB2A88231D6EDCC0006010C8 /* QRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB2A88211D6EDCC0006010C8 /* QRCodeViewController.xib */; };
-		DB2BF2921D89242A00C478C9 /* YHPhotoThrough.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2BF2911D89242A00C478C9 /* YHPhotoThrough.m */; };
 		DB2BF2961D8924A400C478C9 /* PhotoThrough.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2BF2951D8924A400C478C9 /* PhotoThrough.m */; };
+		DB2BF29B1D89310800C478C9 /* YHPhotoThroughViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2BF29A1D89310800C478C9 /* YHPhotoThroughViewController.m */; };
+		DB2BF2A41D893E9100C478C9 /* YHPhotoThroughCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2BF2A21D893E9100C478C9 /* YHPhotoThroughCell.m */; };
+		DB2BF2A51D893E9100C478C9 /* YHPhotoThroughCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB2BF2A31D893E9100C478C9 /* YHPhotoThroughCell.xib */; };
 		DB2F49301D66A1C6001E5B30 /* YHWaterFallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F492F1D66A1C6001E5B30 /* YHWaterFallLayout.m */; };
 		DB315B5E1D41FE9100069C87 /* YHDBYTKValueStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DB315B5D1D41FE9100069C87 /* YHDBYTKValueStore.m */; };
 		DB378E251D5C21B900A375DA /* YHFileDownloadStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DB378E241D5C21B900A375DA /* YHFileDownloadStore.m */; };
@@ -126,10 +128,13 @@
 		DB2A881F1D6EDCC0006010C8 /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
 		DB2A88201D6EDCC0006010C8 /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
 		DB2A88211D6EDCC0006010C8 /* QRCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRCodeViewController.xib; sourceTree = "<group>"; };
-		DB2BF2901D89242A00C478C9 /* YHPhotoThrough.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPhotoThrough.h; sourceTree = "<group>"; };
-		DB2BF2911D89242A00C478C9 /* YHPhotoThrough.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPhotoThrough.m; sourceTree = "<group>"; };
 		DB2BF2941D8924A400C478C9 /* PhotoThrough.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoThrough.h; sourceTree = "<group>"; };
 		DB2BF2951D8924A400C478C9 /* PhotoThrough.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoThrough.m; sourceTree = "<group>"; };
+		DB2BF2991D89310800C478C9 /* YHPhotoThroughViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPhotoThroughViewController.h; sourceTree = "<group>"; };
+		DB2BF29A1D89310800C478C9 /* YHPhotoThroughViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPhotoThroughViewController.m; sourceTree = "<group>"; };
+		DB2BF2A11D893E9100C478C9 /* YHPhotoThroughCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPhotoThroughCell.h; sourceTree = "<group>"; };
+		DB2BF2A21D893E9100C478C9 /* YHPhotoThroughCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPhotoThroughCell.m; sourceTree = "<group>"; };
+		DB2BF2A31D893E9100C478C9 /* YHPhotoThroughCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YHPhotoThroughCell.xib; sourceTree = "<group>"; };
 		DB2F492E1D66A1C6001E5B30 /* YHWaterFallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHWaterFallLayout.h; sourceTree = "<group>"; };
 		DB2F492F1D66A1C6001E5B30 /* YHWaterFallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHWaterFallLayout.m; sourceTree = "<group>"; };
 		DB315B5C1D41FE9100069C87 /* YHDBYTKValueStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHDBYTKValueStore.h; sourceTree = "<group>"; };
@@ -291,7 +296,6 @@
 			isa = PBXGroup;
 			children = (
 				DBC579171D879E4C00A6CF35 /* adsView */,
-				DB2BF28F1D8923CE00C478C9 /* photothrough */,
 				DBC8DB511D6C390400115D0A /* newsView */,
 				DBC8DB421D6C236300115D0A /* flowView */,
 			);
@@ -339,20 +343,23 @@
 			path = qrCode;
 			sourceTree = "<group>";
 		};
-		DB2BF28F1D8923CE00C478C9 /* photothrough */ = {
-			isa = PBXGroup;
-			children = (
-				DB2BF2901D89242A00C478C9 /* YHPhotoThrough.h */,
-				DB2BF2911D89242A00C478C9 /* YHPhotoThrough.m */,
-			);
-			path = photothrough;
-			sourceTree = "<group>";
-		};
 		DB2BF2931D89246D00C478C9 /* photothrough */ = {
 			isa = PBXGroup;
 			children = (
 				DB2BF2941D8924A400C478C9 /* PhotoThrough.h */,
 				DB2BF2951D8924A400C478C9 /* PhotoThrough.m */,
+			);
+			path = photothrough;
+			sourceTree = "<group>";
+		};
+		DB2BF2981D892C4000C478C9 /* photothrough */ = {
+			isa = PBXGroup;
+			children = (
+				DB2BF2991D89310800C478C9 /* YHPhotoThroughViewController.h */,
+				DB2BF29A1D89310800C478C9 /* YHPhotoThroughViewController.m */,
+				DB2BF2A11D893E9100C478C9 /* YHPhotoThroughCell.h */,
+				DB2BF2A21D893E9100C478C9 /* YHPhotoThroughCell.m */,
+				DB2BF2A31D893E9100C478C9 /* YHPhotoThroughCell.xib */,
 			);
 			path = photothrough;
 			sourceTree = "<group>";
@@ -562,6 +569,7 @@
 		DBA450C71D2CE975001ADEDC /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				DB2BF2981D892C4000C478C9 /* photothrough */,
 				DBC579131D87991E00A6CF35 /* photoPick */,
 				DB2A880F1D6EC194006010C8 /* QRCode */,
 				DBF7BD421D5B18D500320F62 /* mutableFileDownload */,
@@ -909,6 +917,7 @@
 				DB2192051D6D9C7300AD48DB /* newsView.png in Resources */,
 				DB5DFB6C1D6AA03A0094C6B1 /* DownloadViewController.xib in Resources */,
 				DBA450E61D2CEE2E001ADEDC /* readMe.strings in Resources */,
+				DB2BF2A51D893E9100C478C9 /* YHPhotoThroughCell.xib in Resources */,
 				DBC66F4D1D4B2B21009666AF /* ZHCN_Language.strings in Resources */,
 				DB5DFB641D6A94F80094C6B1 /* VCList.plist in Resources */,
 				DB5DFB901D6AEF370094C6B1 /* ReadMeViewController.xib in Resources */,
@@ -983,8 +992,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB2BF29B1D89310800C478C9 /* YHPhotoThroughViewController.m in Sources */,
 				DB5DFB6A1D6A9AF70094C6B1 /* AppDelegate.m in Sources */,
-				DB2BF2921D89242A00C478C9 /* YHPhotoThrough.m in Sources */,
 				DBF7BD4E1D5B1F6100320F62 /* YHFileDownLoadOperation.m in Sources */,
 				DB5DFB7E1D6ACE5F0094C6B1 /* LanguageViewController.m in Sources */,
 				DBB8629D1D3CD60500A5951F /* Entity.m in Sources */,
@@ -1009,6 +1018,7 @@
 				DBF2771A1D4C847800EDB2EB /* YHFileCompress.m in Sources */,
 				DB2F49301D66A1C6001E5B30 /* YHWaterFallLayout.m in Sources */,
 				DBEAAC0F1D55D9A200A4E76A /* YHNetCache.m in Sources */,
+				DB2BF2A41D893E9100C478C9 /* YHPhotoThroughCell.m in Sources */,
 				DB5DFB821D6AD0B80094C6B1 /* BaseNavigationViewController.m in Sources */,
 				DBC8DB451D6C236300115D0A /* FlowContentView.m in Sources */,
 				DB5DFB8F1D6AEF370094C6B1 /* ReadMeViewController.m in Sources */,
