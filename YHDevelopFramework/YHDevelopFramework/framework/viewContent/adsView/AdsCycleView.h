@@ -75,7 +75,7 @@ typedef NS_ENUM(NSUInteger,PageContrlAlignment) {
  */
 - (void)isAutoCycleShow:(BOOL)isAuto;
 /**
- *  自动轮播时间间隔,默认5s
+ *  自动轮播时间间隔,默认5s,不得小于0.25s
  *
  *  @param seconds CGFloat
  */

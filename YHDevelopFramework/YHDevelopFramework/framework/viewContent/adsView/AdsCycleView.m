@@ -142,7 +142,9 @@
     CGFloat width = self.scrollView.contentOffset.x + kWidth;
     [self.scrollView scrollRectToVisible:CGRectMake(width, 0, kWidth, self.bounds.size.height) animated:YES];
     [self.scrollView setContentOffset:CGPointMake(width, 0) animated:YES];
-    [self cycleMove:width];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self cycleMove:width];        
+    });
 }
 
 #pragma mark - private
