@@ -11,6 +11,6 @@
 @interface YHPhotoThroughCell : UICollectionViewCell
 
 @property (nonatomic,strong) UIImage *image;
-@property (nonatomic,copy) void(^tapSigleHandleBlock)(void);
+@property (nonatomic,copy) void(^tapGestureHandle)(void);
 
 @end

@@ -8,9 +8,10 @@
 
 #import "YHPhotoThroughCell.h"
 
-@interface YHPhotoThroughCell ()
+@interface YHPhotoThroughCell ()<UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 
@@ -22,53 +23,51 @@
     self.contentView.backgroundColor = [[UIColor clearColor] colorWithAlphaComponent:1.0];
     [self addGesture];
 }
+
 #pragma mark - define
 - (void)setImage:(UIImage *)image {
     
     _image = image;
     self.imageView.image = image;
+    [self.scrollView setZoomScale:1.0f animated:NO];
 }
-#pragma mark - response
-- (void)oneTap:(UITapGestureRecognizer *)tap {
+//添加手势
+- (void)addGesture {
+    //单击手势
+    UITapGestureRecognizer *sigleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(oneTapHandle:)];
+    [self.contentView addGestureRecognizer:sigleTap];
+    //双击手势
+    UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTapHandle:)];
+    [doubleTap setNumberOfTapsRequired:2];
+    [self.contentView addGestureRecognizer:doubleTap];
+    
+    [sigleTap requireGestureRecognizerToFail:doubleTap];
+}
 
-    NSLog(@"one tap");
-    if (self.tapSigleHandleBlock) {
-        self.tapSigleHandleBlock();
+#pragma mark - response
+
+- (void)oneTapHandle:(UITapGestureRecognizer *)tap {
+    
+    if (self.tapGestureHandle) {
+        self.tapGestureHandle();
     }
 }
-
-- (void)twoTap:(UITapGestureRecognizer *)tap {
+- (void)doubleTapHandle:(UITapGestureRecognizer *)tap {
     
     CGPoint point = [tap locationInView:self.imageView];
-    NSLog(@"%@",NSStringFromCGPoint(point));
-    if (CGAffineTransformIsIdentity(self.imageView.transform) ) {
-        CGAffineTransform transform = CGAffineTransformMakeScale(1.3, 1.3);
+    if (self.scrollView.zoomScale == 1.0) {
+        //放大
+        [self.scrollView zoomToRect:CGRectMake(point.x - 50, point.y - 50, 100, 100) animated:YES];
     } else {
-        self.imageView.transform = CGAffineTransformIdentity;
+        //还原
+        [self.scrollView setZoomScale:1.0f animated:YES];
     }
 }
 
-- (void)pinchHandle:(UIPinchGestureRecognizer *)pinch {
-    
-    NSLog(@"pinch");
-    NSLog(@"%f,%f",pinch.scale,pinch.velocity);
-}
+#pragma mark - UIScrollViewDelegate
+- (nullable UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
 
-#pragma mark - private
-- (void)addGesture {
-    
-    //添加单击手势
-    UITapGestureRecognizer *tapSigle = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(oneTap:)];
-    [self.imageView addGestureRecognizer:tapSigle];
-    //添加双击手势
-    UITapGestureRecognizer *tapDouble= [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(twoTap:)];
-    tapDouble.numberOfTapsRequired = 2;
-    [self.imageView addGestureRecognizer:tapDouble];
-    //单击手势识别失败使用双击手势
-    [tapSigle requireGestureRecognizerToFail:tapDouble];
-    //添加捏合手势
-    UIPinchGestureRecognizer *pinch = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchHandle:)];
-    [self.imageView addGestureRecognizer:pinch];
+    return self.imageView;
 }
 
 @end

@@ -13,21 +13,49 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="210" height="143"/>
                 <subviews>
-                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qm4-qo-cZb">
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" maximumZoomScale="2" translatesAutoresizingMaskIntoConstraints="NO" id="wMw-Bk-PPT">
                         <rect key="frame" x="0.0" y="0.0" width="210" height="143"/>
-                    </imageView>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u2W-3O-QZN">
+                                <rect key="frame" x="0.0" y="0.0" width="210" height="143"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AXB-Ua-yBt">
+                                        <rect key="frame" x="0.0" y="0.0" width="210" height="143"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="AXB-Ua-yBt" firstAttribute="top" secondItem="u2W-3O-QZN" secondAttribute="top" id="B5V-vA-0Ej"/>
+                                    <constraint firstItem="AXB-Ua-yBt" firstAttribute="leading" secondItem="u2W-3O-QZN" secondAttribute="leading" id="PUF-bX-lr0"/>
+                                    <constraint firstAttribute="trailing" secondItem="AXB-Ua-yBt" secondAttribute="trailing" id="TUK-2Y-G32"/>
+                                    <constraint firstAttribute="bottom" secondItem="AXB-Ua-yBt" secondAttribute="bottom" id="tiB-Ts-Uax"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="u2W-3O-QZN" secondAttribute="trailing" id="389-8a-zVP"/>
+                            <constraint firstItem="u2W-3O-QZN" firstAttribute="top" secondItem="wMw-Bk-PPT" secondAttribute="top" id="DSk-YO-dUh"/>
+                            <constraint firstItem="u2W-3O-QZN" firstAttribute="height" secondItem="wMw-Bk-PPT" secondAttribute="height" id="IgQ-RN-EZ1"/>
+                            <constraint firstItem="u2W-3O-QZN" firstAttribute="width" secondItem="wMw-Bk-PPT" secondAttribute="width" id="SC6-Di-m83"/>
+                            <constraint firstItem="u2W-3O-QZN" firstAttribute="leading" secondItem="wMw-Bk-PPT" secondAttribute="leading" id="WGD-gq-hVI"/>
+                            <constraint firstAttribute="bottom" secondItem="u2W-3O-QZN" secondAttribute="bottom" id="hMJ-1S-sP8"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="delegate" destination="gTV-IL-0wX" id="fmR-ls-Uiv"/>
+                        </connections>
+                    </scrollView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="Qm4-qo-cZb" secondAttribute="trailing" id="35I-Dh-0fJ"/>
-                <constraint firstItem="Qm4-qo-cZb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="TZ5-Sa-DRg"/>
-                <constraint firstAttribute="bottom" secondItem="Qm4-qo-cZb" secondAttribute="bottom" id="gtX-1H-Aiu"/>
-                <constraint firstItem="Qm4-qo-cZb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="iLH-fs-zpX"/>
+                <constraint firstItem="wMw-Bk-PPT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="07x-3W-YPl"/>
+                <constraint firstAttribute="trailing" secondItem="wMw-Bk-PPT" secondAttribute="trailing" id="B46-6G-pW8"/>
+                <constraint firstItem="wMw-Bk-PPT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ojz-fu-kek"/>
+                <constraint firstAttribute="bottom" secondItem="wMw-Bk-PPT" secondAttribute="bottom" id="VKn-uh-4M1"/>
             </constraints>
             <size key="customSize" width="210" height="143"/>
             <connections>
-                <outlet property="imageView" destination="Qm4-qo-cZb" id="hEj-IG-mHW"/>
+                <outlet property="imageView" destination="AXB-Ua-yBt" id="rj4-HG-AEc"/>
+                <outlet property="scrollView" destination="wMw-Bk-PPT" id="TRu-Tb-4hL"/>
             </connections>
             <point key="canvasLocation" x="416" y="139.5"/>
         </collectionViewCell>

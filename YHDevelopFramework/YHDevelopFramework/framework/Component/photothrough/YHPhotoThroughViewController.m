@@ -44,7 +44,7 @@
 
 - (void)changeNumber:(NSUInteger)index {
 
-    self.pageLabel.text = [NSString stringWithFormat:@"%ld/%ld",index+1,self.imageList.count];
+    self.pageLabel.text = [NSString stringWithFormat:@"%lu/%ld",index+1,self.imageList.count];
 }
 
 #pragma mark - UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout
@@ -59,7 +59,7 @@
     YHPhotoThroughCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     cell.image = self.imageList[indexPath.row];
     __weak typeof(self) weakSelf = self;
-    cell.tapSigleHandleBlock = ^{
+    cell.tapGestureHandle = ^{
         if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(touchSigleViewIncident)]) {
             [weakSelf.delegate touchSigleViewIncident];
         }
@@ -72,9 +72,12 @@
     return self.view.bounds.size;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    [self changeNumber:indexPath.row];
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+
+    NSUInteger index = scrollView.contentOffset.x / self.view.bounds.size.width;
+    [self changeNumber:index];
 }
 
 #pragma mark - getter/setter
