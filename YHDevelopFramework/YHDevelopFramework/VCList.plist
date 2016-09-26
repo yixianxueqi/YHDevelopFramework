@@ -68,5 +68,11 @@
 		<key>vcTitle</key>
 		<string>photo through</string>
 	</dict>
+	<dict>
+		<key>vcName</key>
+		<string>PhotoPickViewController</string>
+		<key>vcTitle</key>
+		<string>photoPick</string>
+	</dict>
 </array>
 </plist>

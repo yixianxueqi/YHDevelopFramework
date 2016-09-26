@@ -6,8 +6,21 @@
 //  Copyright © 2016年 isoftstone. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface YHPhotoPickController : NSObject
+@protocol YHPhotoPickControllerProtocol <NSObject>
+
+@optional
+
+@end
+/**
+ * @class  YHPhotoPickController
+ *
+ * @abstract 照片选择器
+ *
+ */
+@interface YHPhotoPickController : UIViewController
+
+@property (nonatomic,weak) id<YHPhotoPickControllerProtocol> delegate;
 
 @end
