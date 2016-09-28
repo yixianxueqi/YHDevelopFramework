@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="YHPhotoPickCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="174" height="108"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="174" height="108"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fVI-EW-aXl">
+                        <rect key="frame" x="0.0" y="0.0" width="174" height="108"/>
+                        <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBL-V0-Rv4">
+                        <rect key="frame" x="104" y="0.0" width="69.5" height="43"/>
+                        <state key="normal" backgroundImage="photopicker_state_normal"/>
+                        <state key="selected" backgroundImage="photopicker_state_selected"/>
+                        <connections>
+                            <action selector="clickBtn:" destination="gTV-IL-0wX" eventType="touchUpInside" id="vU5-7F-XTR"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="oBL-V0-Rv4" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="5dW-xG-63F"/>
+                <constraint firstAttribute="trailing" secondItem="oBL-V0-Rv4" secondAttribute="trailing" id="6vO-8i-Gsi"/>
+                <constraint firstItem="fVI-EW-aXl" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="DNt-Rp-ggm"/>
+                <constraint firstItem="fVI-EW-aXl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="LMs-zI-DNA"/>
+                <constraint firstAttribute="trailing" secondItem="fVI-EW-aXl" secondAttribute="trailing" id="Mtt-gF-bw0"/>
+                <constraint firstItem="oBL-V0-Rv4" firstAttribute="height" secondItem="fVI-EW-aXl" secondAttribute="height" multiplier="2/5" id="oI2-rj-jtc"/>
+                <constraint firstItem="oBL-V0-Rv4" firstAttribute="width" secondItem="fVI-EW-aXl" secondAttribute="width" multiplier="2/5" id="tpI-9A-0sw"/>
+                <constraint firstAttribute="bottom" secondItem="fVI-EW-aXl" secondAttribute="bottom" id="vve-WC-Zzz"/>
+            </constraints>
+            <size key="customSize" width="174" height="108"/>
+            <connections>
+                <outlet property="imageView" destination="fVI-EW-aXl" id="8js-YL-lQK"/>
+                <outlet property="selectBtn" destination="oBL-V0-Rv4" id="qJ1-CV-H7N"/>
+            </connections>
+            <point key="canvasLocation" x="377" y="220"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="photopicker_state_normal" width="27" height="27"/>
+        <image name="photopicker_state_selected" width="27" height="27"/>
+    </resources>
+</document>

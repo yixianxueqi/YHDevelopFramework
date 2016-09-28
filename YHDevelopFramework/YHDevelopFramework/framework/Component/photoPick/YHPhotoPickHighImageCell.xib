@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="YHPhotoPickHighImageCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                <subviews>
+                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MKx-gG-pjD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yq3-0R-ibA">
+                        <rect key="frame" x="282" y="8" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="f7Z-z1-tMG"/>
+                            <constraint firstAttribute="height" constant="30" id="jPx-Qc-1p0"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="photopicker_state_normal"/>
+                        <state key="selected" backgroundImage="photopicker_state_selected"/>
+                        <connections>
+                            <action selector="clickBtn:" destination="gTV-IL-0wX" eventType="touchUpInside" id="3wc-Z5-009"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="MKx-gG-pjD" secondAttribute="bottom" id="B8C-Fq-yja"/>
+                <constraint firstAttribute="trailing" secondItem="MKx-gG-pjD" secondAttribute="trailing" id="NFs-wY-qvt"/>
+                <constraint firstAttribute="trailing" secondItem="Yq3-0R-ibA" secondAttribute="trailing" constant="8" id="VjH-v0-QwL"/>
+                <constraint firstItem="MKx-gG-pjD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="cXf-hk-onF"/>
+                <constraint firstItem="MKx-gG-pjD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="rs9-gy-Hud"/>
+                <constraint firstItem="Yq3-0R-ibA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="y5c-Eq-Mcb"/>
+            </constraints>
+            <size key="customSize" width="113" height="109"/>
+            <connections>
+                <outlet property="imageView" destination="MKx-gG-pjD" id="ENX-Ge-ZT1"/>
+                <outlet property="selectBtn" destination="Yq3-0R-ibA" id="cyJ-h9-J31"/>
+            </connections>
+            <point key="canvasLocation" x="312.5" y="305.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="photopicker_state_normal" width="27" height="27"/>
+        <image name="photopicker_state_selected" width="27" height="27"/>
+    </resources>
+</document>
