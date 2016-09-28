@@ -46,8 +46,6 @@
 		DB3DA0C51D34ECF30016D137 /* YHLogFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3DA0C41D34ECF30016D137 /* YHLogFormat.m */; };
 		DB44B54A1D3F5CE0000D98C5 /* YHDBSQLite.m in Sources */ = {isa = PBXBuildFile; fileRef = DB44B5491D3F5CE0000D98C5 /* YHDBSQLite.m */; };
 		DB44B54D1D3F8371000D98C5 /* YHDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DB44B54C1D3F8371000D98C5 /* YHDBManager.m */; };
-		DB4992281D91160900272AEB /* YHPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4992261D91160900272AEB /* YHPhotoCollectionViewCell.m */; };
-		DB4992291D91160900272AEB /* YHPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB4992271D91160900272AEB /* YHPhotoCollectionViewCell.xib */; };
 		DB53F7011D4889CF0065F49E /* NSObject+JsonAndDic.m in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7001D4889CF0065F49E /* NSObject+JsonAndDic.m */; };
 		DB53F7041D488C990065F49E /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7031D488C990065F49E /* BaseTableViewCell.m */; };
 		DB53F7071D488D290065F49E /* BaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB53F7061D488D290065F49E /* BaseCollectionViewCell.m */; };
@@ -79,10 +77,6 @@
 		DB5DFB8F1D6AEF370094C6B1 /* ReadMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5DFB8D1D6AEF370094C6B1 /* ReadMeViewController.m */; };
 		DB5DFB901D6AEF370094C6B1 /* ReadMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5DFB8E1D6AEF370094C6B1 /* ReadMeViewController.xib */; };
 		DB63FAC11D37811B000C06F5 /* YHCrashCatch.m in Sources */ = {isa = PBXBuildFile; fileRef = DB63FAC01D37811B000C06F5 /* YHCrashCatch.m */; };
-		DB983F691D8FC23300677AAE /* PhotoPickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB983F671D8FC23300677AAE /* PhotoPickViewController.m */; };
-		DB983F6A1D8FC23300677AAE /* PhotoPickViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB983F681D8FC23300677AAE /* PhotoPickViewController.xib */; };
-		DB983F6D1D8FCF2A00677AAE /* YHPhotoAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = DB983F6C1D8FCF2A00677AAE /* YHPhotoAssets.m */; };
-		DB983F701D8FE7DD00677AAE /* YHPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DB983F6F1D8FE7DD00677AAE /* YHPhotoManager.m */; };
 		DBA450B01D2CE5E8001ADEDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA450AF1D2CE5E8001ADEDC /* main.m */; };
 		DBA450BB1D2CE5E8001ADEDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA450BA1D2CE5E8001ADEDC /* Assets.xcassets */; };
 		DBA450BE1D2CE5E8001ADEDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA450BC1D2CE5E8001ADEDC /* LaunchScreen.storyboard */; };
@@ -186,9 +180,6 @@
 		DB44B5491D3F5CE0000D98C5 /* YHDBSQLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHDBSQLite.m; sourceTree = "<group>"; };
 		DB44B54B1D3F8371000D98C5 /* YHDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHDBManager.h; sourceTree = "<group>"; };
 		DB44B54C1D3F8371000D98C5 /* YHDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHDBManager.m; sourceTree = "<group>"; };
-		DB4992251D91160900272AEB /* YHPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPhotoCollectionViewCell.h; sourceTree = "<group>"; };
-		DB4992261D91160900272AEB /* YHPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPhotoCollectionViewCell.m; sourceTree = "<group>"; };
-		DB4992271D91160900272AEB /* YHPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YHPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		DB53F6FF1D4889CF0065F49E /* NSObject+JsonAndDic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JsonAndDic.h"; sourceTree = "<group>"; };
 		DB53F7001D4889CF0065F49E /* NSObject+JsonAndDic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JsonAndDic.m"; sourceTree = "<group>"; };
 		DB53F7021D488C990065F49E /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
@@ -241,13 +232,6 @@
 		DB5DFB8E1D6AEF370094C6B1 /* ReadMeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadMeViewController.xib; sourceTree = "<group>"; };
 		DB63FABF1D37811B000C06F5 /* YHCrashCatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHCrashCatch.h; sourceTree = "<group>"; };
 		DB63FAC01D37811B000C06F5 /* YHCrashCatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHCrashCatch.m; sourceTree = "<group>"; };
-		DB983F661D8FC23300677AAE /* PhotoPickViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoPickViewController.h; sourceTree = "<group>"; };
-		DB983F671D8FC23300677AAE /* PhotoPickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoPickViewController.m; sourceTree = "<group>"; };
-		DB983F681D8FC23300677AAE /* PhotoPickViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoPickViewController.xib; sourceTree = "<group>"; };
-		DB983F6B1D8FCF2A00677AAE /* YHPhotoAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPhotoAssets.h; sourceTree = "<group>"; };
-		DB983F6C1D8FCF2A00677AAE /* YHPhotoAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPhotoAssets.m; sourceTree = "<group>"; };
-		DB983F6E1D8FE7DD00677AAE /* YHPhotoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPhotoManager.h; sourceTree = "<group>"; };
-		DB983F6F1D8FE7DD00677AAE /* YHPhotoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPhotoManager.m; sourceTree = "<group>"; };
 		DBA450AB1D2CE5E8001ADEDC /* YHDevelopFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YHDevelopFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA450AF1D2CE5E8001ADEDC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DBA450BA1D2CE5E8001ADEDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Assets.xcassets; sourceTree = "<group>"; };
@@ -972,7 +956,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB4992291D91160900272AEB /* YHPhotoCollectionViewCell.xib in Resources */,
 				DB5DFB791D6AAAAC0094C6B1 /* DeviceInfoViewController.xib in Resources */,
 				DB36C8821D9918DE00451513 /* YHPhotoPickCollectionViewCell.xib in Resources */,
 				DB5DFB7F1D6ACE5F0094C6B1 /* LanguageViewController.xib in Resources */,
@@ -1098,9 +1081,7 @@
 				DB44B54A1D3F5CE0000D98C5 /* YHDBSQLite.m in Sources */,
 				DB3DA0BF1D34D2500016D137 /* UIView+Frame.m in Sources */,
 				DB44B54D1D3F8371000D98C5 /* YHDBManager.m in Sources */,
-				DB983F701D8FE7DD00677AAE /* YHPhotoManager.m in Sources */,
 				DB53F7011D4889CF0065F49E /* NSObject+JsonAndDic.m in Sources */,
-				DB4992281D91160900272AEB /* YHPhotoCollectionViewCell.m in Sources */,
 				DBA450D41D2CEADD001ADEDC /* BaseService.m in Sources */,
 				DB36C88B1D9A4E4E00451513 /* YHBottomView.m in Sources */,
 				DB5DFB781D6AAAAC0094C6B1 /* DeviceInfoViewController.m in Sources */,

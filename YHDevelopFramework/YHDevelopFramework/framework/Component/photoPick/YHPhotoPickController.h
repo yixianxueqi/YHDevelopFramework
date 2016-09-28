@@ -8,20 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-<<<<<<< HEAD
-@protocol YHPhotoPickControllerProtocol <NSObject>
-
-@optional
-
-@end
-=======
 extern NSString *const HIGH_IMAGE;
 extern NSString *const LOW_IMAGE;
 extern NSString *const IMAGE_INFO;
 
 typedef void(^PhotoPickCompletionBlock)(NSArray<UIImage *> *imageList);
 
->>>>>>> photoPick
 /**
  * @class  YHPhotoPickController
  *
@@ -30,12 +22,9 @@ typedef void(^PhotoPickCompletionBlock)(NSArray<UIImage *> *imageList);
  */
 @interface YHPhotoPickController : UIViewController
 
-<<<<<<< HEAD
-@property (nonatomic,weak) id<YHPhotoPickControllerProtocol> delegate;
-=======
 //照片最多选取限制，最小为1
 @property (nonatomic,assign) NSUInteger maxSelectCount;
 @property (nonatomic,copy) PhotoPickCompletionBlock completionBlock;
->>>>>>> photoPick
+
 
 @end
