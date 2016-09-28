@@ -14,6 +14,7 @@
 #import "NSDate+YHDateFormat.h"
 #import "YHTools.h"
 #import "YHInternationalControl.h"
+#import "YHPreConstant.h"
 /**
  * @class  BaseViewController
  *

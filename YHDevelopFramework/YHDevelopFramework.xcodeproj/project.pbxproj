@@ -11,6 +11,8 @@
 		DB0243331D54268000E99FA8 /* NSString+Rect.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0243321D54268000E99FA8 /* NSString+Rect.m */; };
 		DB0243361D54290900E99FA8 /* YHNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0243351D54290900E99FA8 /* YHNetWork.m */; };
 		DB02433C1D54656C00E99FA8 /* YHReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02433B1D54656C00E99FA8 /* YHReachability.m */; };
+		DB160CAA1D9B6E5C004E11FA /* YHPhotoPickHighImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB160CA81D9B6E5C004E11FA /* YHPhotoPickHighImageCell.m */; };
+		DB160CAB1D9B6E5C004E11FA /* YHPhotoPickHighImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB160CA91D9B6E5C004E11FA /* YHPhotoPickHighImageCell.xib */; };
 		DB2191FC1D6D3A7B00AD48DB /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2191FA1D6D3A7B00AD48DB /* NewsViewController.m */; };
 		DB2191FD1D6D3A7B00AD48DB /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB2191FB1D6D3A7B00AD48DB /* NewsViewController.xib */; };
 		DB2192001D6D843300AD48DB /* NewContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2191FF1D6D843300AD48DB /* NewContentView.m */; };
@@ -29,6 +31,14 @@
 		DB2BF2A51D893E9100C478C9 /* YHPhotoThroughCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB2BF2A31D893E9100C478C9 /* YHPhotoThroughCell.xib */; };
 		DB2F49301D66A1C6001E5B30 /* YHWaterFallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F492F1D66A1C6001E5B30 /* YHWaterFallLayout.m */; };
 		DB315B5E1D41FE9100069C87 /* YHDBYTKValueStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DB315B5D1D41FE9100069C87 /* YHDBYTKValueStore.m */; };
+		DB36C87C1D9912D600451513 /* PhotoPickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB36C87A1D9912D600451513 /* PhotoPickViewController.m */; };
+		DB36C87D1D9912D600451513 /* PhotoPickViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB36C87B1D9912D600451513 /* PhotoPickViewController.xib */; };
+		DB36C8811D9918DE00451513 /* YHPhotoPickCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB36C87F1D9918DE00451513 /* YHPhotoPickCollectionViewCell.m */; };
+		DB36C8821D9918DE00451513 /* YHPhotoPickCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB36C8801D9918DE00451513 /* YHPhotoPickCollectionViewCell.xib */; };
+		DB36C8851D99227400451513 /* YHPreConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = DB36C8841D99227400451513 /* YHPreConstant.m */; };
+		DB36C8881D9927E000451513 /* YHAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = DB36C8871D9927E000451513 /* YHAssets.m */; };
+		DB36C88B1D9A4E4E00451513 /* YHBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB36C88A1D9A4E4E00451513 /* YHBottomView.m */; };
+		DB36C88D1D9A4E7B00451513 /* YHBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB36C88C1D9A4E7B00451513 /* YHBottomView.xib */; };
 		DB378E251D5C21B900A375DA /* YHFileDownloadStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DB378E241D5C21B900A375DA /* YHFileDownloadStore.m */; };
 		DB3DA0BC1D34BC360016D137 /* YHDeviceTools.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3DA0BB1D34BC360016D137 /* YHDeviceTools.m */; };
 		DB3DA0BF1D34D2500016D137 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3DA0BE1D34D2500016D137 /* UIView+Frame.m */; };
@@ -108,6 +118,10 @@
 		DB0243351D54290900E99FA8 /* YHNetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHNetWork.m; sourceTree = "<group>"; };
 		DB02433A1D54656C00E99FA8 /* YHReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHReachability.h; sourceTree = "<group>"; };
 		DB02433B1D54656C00E99FA8 /* YHReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHReachability.m; sourceTree = "<group>"; };
+		DB160CA71D9B6E5C004E11FA /* YHPhotoPickHighImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPhotoPickHighImageCell.h; sourceTree = "<group>"; };
+		DB160CA81D9B6E5C004E11FA /* YHPhotoPickHighImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPhotoPickHighImageCell.m; sourceTree = "<group>"; };
+		DB160CA91D9B6E5C004E11FA /* YHPhotoPickHighImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YHPhotoPickHighImageCell.xib; sourceTree = "<group>"; };
+		DB160CAC1D9BAA55004E11FA /* YHPhotoPickCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPhotoPickCellProtocol.h; sourceTree = "<group>"; };
 		DB2191F91D6D3A7B00AD48DB /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		DB2191FA1D6D3A7B00AD48DB /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		DB2191FB1D6D3A7B00AD48DB /* NewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
@@ -139,6 +153,19 @@
 		DB2F492F1D66A1C6001E5B30 /* YHWaterFallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHWaterFallLayout.m; sourceTree = "<group>"; };
 		DB315B5C1D41FE9100069C87 /* YHDBYTKValueStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHDBYTKValueStore.h; sourceTree = "<group>"; };
 		DB315B5D1D41FE9100069C87 /* YHDBYTKValueStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHDBYTKValueStore.m; sourceTree = "<group>"; };
+		DB36C8791D9912D600451513 /* PhotoPickViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoPickViewController.h; path = YHDevelopFramework/test/photothrough/PhotoPickViewController.h; sourceTree = SOURCE_ROOT; };
+		DB36C87A1D9912D600451513 /* PhotoPickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoPickViewController.m; path = YHDevelopFramework/test/photothrough/PhotoPickViewController.m; sourceTree = SOURCE_ROOT; };
+		DB36C87B1D9912D600451513 /* PhotoPickViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PhotoPickViewController.xib; path = YHDevelopFramework/test/photothrough/PhotoPickViewController.xib; sourceTree = SOURCE_ROOT; };
+		DB36C87E1D9918DE00451513 /* YHPhotoPickCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPhotoPickCollectionViewCell.h; sourceTree = "<group>"; };
+		DB36C87F1D9918DE00451513 /* YHPhotoPickCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPhotoPickCollectionViewCell.m; sourceTree = "<group>"; };
+		DB36C8801D9918DE00451513 /* YHPhotoPickCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YHPhotoPickCollectionViewCell.xib; sourceTree = "<group>"; };
+		DB36C8831D99227400451513 /* YHPreConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPreConstant.h; sourceTree = "<group>"; };
+		DB36C8841D99227400451513 /* YHPreConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPreConstant.m; sourceTree = "<group>"; };
+		DB36C8861D9927E000451513 /* YHAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHAssets.h; sourceTree = "<group>"; };
+		DB36C8871D9927E000451513 /* YHAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHAssets.m; sourceTree = "<group>"; };
+		DB36C8891D9A4E4E00451513 /* YHBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHBottomView.h; sourceTree = "<group>"; };
+		DB36C88A1D9A4E4E00451513 /* YHBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHBottomView.m; sourceTree = "<group>"; };
+		DB36C88C1D9A4E7B00451513 /* YHBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YHBottomView.xib; sourceTree = "<group>"; };
 		DB378E231D5C21B900A375DA /* YHFileDownloadStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHFileDownloadStore.h; sourceTree = "<group>"; };
 		DB378E241D5C21B900A375DA /* YHFileDownloadStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHFileDownloadStore.m; sourceTree = "<group>"; };
 		DB3DA0BA1D34BC360016D137 /* YHDeviceTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHDeviceTools.h; sourceTree = "<group>"; };
@@ -390,6 +417,8 @@
 				DBBCA3DA1D3DF9D400ED7014 /* YHTools.h */,
 				DB53F7111D48A02D0065F49E /* RegularCheck.h */,
 				DB53F7121D48A02D0065F49E /* RegularCheck.m */,
+				DB36C8831D99227400451513 /* YHPreConstant.h */,
+				DB36C8841D99227400451513 /* YHPreConstant.m */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -752,6 +781,9 @@
 		DBC579121D8792E600A6CF35 /* photoPick */ = {
 			isa = PBXGroup;
 			children = (
+				DB36C8791D9912D600451513 /* PhotoPickViewController.h */,
+				DB36C87A1D9912D600451513 /* PhotoPickViewController.m */,
+				DB36C87B1D9912D600451513 /* PhotoPickViewController.xib */,
 			);
 			path = photoPick;
 			sourceTree = "<group>";
@@ -761,6 +793,18 @@
 			children = (
 				DBC579141D87996900A6CF35 /* YHPhotoPickController.h */,
 				DBC579151D87996900A6CF35 /* YHPhotoPickController.m */,
+				DB36C8861D9927E000451513 /* YHAssets.h */,
+				DB36C8871D9927E000451513 /* YHAssets.m */,
+				DB36C8891D9A4E4E00451513 /* YHBottomView.h */,
+				DB36C88A1D9A4E4E00451513 /* YHBottomView.m */,
+				DB36C88C1D9A4E7B00451513 /* YHBottomView.xib */,
+				DB160CA71D9B6E5C004E11FA /* YHPhotoPickHighImageCell.h */,
+				DB160CA81D9B6E5C004E11FA /* YHPhotoPickHighImageCell.m */,
+				DB160CA91D9B6E5C004E11FA /* YHPhotoPickHighImageCell.xib */,
+				DB36C87E1D9918DE00451513 /* YHPhotoPickCollectionViewCell.h */,
+				DB36C87F1D9918DE00451513 /* YHPhotoPickCollectionViewCell.m */,
+				DB36C8801D9918DE00451513 /* YHPhotoPickCollectionViewCell.xib */,
+				DB160CAC1D9BAA55004E11FA /* YHPhotoPickCellProtocol.h */,
 			);
 			path = photoPick;
 			sourceTree = "<group>";
@@ -913,7 +957,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB5DFB791D6AAAAC0094C6B1 /* DeviceInfoViewController.xib in Resources */,
+				DB36C8821D9918DE00451513 /* YHPhotoPickCollectionViewCell.xib in Resources */,
 				DB5DFB7F1D6ACE5F0094C6B1 /* LanguageViewController.xib in Resources */,
+				DB36C87D1D9912D600451513 /* PhotoPickViewController.xib in Resources */,
 				DB2192051D6D9C7300AD48DB /* newsView.png in Resources */,
 				DB5DFB6C1D6AA03A0094C6B1 /* DownloadViewController.xib in Resources */,
 				DBA450E61D2CEE2E001ADEDC /* readMe.strings in Resources */,
@@ -924,6 +970,7 @@
 				DB5DFB581D6A936D0094C6B1 /* DownloadCell.xib in Resources */,
 				DB5DFB621D6A93ED0094C6B1 /* Main.storyboard in Resources */,
 				DB5DFB881D6ADD670094C6B1 /* FileManagerViewController.xib in Resources */,
+				DB160CAB1D9B6E5C004E11FA /* YHPhotoPickHighImageCell.xib in Resources */,
 				DB5DFB721D6AA1B70094C6B1 /* NetworkViewController.xib in Resources */,
 				DB2A88231D6EDCC0006010C8 /* QRCodeViewController.xib in Resources */,
 				DB5DFB8A1D6AEE7F0094C6B1 /* readMe.txt in Resources */,
@@ -931,6 +978,7 @@
 				DBBCA3DE1D3DFC1300ED7014 /* YHList.plist in Resources */,
 				DBA450BE1D2CE5E8001ADEDC /* LaunchScreen.storyboard in Resources */,
 				DB2A881D1D6EDC97006010C8 /* QRCodeScanLine.png in Resources */,
+				DB36C88D1D9A4E7B00451513 /* YHBottomView.xib in Resources */,
 				DBC66F4F1D4B2B44009666AF /* EN_Language.strings in Resources */,
 				DBA450BB1D2CE5E8001ADEDC /* Assets.xcassets in Resources */,
 				DB2191FD1D6D3A7B00AD48DB /* NewsViewController.xib in Resources */,
@@ -1013,9 +1061,11 @@
 				DBC8DB4F1D6C253800115D0A /* FlowViewController.m in Sources */,
 				DB02433C1D54656C00E99FA8 /* YHReachability.m in Sources */,
 				DBA450E91D2D0771001ADEDC /* NSDate+YHDateFormat.m in Sources */,
+				DB36C8811D9918DE00451513 /* YHPhotoPickCollectionViewCell.m in Sources */,
 				DB53F7101D4898160065F49E /* NSString+Secret.m in Sources */,
 				DB3DA0C21D34E0190016D137 /* YHLogger.m in Sources */,
 				DBF2771A1D4C847800EDB2EB /* YHFileCompress.m in Sources */,
+				DB36C87C1D9912D600451513 /* PhotoPickViewController.m in Sources */,
 				DB2F49301D66A1C6001E5B30 /* YHWaterFallLayout.m in Sources */,
 				DBEAAC0F1D55D9A200A4E76A /* YHNetCache.m in Sources */,
 				DB2BF2A41D893E9100C478C9 /* YHPhotoThroughCell.m in Sources */,
@@ -1026,12 +1076,14 @@
 				DB53F70A1D4892F00065F49E /* NSNumber+Formatter.m in Sources */,
 				DBA450CE1D2CEA91001ADEDC /* BaseViewController.m in Sources */,
 				DB53F7241D48AF800065F49E /* YHInternationalControl.m in Sources */,
+				DB160CAA1D9B6E5C004E11FA /* YHPhotoPickHighImageCell.m in Sources */,
 				DB5DFB711D6AA1B70094C6B1 /* NetworkViewController.m in Sources */,
 				DB44B54A1D3F5CE0000D98C5 /* YHDBSQLite.m in Sources */,
 				DB3DA0BF1D34D2500016D137 /* UIView+Frame.m in Sources */,
 				DB44B54D1D3F8371000D98C5 /* YHDBManager.m in Sources */,
 				DB53F7011D4889CF0065F49E /* NSObject+JsonAndDic.m in Sources */,
 				DBA450D41D2CEADD001ADEDC /* BaseService.m in Sources */,
+				DB36C88B1D9A4E4E00451513 /* YHBottomView.m in Sources */,
 				DB5DFB781D6AAAAC0094C6B1 /* DeviceInfoViewController.m in Sources */,
 				DB5DFB871D6ADD670094C6B1 /* FileManagerViewController.m in Sources */,
 				DB53F7041D488C990065F49E /* BaseTableViewCell.m in Sources */,
@@ -1044,10 +1096,12 @@
 				DBC5791E1D87A79700A6CF35 /* AdsViewController.m in Sources */,
 				DBA450D11D2CEAAE001ADEDC /* BaseView.m in Sources */,
 				DB2A88181D6EDC89006010C8 /* QRCodeCameraViewController.m in Sources */,
+				DB36C8881D9927E000451513 /* YHAssets.m in Sources */,
 				DB53F7071D488D290065F49E /* BaseCollectionViewCell.m in Sources */,
 				DB5DFB591D6A936D0094C6B1 /* DownloadViewController.m in Sources */,
 				DB2BF2961D8924A400C478C9 /* PhotoThrough.m in Sources */,
 				DBBCA3E11D3E074B00ED7014 /* UIImage+ChangeSize.m in Sources */,
+				DB36C8851D99227400451513 /* YHPreConstant.m in Sources */,
 				DB2A88221D6EDCC0006010C8 /* QRCodeViewController.m in Sources */,
 				DB2192001D6D843300AD48DB /* NewContentView.m in Sources */,
 				DB5DFB5B1D6A936D0094C6B1 /* Son.m in Sources */,

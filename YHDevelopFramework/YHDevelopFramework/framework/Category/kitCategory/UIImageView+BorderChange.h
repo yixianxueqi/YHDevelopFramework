@@ -12,7 +12,7 @@
  * @class  UIImageView
  *
  * @abstract 边框处理后的图案
- * @notice 采用遮罩的方式实现，避免离屏渲染影响FPS
+ * @notice 采用遮罩的方式实现
  *
  */
 @interface UIImageView (BorderChange)

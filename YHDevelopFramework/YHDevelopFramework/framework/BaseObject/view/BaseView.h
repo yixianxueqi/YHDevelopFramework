@@ -12,6 +12,7 @@
 #import "UIView+Frame.h"
 #import "NSDate+YHDateFormat.h"
 #import "YHTools.h"
+#import "YHPreConstant.h"
 /**
  * @class BaseView
  *

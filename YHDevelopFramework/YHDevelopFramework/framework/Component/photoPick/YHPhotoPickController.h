@@ -6,8 +6,24 @@
 //  Copyright © 2016年 isoftstone. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface YHPhotoPickController : NSObject
+extern NSString *const HIGH_IMAGE;
+extern NSString *const LOW_IMAGE;
+extern NSString *const IMAGE_INFO;
+
+typedef void(^PhotoPickCompletionBlock)(NSArray<UIImage *> *imageList);
+
+/**
+ * @class  YHPhotoPickController
+ *
+ * @abstract 照片选择器
+ *
+ */
+@interface YHPhotoPickController : UIViewController
+
+//照片最多选取限制，最小为1
+@property (nonatomic,assign) NSUInteger maxSelectCount;
+@property (nonatomic,copy) PhotoPickCompletionBlock completionBlock;
 
 @end
