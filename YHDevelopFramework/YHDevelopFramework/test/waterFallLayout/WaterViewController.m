@@ -62,7 +62,7 @@
     if (!_collectionView) {
         YHWaterFallLayout *waterLayout = [[YHWaterFallLayout alloc] init];
         waterLayout.column = 3;
-        _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:waterLayout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 64, [UIView screenWidth], [UIView screenHeight] - 64) collectionViewLayout:waterLayout];
         [self.view addSubview:_collectionView];
         _collectionView.backgroundColor = [UIColor whiteColor];
         _collectionView.delegate = self;
