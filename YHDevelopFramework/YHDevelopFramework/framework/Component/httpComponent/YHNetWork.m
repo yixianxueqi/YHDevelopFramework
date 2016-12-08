@@ -299,6 +299,23 @@ static NSArray *blackList;
 - (void)clearCache {
     [[YHNetCache sharedCache] removeObjectforKey:[self sigleID]];
 }
+//设置证书
+- (void)setCerPath:(NSString *)cerPath {
+    
+    if (cerPath && cerPath.length > 0) {
+        //路径存在
+        NSData * certData =[NSData dataWithContentsOfFile:cerPath];
+        NSSet * certSet = [[NSSet alloc] initWithObjects:certData, nil];
+        AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
+        // 是否允许,NO-- 不允许无效的证书
+        [securityPolicy setAllowInvalidCertificates:YES];
+        //如置为NO，建议自己添加对应域名的校验逻辑。
+        securityPolicy.validatesDomainName = NO;
+        // 设置证书
+        [securityPolicy setPinnedCertificates:certSet];
+        self.sessionManager.securityPolicy = securityPolicy;
+    }
+}
 #pragma mark - define
 //设置请求的超时时间
 - (void)setRequestTimeoutSeconds:(NSTimeInterval)seconds {

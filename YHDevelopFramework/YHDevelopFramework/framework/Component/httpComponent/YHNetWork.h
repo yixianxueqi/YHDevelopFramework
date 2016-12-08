@@ -135,4 +135,7 @@ typedef void(^requestFailureBlock)(NSError *error);
 - (void)isUseCache:(BOOL)flag;
 //清除缓存
 - (void)clearCache;
+//设置证书
+- (void)setCerPath:(NSString *)cerPath
+
 @end
