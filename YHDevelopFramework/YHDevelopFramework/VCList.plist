@@ -74,5 +74,11 @@
 		<key>vcTitle</key>
 		<string>PhotoPick</string>
 	</dict>
+	<dict>
+		<key>vcName</key>
+		<string>textInputDemoViewController</string>
+		<key>vcTitle</key>
+		<string>textInput</string>
+	</dict>
 </array>
 </plist>

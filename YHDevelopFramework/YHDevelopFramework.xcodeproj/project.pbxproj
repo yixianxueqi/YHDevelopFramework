@@ -18,6 +18,8 @@
 		DB2192001D6D843300AD48DB /* NewContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2191FF1D6D843300AD48DB /* NewContentView.m */; };
 		DB2192031D6D86AA00AD48DB /* NewsTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2192021D6D86AA00AD48DB /* NewsTableViewDelegate.m */; };
 		DB2192051D6D9C7300AD48DB /* newsView.png in Resources */ = {isa = PBXBuildFile; fileRef = DB2192041D6D9C7300AD48DB /* newsView.png */; };
+		DB283CAB1E0CCC8C00C2A037 /* YHDispatchTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = DB283CAA1E0CCC8C00C2A037 /* YHDispatchTimer.m */; };
+		DB283CAE1E0CD1D000C2A037 /* YHDispatchGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = DB283CAD1E0CD1D000C2A037 /* YHDispatchGroup.m */; };
 		DB2A88181D6EDC89006010C8 /* QRCodeCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2A88111D6EDC89006010C8 /* QRCodeCameraViewController.m */; };
 		DB2A88191D6EDC89006010C8 /* QRCodeCreate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2A88131D6EDC89006010C8 /* QRCodeCreate.m */; };
 		DB2A881A1D6EDC89006010C8 /* QRCodePhotoLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2A88151D6EDC89006010C8 /* QRCodePhotoLibrary.m */; };
@@ -25,6 +27,10 @@
 		DB2A881D1D6EDC97006010C8 /* QRCodeScanLine.png in Resources */ = {isa = PBXBuildFile; fileRef = DB2A881C1D6EDC97006010C8 /* QRCodeScanLine.png */; };
 		DB2A88221D6EDCC0006010C8 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2A88201D6EDCC0006010C8 /* QRCodeViewController.m */; };
 		DB2A88231D6EDCC0006010C8 /* QRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB2A88211D6EDCC0006010C8 /* QRCodeViewController.xib */; };
+		DB2BB2531E14A8980057EA4D /* NSString+RegularCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2BB2521E14A8980057EA4D /* NSString+RegularCheck.m */; };
+		DB2BB2591E14DCA10057EA4D /* textInputDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2BB2571E14DCA10057EA4D /* textInputDemoViewController.m */; };
+		DB2BB25A1E14DCA10057EA4D /* textInputDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB2BB2581E14DCA10057EA4D /* textInputDemoViewController.xib */; };
+		DB2BB25D1E14E5540057EA4D /* YHTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2BB25C1E14E5540057EA4D /* YHTextField.m */; };
 		DB2BF2961D8924A400C478C9 /* PhotoThrough.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2BF2951D8924A400C478C9 /* PhotoThrough.m */; };
 		DB2BF29B1D89310800C478C9 /* YHPhotoThroughViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2BF29A1D89310800C478C9 /* YHPhotoThroughViewController.m */; };
 		DB2BF2A41D893E9100C478C9 /* YHPhotoThroughCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2BF2A21D893E9100C478C9 /* YHPhotoThroughCell.m */; };
@@ -77,6 +83,7 @@
 		DB5DFB8F1D6AEF370094C6B1 /* ReadMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5DFB8D1D6AEF370094C6B1 /* ReadMeViewController.m */; };
 		DB5DFB901D6AEF370094C6B1 /* ReadMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5DFB8E1D6AEF370094C6B1 /* ReadMeViewController.xib */; };
 		DB63FAC11D37811B000C06F5 /* YHCrashCatch.m in Sources */ = {isa = PBXBuildFile; fileRef = DB63FAC01D37811B000C06F5 /* YHCrashCatch.m */; };
+		DB752BD91E13C1D400A5982D /* YHTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB752BD81E13C1D400A5982D /* YHTextView.m */; };
 		DBA450B01D2CE5E8001ADEDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA450AF1D2CE5E8001ADEDC /* main.m */; };
 		DBA450BB1D2CE5E8001ADEDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA450BA1D2CE5E8001ADEDC /* Assets.xcassets */; };
 		DBA450BE1D2CE5E8001ADEDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA450BC1D2CE5E8001ADEDC /* LaunchScreen.storyboard */; };
@@ -130,6 +137,10 @@
 		DB2192011D6D86AA00AD48DB /* NewsTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewDelegate.h; sourceTree = "<group>"; };
 		DB2192021D6D86AA00AD48DB /* NewsTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewDelegate.m; sourceTree = "<group>"; };
 		DB2192041D6D9C7300AD48DB /* newsView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newsView.png; sourceTree = "<group>"; };
+		DB283CA91E0CCC8C00C2A037 /* YHDispatchTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHDispatchTimer.h; sourceTree = "<group>"; };
+		DB283CAA1E0CCC8C00C2A037 /* YHDispatchTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHDispatchTimer.m; sourceTree = "<group>"; };
+		DB283CAC1E0CD1D000C2A037 /* YHDispatchGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHDispatchGroup.h; sourceTree = "<group>"; };
+		DB283CAD1E0CD1D000C2A037 /* YHDispatchGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHDispatchGroup.m; sourceTree = "<group>"; };
 		DB2A88101D6EDC89006010C8 /* QRCodeCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeCameraViewController.h; sourceTree = "<group>"; };
 		DB2A88111D6EDC89006010C8 /* QRCodeCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeCameraViewController.m; sourceTree = "<group>"; };
 		DB2A88121D6EDC89006010C8 /* QRCodeCreate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeCreate.h; sourceTree = "<group>"; };
@@ -142,6 +153,13 @@
 		DB2A881F1D6EDCC0006010C8 /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
 		DB2A88201D6EDCC0006010C8 /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
 		DB2A88211D6EDCC0006010C8 /* QRCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRCodeViewController.xib; sourceTree = "<group>"; };
+		DB2BB2511E14A8980057EA4D /* NSString+RegularCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RegularCheck.h"; sourceTree = "<group>"; };
+		DB2BB2521E14A8980057EA4D /* NSString+RegularCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RegularCheck.m"; sourceTree = "<group>"; };
+		DB2BB2561E14DCA10057EA4D /* textInputDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = textInputDemoViewController.h; sourceTree = "<group>"; };
+		DB2BB2571E14DCA10057EA4D /* textInputDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = textInputDemoViewController.m; sourceTree = "<group>"; };
+		DB2BB2581E14DCA10057EA4D /* textInputDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = textInputDemoViewController.xib; sourceTree = "<group>"; };
+		DB2BB25B1E14E5540057EA4D /* YHTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHTextField.h; sourceTree = "<group>"; };
+		DB2BB25C1E14E5540057EA4D /* YHTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHTextField.m; sourceTree = "<group>"; };
 		DB2BF2941D8924A400C478C9 /* PhotoThrough.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoThrough.h; sourceTree = "<group>"; };
 		DB2BF2951D8924A400C478C9 /* PhotoThrough.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoThrough.m; sourceTree = "<group>"; };
 		DB2BF2991D89310800C478C9 /* YHPhotoThroughViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPhotoThroughViewController.h; sourceTree = "<group>"; };
@@ -232,6 +250,8 @@
 		DB5DFB8E1D6AEF370094C6B1 /* ReadMeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadMeViewController.xib; sourceTree = "<group>"; };
 		DB63FABF1D37811B000C06F5 /* YHCrashCatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHCrashCatch.h; sourceTree = "<group>"; };
 		DB63FAC01D37811B000C06F5 /* YHCrashCatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHCrashCatch.m; sourceTree = "<group>"; };
+		DB752BD71E13C1D400A5982D /* YHTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHTextView.h; sourceTree = "<group>"; };
+		DB752BD81E13C1D400A5982D /* YHTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHTextView.m; sourceTree = "<group>"; };
 		DBA450AB1D2CE5E8001ADEDC /* YHDevelopFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YHDevelopFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA450AF1D2CE5E8001ADEDC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DBA450BA1D2CE5E8001ADEDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Assets.xcassets; sourceTree = "<group>"; };
@@ -344,6 +364,17 @@
 			path = newsView;
 			sourceTree = "<group>";
 		};
+		DB283CA81E0CCC6400C2A037 /* dispatch */ = {
+			isa = PBXGroup;
+			children = (
+				DB283CA91E0CCC8C00C2A037 /* YHDispatchTimer.h */,
+				DB283CAA1E0CCC8C00C2A037 /* YHDispatchTimer.m */,
+				DB283CAC1E0CD1D000C2A037 /* YHDispatchGroup.h */,
+				DB283CAD1E0CD1D000C2A037 /* YHDispatchGroup.m */,
+			);
+			path = dispatch;
+			sourceTree = "<group>";
+		};
 		DB2A880F1D6EC194006010C8 /* QRCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,6 +401,25 @@
 			path = qrCode;
 			sourceTree = "<group>";
 		};
+		DB2BB2541E14BC750057EA4D /* textField */ = {
+			isa = PBXGroup;
+			children = (
+				DB2BB25B1E14E5540057EA4D /* YHTextField.h */,
+				DB2BB25C1E14E5540057EA4D /* YHTextField.m */,
+			);
+			path = textField;
+			sourceTree = "<group>";
+		};
+		DB2BB2551E14DC500057EA4D /* textInput */ = {
+			isa = PBXGroup;
+			children = (
+				DB2BB2561E14DCA10057EA4D /* textInputDemoViewController.h */,
+				DB2BB2571E14DCA10057EA4D /* textInputDemoViewController.m */,
+				DB2BB2581E14DCA10057EA4D /* textInputDemoViewController.xib */,
+			);
+			name = textInput;
+			sourceTree = "<group>";
+		};
 		DB2BF2931D89246D00C478C9 /* photothrough */ = {
 			isa = PBXGroup;
 			children = (
@@ -394,6 +444,8 @@
 		DB2F492C1D669A96001E5B30 /* subClass */ = {
 			isa = PBXGroup;
 			children = (
+				DB2BB2541E14BC750057EA4D /* textField */,
+				DB752BD61E13C19B00A5982D /* textView */,
 				DBC5791F1D87DDF800A6CF35 /* pageControl */,
 				DB2F492D1D669B30001E5B30 /* waterfallLayout */,
 			);
@@ -426,6 +478,7 @@
 		DB5DFB481D6A936D0094C6B1 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				DB2BB2551E14DC500057EA4D /* textInput */,
 				DBC5791B1D87A76400A6CF35 /* adsView */,
 				DB2BF2931D89246D00C478C9 /* photothrough */,
 				DBC579121D8792E600A6CF35 /* photoPick */,
@@ -527,6 +580,15 @@
 			path = readMe;
 			sourceTree = "<group>";
 		};
+		DB752BD61E13C19B00A5982D /* textView */ = {
+			isa = PBXGroup;
+			children = (
+				DB752BD71E13C1D400A5982D /* YHTextView.h */,
+				DB752BD81E13C1D400A5982D /* YHTextView.m */,
+			);
+			path = textView;
+			sourceTree = "<group>";
+		};
 		DBA450A21D2CE5E8001ADEDC = {
 			isa = PBXGroup;
 			children = (
@@ -598,6 +660,7 @@
 		DBA450C71D2CE975001ADEDC /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				DB283CA81E0CCC6400C2A037 /* dispatch */,
 				DB2BF2981D892C4000C478C9 /* photothrough */,
 				DBC579131D87991E00A6CF35 /* photoPick */,
 				DB2A880F1D6EC194006010C8 /* QRCode */,
@@ -727,6 +790,8 @@
 				DB53F70F1D4898160065F49E /* NSString+Secret.m */,
 				DB0243311D54268000E99FA8 /* NSString+Rect.h */,
 				DB0243321D54268000E99FA8 /* NSString+Rect.m */,
+				DB2BB2511E14A8980057EA4D /* NSString+RegularCheck.h */,
+				DB2BB2521E14A8980057EA4D /* NSString+RegularCheck.m */,
 			);
 			path = foundationCategory;
 			sourceTree = "<group>";
@@ -963,6 +1028,7 @@
 				DB5DFB7F1D6ACE5F0094C6B1 /* LanguageViewController.xib in Resources */,
 				DB36C87D1D9912D600451513 /* PhotoPickViewController.xib in Resources */,
 				DB2192051D6D9C7300AD48DB /* newsView.png in Resources */,
+				DB2BB25A1E14DCA10057EA4D /* textInputDemoViewController.xib in Resources */,
 				DB5DFB6C1D6AA03A0094C6B1 /* DownloadViewController.xib in Resources */,
 				DBA450E61D2CEE2E001ADEDC /* readMe.strings in Resources */,
 				DB2BF2A51D893E9100C478C9 /* YHPhotoThroughCell.xib in Resources */,
@@ -1052,6 +1118,7 @@
 				DB2A881A1D6EDC89006010C8 /* QRCodePhotoLibrary.m in Sources */,
 				DBF277171D4C830100EDB2EB /* YHFileManager.m in Sources */,
 				DB5DFB5C1D6A936D0094C6B1 /* WaterViewController.m in Sources */,
+				DB2BB25D1E14E5540057EA4D /* YHTextField.m in Sources */,
 				DBF7BD481D5B1EF600320F62 /* YHFileDownLoadModel.m in Sources */,
 				DBC5791A1D879E7E00A6CF35 /* AdsCycleView.m in Sources */,
 				DBB862991D3CBF2000A5951F /* UIImageView+BorderChange.m in Sources */,
@@ -1063,6 +1130,7 @@
 				DBC8DB4F1D6C253800115D0A /* FlowViewController.m in Sources */,
 				DB02433C1D54656C00E99FA8 /* YHReachability.m in Sources */,
 				DBA450E91D2D0771001ADEDC /* NSDate+YHDateFormat.m in Sources */,
+				DB2BB2531E14A8980057EA4D /* NSString+RegularCheck.m in Sources */,
 				DB36C8811D9918DE00451513 /* YHPhotoPickCollectionViewCell.m in Sources */,
 				DB53F7101D4898160065F49E /* NSString+Secret.m in Sources */,
 				DB3DA0C21D34E0190016D137 /* YHLogger.m in Sources */,
@@ -1072,6 +1140,7 @@
 				DBEAAC0F1D55D9A200A4E76A /* YHNetCache.m in Sources */,
 				DB2BF2A41D893E9100C478C9 /* YHPhotoThroughCell.m in Sources */,
 				DB5DFB821D6AD0B80094C6B1 /* BaseNavigationViewController.m in Sources */,
+				DB283CAB1E0CCC8C00C2A037 /* YHDispatchTimer.m in Sources */,
 				DBC8DB451D6C236300115D0A /* FlowContentView.m in Sources */,
 				DB5DFB8F1D6AEF370094C6B1 /* ReadMeViewController.m in Sources */,
 				DBC8DB541D6C39BB00115D0A /* NewsView.m in Sources */,
@@ -1083,7 +1152,9 @@
 				DB44B54A1D3F5CE0000D98C5 /* YHDBSQLite.m in Sources */,
 				DB3DA0BF1D34D2500016D137 /* UIView+Frame.m in Sources */,
 				DB44B54D1D3F8371000D98C5 /* YHDBManager.m in Sources */,
+				DB283CAE1E0CD1D000C2A037 /* YHDispatchGroup.m in Sources */,
 				DB53F7011D4889CF0065F49E /* NSObject+JsonAndDic.m in Sources */,
+				DB752BD91E13C1D400A5982D /* YHTextView.m in Sources */,
 				DBA450D41D2CEADD001ADEDC /* BaseService.m in Sources */,
 				DB36C88B1D9A4E4E00451513 /* YHBottomView.m in Sources */,
 				DB5DFB781D6AAAAC0094C6B1 /* DeviceInfoViewController.m in Sources */,
@@ -1103,6 +1174,7 @@
 				DB5DFB591D6A936D0094C6B1 /* DownloadViewController.m in Sources */,
 				DB2BF2961D8924A400C478C9 /* PhotoThrough.m in Sources */,
 				DBBCA3E11D3E074B00ED7014 /* UIImage+ChangeSize.m in Sources */,
+				DB2BB2591E14DCA10057EA4D /* textInputDemoViewController.m in Sources */,
 				DB36C8851D99227400451513 /* YHPreConstant.m in Sources */,
 				DB2A88221D6EDCC0006010C8 /* QRCodeViewController.m in Sources */,
 				DB2192001D6D843300AD48DB /* NewContentView.m in Sources */,
