@@ -80,5 +80,11 @@
 		<key>vcTitle</key>
 		<string>textInput</string>
 	</dict>
+	<dict>
+		<key>vcName</key>
+		<string>AppInfoDemoViewController</string>
+		<key>vcTitle</key>
+		<string>appInfo</string>
+	</dict>
 </array>
 </plist>
