@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		6BA7A0B108064810A864A538 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9628ACA354870A8FADE8F0D1 /* libPods.a */; };
 		DB0243331D54268000E99FA8 /* NSString+Rect.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0243321D54268000E99FA8 /* NSString+Rect.m */; };
-		DB0243361D54290900E99FA8 /* YHNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0243351D54290900E99FA8 /* YHNetWork.m */; };
-		DB02433C1D54656C00E99FA8 /* YHReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02433B1D54656C00E99FA8 /* YHReachability.m */; };
 		DB160CAA1D9B6E5C004E11FA /* YHPhotoPickHighImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB160CA81D9B6E5C004E11FA /* YHPhotoPickHighImageCell.m */; };
 		DB160CAB1D9B6E5C004E11FA /* YHPhotoPickHighImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB160CA91D9B6E5C004E11FA /* YHPhotoPickHighImageCell.xib */; };
 		DB2191FC1D6D3A7B00AD48DB /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2191FA1D6D3A7B00AD48DB /* NewsViewController.m */; };
@@ -83,6 +81,9 @@
 		DB5DFB8F1D6AEF370094C6B1 /* ReadMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5DFB8D1D6AEF370094C6B1 /* ReadMeViewController.m */; };
 		DB5DFB901D6AEF370094C6B1 /* ReadMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5DFB8E1D6AEF370094C6B1 /* ReadMeViewController.xib */; };
 		DB63FAC11D37811B000C06F5 /* YHCrashCatch.m in Sources */ = {isa = PBXBuildFile; fileRef = DB63FAC01D37811B000C06F5 /* YHCrashCatch.m */; };
+		DB6EA4B11E30A552001A5DFE /* YHNetCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6EA4AC1E30A552001A5DFE /* YHNetCache.m */; };
+		DB6EA4B21E30A553001A5DFE /* YHNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6EA4AE1E30A552001A5DFE /* YHNetWork.m */; };
+		DB6EA4B31E30A553001A5DFE /* YHReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6EA4B01E30A552001A5DFE /* YHReachability.m */; };
 		DB752BD91E13C1D400A5982D /* YHTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB752BD81E13C1D400A5982D /* YHTextView.m */; };
 		DB7E790B1E164F3A00221596 /* AppInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7E790A1E164F3A00221596 /* AppInfoManager.m */; };
 		DB7E79101E164F7500221596 /* AppInfoDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7E790E1E164F7500221596 /* AppInfoDemoViewController.m */; };
@@ -109,7 +110,6 @@
 		DBC8DB4F1D6C253800115D0A /* FlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC8DB4D1D6C253800115D0A /* FlowViewController.m */; };
 		DBC8DB501D6C253800115D0A /* FlowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBC8DB4E1D6C253800115D0A /* FlowViewController.xib */; };
 		DBC8DB541D6C39BB00115D0A /* NewsView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC8DB531D6C39BB00115D0A /* NewsView.m */; };
-		DBEAAC0F1D55D9A200A4E76A /* YHNetCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEAAC0E1D55D9A200A4E76A /* YHNetCache.m */; };
 		DBF277171D4C830100EDB2EB /* YHFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF277161D4C830100EDB2EB /* YHFileManager.m */; };
 		DBF2771A1D4C847800EDB2EB /* YHFileCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF277191D4C847800EDB2EB /* YHFileCompress.m */; };
 		DBF2771D1D4C84BE00EDB2EB /* YHFileAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF2771C1D4C84BE00EDB2EB /* YHFileAction.m */; };
@@ -124,10 +124,6 @@
 		9628ACA354870A8FADE8F0D1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0243311D54268000E99FA8 /* NSString+Rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Rect.h"; sourceTree = "<group>"; };
 		DB0243321D54268000E99FA8 /* NSString+Rect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Rect.m"; sourceTree = "<group>"; };
-		DB0243341D54290900E99FA8 /* YHNetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHNetWork.h; sourceTree = "<group>"; };
-		DB0243351D54290900E99FA8 /* YHNetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHNetWork.m; sourceTree = "<group>"; };
-		DB02433A1D54656C00E99FA8 /* YHReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHReachability.h; sourceTree = "<group>"; };
-		DB02433B1D54656C00E99FA8 /* YHReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHReachability.m; sourceTree = "<group>"; };
 		DB160CA71D9B6E5C004E11FA /* YHPhotoPickHighImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPhotoPickHighImageCell.h; sourceTree = "<group>"; };
 		DB160CA81D9B6E5C004E11FA /* YHPhotoPickHighImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPhotoPickHighImageCell.m; sourceTree = "<group>"; };
 		DB160CA91D9B6E5C004E11FA /* YHPhotoPickHighImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YHPhotoPickHighImageCell.xib; sourceTree = "<group>"; };
@@ -253,6 +249,12 @@
 		DB5DFB8E1D6AEF370094C6B1 /* ReadMeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadMeViewController.xib; sourceTree = "<group>"; };
 		DB63FABF1D37811B000C06F5 /* YHCrashCatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHCrashCatch.h; sourceTree = "<group>"; };
 		DB63FAC01D37811B000C06F5 /* YHCrashCatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHCrashCatch.m; sourceTree = "<group>"; };
+		DB6EA4AB1E30A552001A5DFE /* YHNetCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHNetCache.h; sourceTree = "<group>"; };
+		DB6EA4AC1E30A552001A5DFE /* YHNetCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHNetCache.m; sourceTree = "<group>"; };
+		DB6EA4AD1E30A552001A5DFE /* YHNetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHNetWork.h; sourceTree = "<group>"; };
+		DB6EA4AE1E30A552001A5DFE /* YHNetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHNetWork.m; sourceTree = "<group>"; };
+		DB6EA4AF1E30A552001A5DFE /* YHReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHReachability.h; sourceTree = "<group>"; };
+		DB6EA4B01E30A552001A5DFE /* YHReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHReachability.m; sourceTree = "<group>"; };
 		DB752BD71E13C1D400A5982D /* YHTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHTextView.h; sourceTree = "<group>"; };
 		DB752BD81E13C1D400A5982D /* YHTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHTextView.m; sourceTree = "<group>"; };
 		DB7E79091E164F3A00221596 /* AppInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfoManager.h; sourceTree = "<group>"; };
@@ -299,8 +301,6 @@
 		DBC8DB4E1D6C253800115D0A /* FlowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlowViewController.xib; sourceTree = "<group>"; };
 		DBC8DB521D6C39BB00115D0A /* NewsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsView.h; sourceTree = "<group>"; };
 		DBC8DB531D6C39BB00115D0A /* NewsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsView.m; sourceTree = "<group>"; };
-		DBEAAC0D1D55D9A200A4E76A /* YHNetCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHNetCache.h; sourceTree = "<group>"; };
-		DBEAAC0E1D55D9A200A4E76A /* YHNetCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHNetCache.m; sourceTree = "<group>"; };
 		DBF277151D4C830100EDB2EB /* YHFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHFileManager.h; sourceTree = "<group>"; };
 		DBF277161D4C830100EDB2EB /* YHFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHFileManager.m; sourceTree = "<group>"; };
 		DBF277181D4C847800EDB2EB /* YHFileCompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHFileCompress.h; sourceTree = "<group>"; };
@@ -589,6 +589,19 @@
 			path = readMe;
 			sourceTree = "<group>";
 		};
+		DB6EA4AA1E30A552001A5DFE /* httpComponent */ = {
+			isa = PBXGroup;
+			children = (
+				DB6EA4AB1E30A552001A5DFE /* YHNetCache.h */,
+				DB6EA4AC1E30A552001A5DFE /* YHNetCache.m */,
+				DB6EA4AD1E30A552001A5DFE /* YHNetWork.h */,
+				DB6EA4AE1E30A552001A5DFE /* YHNetWork.m */,
+				DB6EA4AF1E30A552001A5DFE /* YHReachability.h */,
+				DB6EA4B01E30A552001A5DFE /* YHReachability.m */,
+			);
+			path = httpComponent;
+			sourceTree = "<group>";
+		};
 		DB752BD61E13C19B00A5982D /* textView */ = {
 			isa = PBXGroup;
 			children = (
@@ -688,6 +701,7 @@
 		DBA450C71D2CE975001ADEDC /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				DB6EA4AA1E30A552001A5DFE /* httpComponent */,
 				DB7E79081E164F0F00221596 /* appInfo */,
 				DB283CA81E0CCC6400C2A037 /* dispatch */,
 				DB2BF2981D892C4000C478C9 /* photothrough */,
@@ -698,7 +712,6 @@
 				DBA450D81D2CEC1B001ADEDC /* DBComponent */,
 				DBA450D71D2CEB5F001ADEDC /* logComponent */,
 				DBA450D61D2CEB3B001ADEDC /* languageComponent */,
-				DBA450D51D2CEB13001ADEDC /* httpComponent */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -743,19 +756,6 @@
 				DBA450D31D2CEADD001ADEDC /* BaseService.m */,
 			);
 			path = service;
-			sourceTree = "<group>";
-		};
-		DBA450D51D2CEB13001ADEDC /* httpComponent */ = {
-			isa = PBXGroup;
-			children = (
-				DB0243341D54290900E99FA8 /* YHNetWork.h */,
-				DB0243351D54290900E99FA8 /* YHNetWork.m */,
-				DB02433A1D54656C00E99FA8 /* YHReachability.h */,
-				DB02433B1D54656C00E99FA8 /* YHReachability.m */,
-				DBEAAC0D1D55D9A200A4E76A /* YHNetCache.h */,
-				DBEAAC0E1D55D9A200A4E76A /* YHNetCache.m */,
-			);
-			path = httpComponent;
 			sourceTree = "<group>";
 		};
 		DBA450D61D2CEB3B001ADEDC /* languageComponent */ = {
@@ -1139,6 +1139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB2BF29B1D89310800C478C9 /* YHPhotoThroughViewController.m in Sources */,
+				DB6EA4B21E30A553001A5DFE /* YHNetWork.m in Sources */,
 				DB5DFB6A1D6A9AF70094C6B1 /* AppDelegate.m in Sources */,
 				DBF7BD4E1D5B1F6100320F62 /* YHFileDownLoadOperation.m in Sources */,
 				DB5DFB7E1D6ACE5F0094C6B1 /* LanguageViewController.m in Sources */,
@@ -1159,7 +1160,6 @@
 				DB2192031D6D86AA00AD48DB /* NewsTableViewDelegate.m in Sources */,
 				DB7E790B1E164F3A00221596 /* AppInfoManager.m in Sources */,
 				DBC8DB4F1D6C253800115D0A /* FlowViewController.m in Sources */,
-				DB02433C1D54656C00E99FA8 /* YHReachability.m in Sources */,
 				DBA450E91D2D0771001ADEDC /* NSDate+YHDateFormat.m in Sources */,
 				DB2BB2531E14A8980057EA4D /* NSString+RegularCheck.m in Sources */,
 				DB36C8811D9918DE00451513 /* YHPhotoPickCollectionViewCell.m in Sources */,
@@ -1168,14 +1168,15 @@
 				DBF2771A1D4C847800EDB2EB /* YHFileCompress.m in Sources */,
 				DB36C87C1D9912D600451513 /* PhotoPickViewController.m in Sources */,
 				DB2F49301D66A1C6001E5B30 /* YHWaterFallLayout.m in Sources */,
-				DBEAAC0F1D55D9A200A4E76A /* YHNetCache.m in Sources */,
 				DB2BF2A41D893E9100C478C9 /* YHPhotoThroughCell.m in Sources */,
 				DB5DFB821D6AD0B80094C6B1 /* BaseNavigationViewController.m in Sources */,
 				DB283CAB1E0CCC8C00C2A037 /* YHDispatchTimer.m in Sources */,
 				DBC8DB451D6C236300115D0A /* FlowContentView.m in Sources */,
+				DB6EA4B31E30A553001A5DFE /* YHReachability.m in Sources */,
 				DB5DFB8F1D6AEF370094C6B1 /* ReadMeViewController.m in Sources */,
 				DBC8DB541D6C39BB00115D0A /* NewsView.m in Sources */,
 				DB53F70A1D4892F00065F49E /* NSNumber+Formatter.m in Sources */,
+				DB6EA4B11E30A552001A5DFE /* YHNetCache.m in Sources */,
 				DBA450CE1D2CEA91001ADEDC /* BaseViewController.m in Sources */,
 				DB53F7241D48AF800065F49E /* YHInternationalControl.m in Sources */,
 				DB160CAA1D9B6E5C004E11FA /* YHPhotoPickHighImageCell.m in Sources */,
@@ -1192,7 +1193,6 @@
 				DB5DFB871D6ADD670094C6B1 /* FileManagerViewController.m in Sources */,
 				DB53F7041D488C990065F49E /* BaseTableViewCell.m in Sources */,
 				DBC579221D87DE1500A6CF35 /* YHPageControl.m in Sources */,
-				DB0243361D54290900E99FA8 /* YHNetWork.m in Sources */,
 				DB3DA0BC1D34BC360016D137 /* YHDeviceTools.m in Sources */,
 				DB5DFB5A1D6A936D0094C6B1 /* Person.m in Sources */,
 				DB2191FC1D6D3A7B00AD48DB /* NewsViewController.m in Sources */,

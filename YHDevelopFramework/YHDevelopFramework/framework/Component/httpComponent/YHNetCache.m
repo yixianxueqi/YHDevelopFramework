@@ -7,7 +7,7 @@
 //
 
 #import "YHNetCache.h"
-#import <YYCache.h>
+#import "YYCache.h"
 
 @interface YHNetCache ()
 

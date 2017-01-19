@@ -7,10 +7,8 @@
 //
 
 #import "YHNetWork.h"
-#import "YHTools.h"
-#import "NSString+Secret.h"
 #import "YHNetCache.h"
-#import "NSObject+JsonAndDic.h"
+#import <YYKit/YYKit.h>
 
 #define kCommonParamKey @"networkCommonParam"
 //error domain
@@ -253,12 +251,12 @@ static NSArray *blackList;
 //设置通用参数
 + (void)setCommonParam:(NSDictionary *)dic {
     
-    sanBoxStore(kCommonParamKey, dic);
+    [self sandBoxStoreValue:dic key:kCommonParamKey];
 }
 //获取通用参数
 + (NSDictionary *)getCommonParam {
     
-    return sanBoxTake(kCommonParamKey);
+    return [self sandBoxTakeValueForkey:kCommonParamKey];
 }
 //不使用通用参数的url
 + (void)blackListNotUseCommonParam:(NSArray *)list {
@@ -266,7 +264,7 @@ static NSArray *blackList;
     NSMutableArray *listM = [NSMutableArray array];
     //将url转化为MD5字符串，便于比较使用
     for (NSString *str in list) {
-        [listM addObject:[str md5]];
+        [listM addObject:[self stringMD5:str]];
     }
     blackList = listM;
 }
@@ -327,7 +325,7 @@ static NSArray *blackList;
 
     NSDictionary *commonDic = [self.class getCommonParam];
     NSMutableDictionary *dictM = [NSMutableDictionary dictionaryWithDictionary:self.dic];
-    if (![blackList containsObject:[self.url md5]]) {
+    if (![blackList containsObject:[[self class] stringMD5:self.url]]) {
         [dictM setDictionary:commonDic];
     }
     return dictM;
@@ -343,7 +341,7 @@ static NSArray *blackList;
         obj.parameter = self.dic;
         obj.responseTime = endTime;
         obj.responseJsonStr = responseObj;
-        NSString *jsonStr = [[obj toDic] toJsonString];
+        NSString *jsonStr = [obj modelToJSONString];
         [[YHNetCache sharedCache] setObject:jsonStr forKey:sigleID];
     });
 }
@@ -353,7 +351,7 @@ static NSArray *blackList;
     YHNetCache *cache = [YHNetCache sharedCache];
     if ([cache containsObjectForKey:sigleID]) {
         NSString *json = [cache objectForKey:sigleID];
-        NSDictionary *dic = [self jsonToDic:json];
+        NSDictionary *dic = [[self class] jsonToDic:json];
         CacheObj *obj = [[CacheObj alloc] init];
         obj.url = dic[@"url"];
         obj.requestTime = dic[@"requestTime"];
@@ -385,9 +383,42 @@ static NSArray *blackList;
 //根据url和参数生成唯一标示，作为缓存的唯一标示
 - (NSString *)sigleID {
 
-    NSString *parameterJsonStr = [self.dic toJsonString];
+    NSString *parameterJsonStr = [self.dic modelToJSONString];
     NSString *str = [NSString stringWithFormat:@"%@%@",self.url,parameterJsonStr];
-    return [str md5];
+    return [[self class] stringMD5:str];
+}
+
+#pragma mark - tool
++ (NSString *)stringMD5:(NSString *)targetStr {
+
+    return [targetStr md5String];;
+}
+//沙盒存
++ (void)sandBoxStoreValue:(id)value key:(NSString *)key {
+
+    [[NSUserDefaults standardUserDefaults] setValue:value forKey:key];
+}
+//沙盒取
++ (id)sandBoxTakeValueForkey:(NSString *)key {
+    
+    return [[NSUserDefaults standardUserDefaults] valueForKey:key];
+}
+//json转字典
++ (NSDictionary *)jsonToDic:(NSString *)jsonStr {
+    
+    if (!jsonStr || jsonStr.length == 0) {
+        return nil;
+    }
+    NSData *jsonData = [jsonStr dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *err;
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                        options:NSJSONReadingMutableContainers
+                                                          error:&err];
+    if(err) {
+        NSLog(@"json解析失败：%@",err);
+        return nil;
+    }
+    return dic;
 }
 
 #pragma mark - getter/setter

@@ -103,7 +103,7 @@ typedef void(^requestFailureBlock)(NSError *error);
  *  下载文件
  *
  *  @param URLString           请求地址
- *  @param uploadProgressBlock 下载进度
+ *  @param downloadProgressBlock 下载进度
  *  @param fileLocationURL     文件下载本地存放路径
  *  @param completionHandler   下载完成回调
  *
