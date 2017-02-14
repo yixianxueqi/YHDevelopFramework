@@ -326,7 +326,7 @@ static NSArray *blackList;
     NSDictionary *commonDic = [self.class getCommonParam];
     NSMutableDictionary *dictM = [NSMutableDictionary dictionaryWithDictionary:self.dic];
     if (![blackList containsObject:[[self class] stringMD5:self.url]]) {
-        [dictM setDictionary:commonDic];
+        [dictM addEntriesFromDictionary:commonDic];
     }
     return dictM;
 }

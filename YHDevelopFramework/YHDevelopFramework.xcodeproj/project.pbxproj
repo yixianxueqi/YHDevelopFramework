@@ -100,6 +100,10 @@
 		DBB8629D1D3CD60500A5951F /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB8629C1D3CD60500A5951F /* Entity.m */; };
 		DBBCA3DE1D3DFC1300ED7014 /* YHList.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBBCA3DD1D3DFC1300ED7014 /* YHList.plist */; };
 		DBBCA3E11D3E074B00ED7014 /* UIImage+ChangeSize.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBCA3E01D3E074B00ED7014 /* UIImage+ChangeSize.m */; };
+		DBC06DB71E52ADC300C49283 /* LoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC06DB41E52ADC300C49283 /* LoginService.m */; };
+		DBC06DB81E52ADC300C49283 /* LoginServiceDB.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC06DB61E52ADC300C49283 /* LoginServiceDB.m */; };
+		DBC06DBD1E52AE2600C49283 /* LoginServiceDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC06DBB1E52AE2600C49283 /* LoginServiceDemoViewController.m */; };
+		DBC06DBE1E52AE2600C49283 /* LoginServiceDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBC06DBC1E52AE2600C49283 /* LoginServiceDemoViewController.xib */; };
 		DBC579161D87996900A6CF35 /* YHPhotoPickController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC579151D87996900A6CF35 /* YHPhotoPickController.m */; };
 		DBC5791A1D879E7E00A6CF35 /* AdsCycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC579191D879E7E00A6CF35 /* AdsCycleView.m */; };
 		DBC5791E1D87A79700A6CF35 /* AdsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC5791D1D87A79700A6CF35 /* AdsViewController.m */; };
@@ -284,6 +288,13 @@
 		DBBCA3DD1D3DFC1300ED7014 /* YHList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = YHList.plist; sourceTree = "<group>"; };
 		DBBCA3DF1D3E074B00ED7014 /* UIImage+ChangeSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ChangeSize.h"; sourceTree = "<group>"; };
 		DBBCA3E01D3E074B00ED7014 /* UIImage+ChangeSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ChangeSize.m"; sourceTree = "<group>"; };
+		DBC06DB31E52ADC300C49283 /* LoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginService.h; sourceTree = "<group>"; };
+		DBC06DB41E52ADC300C49283 /* LoginService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginService.m; sourceTree = "<group>"; };
+		DBC06DB51E52ADC300C49283 /* LoginServiceDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginServiceDB.h; sourceTree = "<group>"; };
+		DBC06DB61E52ADC300C49283 /* LoginServiceDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginServiceDB.m; sourceTree = "<group>"; };
+		DBC06DBA1E52AE2600C49283 /* LoginServiceDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginServiceDemoViewController.h; sourceTree = "<group>"; };
+		DBC06DBB1E52AE2600C49283 /* LoginServiceDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginServiceDemoViewController.m; sourceTree = "<group>"; };
+		DBC06DBC1E52AE2600C49283 /* LoginServiceDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginServiceDemoViewController.xib; sourceTree = "<group>"; };
 		DBC579141D87996900A6CF35 /* YHPhotoPickController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPhotoPickController.h; sourceTree = "<group>"; };
 		DBC579151D87996900A6CF35 /* YHPhotoPickController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPhotoPickController.m; sourceTree = "<group>"; };
 		DBC579181D879E7E00A6CF35 /* AdsCycleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsCycleView.h; sourceTree = "<group>"; };
@@ -486,6 +497,7 @@
 		DB5DFB481D6A936D0094C6B1 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				DBC06DB91E52ADE200C49283 /* loginService */,
 				DB7E790C1E164F4700221596 /* appInfo */,
 				DB2BB2551E14DC500057EA4D /* textInput */,
 				DBC5791B1D87A76400A6CF35 /* adsView */,
@@ -701,6 +713,7 @@
 		DBA450C71D2CE975001ADEDC /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				DBC06DB21E52ADC300C49283 /* loginService */,
 				DB6EA4AA1E30A552001A5DFE /* httpComponent */,
 				DB7E79081E164F0F00221596 /* appInfo */,
 				DB283CA81E0CCC6400C2A037 /* dispatch */,
@@ -870,6 +883,27 @@
 				DBB8629C1D3CD60500A5951F /* Entity.m */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		DBC06DB21E52ADC300C49283 /* loginService */ = {
+			isa = PBXGroup;
+			children = (
+				DBC06DB31E52ADC300C49283 /* LoginService.h */,
+				DBC06DB41E52ADC300C49283 /* LoginService.m */,
+				DBC06DB51E52ADC300C49283 /* LoginServiceDB.h */,
+				DBC06DB61E52ADC300C49283 /* LoginServiceDB.m */,
+			);
+			path = loginService;
+			sourceTree = "<group>";
+		};
+		DBC06DB91E52ADE200C49283 /* loginService */ = {
+			isa = PBXGroup;
+			children = (
+				DBC06DBA1E52AE2600C49283 /* LoginServiceDemoViewController.h */,
+				DBC06DBB1E52AE2600C49283 /* LoginServiceDemoViewController.m */,
+				DBC06DBC1E52AE2600C49283 /* LoginServiceDemoViewController.xib */,
+			);
+			path = loginService;
 			sourceTree = "<group>";
 		};
 		DBC579121D8792E600A6CF35 /* photoPick */ = {
@@ -1080,6 +1114,7 @@
 				DBC66F4F1D4B2B44009666AF /* EN_Language.strings in Resources */,
 				DBA450BB1D2CE5E8001ADEDC /* Assets.xcassets in Resources */,
 				DB2191FD1D6D3A7B00AD48DB /* NewsViewController.xib in Resources */,
+				DBC06DBE1E52AE2600C49283 /* LoginServiceDemoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1150,6 +1185,7 @@
 				DBF277171D4C830100EDB2EB /* YHFileManager.m in Sources */,
 				DB5DFB5C1D6A936D0094C6B1 /* WaterViewController.m in Sources */,
 				DB2BB25D1E14E5540057EA4D /* YHTextField.m in Sources */,
+				DBC06DB81E52ADC300C49283 /* LoginServiceDB.m in Sources */,
 				DBF7BD481D5B1EF600320F62 /* YHFileDownLoadModel.m in Sources */,
 				DBC5791A1D879E7E00A6CF35 /* AdsCycleView.m in Sources */,
 				DBB862991D3CBF2000A5951F /* UIImageView+BorderChange.m in Sources */,
@@ -1163,6 +1199,7 @@
 				DBA450E91D2D0771001ADEDC /* NSDate+YHDateFormat.m in Sources */,
 				DB2BB2531E14A8980057EA4D /* NSString+RegularCheck.m in Sources */,
 				DB36C8811D9918DE00451513 /* YHPhotoPickCollectionViewCell.m in Sources */,
+				DBC06DBD1E52AE2600C49283 /* LoginServiceDemoViewController.m in Sources */,
 				DB53F7101D4898160065F49E /* NSString+Secret.m in Sources */,
 				DB3DA0C21D34E0190016D137 /* YHLogger.m in Sources */,
 				DBF2771A1D4C847800EDB2EB /* YHFileCompress.m in Sources */,
@@ -1191,6 +1228,7 @@
 				DB36C88B1D9A4E4E00451513 /* YHBottomView.m in Sources */,
 				DB5DFB781D6AAAAC0094C6B1 /* DeviceInfoViewController.m in Sources */,
 				DB5DFB871D6ADD670094C6B1 /* FileManagerViewController.m in Sources */,
+				DBC06DB71E52ADC300C49283 /* LoginService.m in Sources */,
 				DB53F7041D488C990065F49E /* BaseTableViewCell.m in Sources */,
 				DBC579221D87DE1500A6CF35 /* YHPageControl.m in Sources */,
 				DB3DA0BC1D34BC360016D137 /* YHDeviceTools.m in Sources */,
@@ -1335,6 +1373,7 @@
 			baseConfigurationReference = DD0E1219D0BEF083B310C3CF /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = QZQD5SSHHH;
 				INFOPLIST_FILE = YHDevelopFramework/Info.plist;
@@ -1350,6 +1389,7 @@
 			baseConfigurationReference = 7C43B3DB5A87B567429D9E18 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = QZQD5SSHHH;
 				INFOPLIST_FILE = YHDevelopFramework/Info.plist;
