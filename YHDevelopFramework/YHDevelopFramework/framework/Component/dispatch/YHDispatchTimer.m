@@ -34,12 +34,14 @@
 
 - (void)cancelTimer:(nullable TimerIncident)incident {
 
-    dispatch_source_set_cancel_handler(self.timer, ^{
-        if (incident) {
-            incident();
-        }
-    });
-    dispatch_cancel(self.timer);
+    if (self.timer) {
+        dispatch_source_set_cancel_handler(self.timer, ^{
+            if (incident) {
+                incident();
+            }
+        });
+        dispatch_cancel(self.timer);        
+    }
 }
 
 @end

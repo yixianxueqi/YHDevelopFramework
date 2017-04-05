@@ -29,6 +29,7 @@
     self.newsView.titleList = @[@"abc",@"cda",@"qwe",@"rew",@"asdadadasd",@"qweqqe",@"ioouou",@"jjhhg"];
 }
 
+
 #pragma mark - getter/setter
 - (NewContentView *)newsView {
 
