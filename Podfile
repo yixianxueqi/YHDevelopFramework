@@ -1,4 +1,7 @@
 platform:ios,'8.0'
+
+target:YHDevelopFramework do
+
 pod 'AFNetworking', '3.1.0'
 pod 'SDWebImage', '3.8.1'
 pod 'NullSafe', '1.2.2'
@@ -13,3 +16,5 @@ pod 'YTKKeyValueStore','0.1.2'
 pod 'RegexKitLite', ‘4.0'
 pod 'ZipArchive', '1.4.0'
 pod 'IQKeyboardManager', '4.0.4'
+
+end
