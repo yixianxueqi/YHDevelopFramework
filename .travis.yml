@@ -1,3 +1,4 @@
 language: objective-c
+osx_image: xcode8.2
 script:
 - xcodebuild -workspace YHDevelopFramework.xcworkspace -scheme YHDevelopFramework -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
