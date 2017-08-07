@@ -103,4 +103,14 @@
  *  @return CGFloat
  */
 + (CGFloat)batteryLevel;
+
+// 获取当前设备IP
++ (NSString *)getDeviceIPAdress;
+/// 获取总内存大小
++ (long long)getTotalMemorySize;
+/// 获取当前可用内存
++ (long long)getAvailableMemorySize;
+/// 获取精准电池电量
++ (CGFloat)getCurrentBatteryLevel;
+
 @end

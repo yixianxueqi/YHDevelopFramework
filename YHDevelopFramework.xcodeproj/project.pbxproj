@@ -44,7 +44,7 @@
 		DB36C88B1D9A4E4E00451513 /* YHBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB36C88A1D9A4E4E00451513 /* YHBottomView.m */; };
 		DB36C88D1D9A4E7B00451513 /* YHBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB36C88C1D9A4E7B00451513 /* YHBottomView.xib */; };
 		DB378E251D5C21B900A375DA /* YHFileDownloadStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DB378E241D5C21B900A375DA /* YHFileDownloadStore.m */; };
-		DB3DA0BC1D34BC360016D137 /* YHDeviceTools.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3DA0BB1D34BC360016D137 /* YHDeviceTools.m */; };
+		DB3DA0BC1D34BC360016D137 /* YHDeviceTools.mm in Sources */ = {isa = PBXBuildFile; fileRef = DB3DA0BB1D34BC360016D137 /* YHDeviceTools.mm */; };
 		DB3DA0BF1D34D2500016D137 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3DA0BE1D34D2500016D137 /* UIView+Frame.m */; };
 		DB3DA0C21D34E0190016D137 /* YHLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3DA0C11D34E0190016D137 /* YHLogger.m */; };
 		DB3DA0C51D34ECF30016D137 /* YHLogFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3DA0C41D34ECF30016D137 /* YHLogFormat.m */; };
@@ -190,7 +190,7 @@
 		DB378E231D5C21B900A375DA /* YHFileDownloadStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHFileDownloadStore.h; sourceTree = "<group>"; };
 		DB378E241D5C21B900A375DA /* YHFileDownloadStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHFileDownloadStore.m; sourceTree = "<group>"; };
 		DB3DA0BA1D34BC360016D137 /* YHDeviceTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHDeviceTools.h; sourceTree = "<group>"; };
-		DB3DA0BB1D34BC360016D137 /* YHDeviceTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHDeviceTools.m; sourceTree = "<group>"; };
+		DB3DA0BB1D34BC360016D137 /* YHDeviceTools.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = YHDeviceTools.mm; sourceTree = "<group>"; };
 		DB3DA0BD1D34D2500016D137 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		DB3DA0BE1D34D2500016D137 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		DB3DA0C01D34E0190016D137 /* YHLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHLogger.h; sourceTree = "<group>"; };
@@ -484,7 +484,7 @@
 			isa = PBXGroup;
 			children = (
 				DB3DA0BA1D34BC360016D137 /* YHDeviceTools.h */,
-				DB3DA0BB1D34BC360016D137 /* YHDeviceTools.m */,
+				DB3DA0BB1D34BC360016D137 /* YHDeviceTools.mm */,
 				DBBCA3DA1D3DF9D400ED7014 /* YHTools.h */,
 				DB53F7111D48A02D0065F49E /* RegularCheck.h */,
 				DB53F7121D48A02D0065F49E /* RegularCheck.m */,
@@ -1231,7 +1231,7 @@
 				DBC06DB71E52ADC300C49283 /* LoginService.m in Sources */,
 				DB53F7041D488C990065F49E /* BaseTableViewCell.m in Sources */,
 				DBC579221D87DE1500A6CF35 /* YHPageControl.m in Sources */,
-				DB3DA0BC1D34BC360016D137 /* YHDeviceTools.m in Sources */,
+				DB3DA0BC1D34BC360016D137 /* YHDeviceTools.mm in Sources */,
 				DB5DFB5A1D6A936D0094C6B1 /* Person.m in Sources */,
 				DB2191FC1D6D3A7B00AD48DB /* NewsViewController.m in Sources */,
 				DBF2771D1D4C84BE00EDB2EB /* YHFileAction.m in Sources */,
